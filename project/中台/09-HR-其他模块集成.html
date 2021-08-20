@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>其他模块集成 | 笔记栈</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/assets/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.0d7c1303.js" as="script"><link rel="preload" href="/assets/js/2.1fe0b50b.js" as="script"><link rel="preload" href="/assets/js/33.a43732df.js" as="script"><link rel="prefetch" href="/assets/js/10.2978dd1f.js"><link rel="prefetch" href="/assets/js/11.0dbaa531.js"><link rel="prefetch" href="/assets/js/12.32c02705.js"><link rel="prefetch" href="/assets/js/13.109a51a8.js"><link rel="prefetch" href="/assets/js/14.515ca27a.js"><link rel="prefetch" href="/assets/js/15.5ded3296.js"><link rel="prefetch" href="/assets/js/16.8bc52c4e.js"><link rel="prefetch" href="/assets/js/17.68df63de.js"><link rel="prefetch" href="/assets/js/18.89b1b877.js"><link rel="prefetch" href="/assets/js/19.901364af.js"><link rel="prefetch" href="/assets/js/20.5481b80d.js"><link rel="prefetch" href="/assets/js/21.2a144945.js"><link rel="prefetch" href="/assets/js/22.70831219.js"><link rel="prefetch" href="/assets/js/23.3b0c302e.js"><link rel="prefetch" href="/assets/js/24.878e1e96.js"><link rel="prefetch" href="/assets/js/25.9ff49721.js"><link rel="prefetch" href="/assets/js/26.093c8bdc.js"><link rel="prefetch" href="/assets/js/27.401b5c78.js"><link rel="prefetch" href="/assets/js/28.dc1c7c43.js"><link rel="prefetch" href="/assets/js/29.40e51e71.js"><link rel="prefetch" href="/assets/js/3.ac9d9143.js"><link rel="prefetch" href="/assets/js/30.b76a99b4.js"><link rel="prefetch" href="/assets/js/31.c3ef67ce.js"><link rel="prefetch" href="/assets/js/32.6c5637f7.js"><link rel="prefetch" href="/assets/js/34.944b27fe.js"><link rel="prefetch" href="/assets/js/35.c2719e80.js"><link rel="prefetch" href="/assets/js/36.db5072a0.js"><link rel="prefetch" href="/assets/js/37.3aac3f33.js"><link rel="prefetch" href="/assets/js/38.ac02531c.js"><link rel="prefetch" href="/assets/js/39.b9d37857.js"><link rel="prefetch" href="/assets/js/4.e05c873c.js"><link rel="prefetch" href="/assets/js/40.750e94fc.js"><link rel="prefetch" href="/assets/js/41.941fe774.js"><link rel="prefetch" href="/assets/js/42.bcdffcaa.js"><link rel="prefetch" href="/assets/js/43.1188d721.js"><link rel="prefetch" href="/assets/js/44.0ba6bb4b.js"><link rel="prefetch" href="/assets/js/45.a98c08d8.js"><link rel="prefetch" href="/assets/js/46.1339ab8c.js"><link rel="prefetch" href="/assets/js/47.1e9f1793.js"><link rel="prefetch" href="/assets/js/48.0b65993c.js"><link rel="prefetch" href="/assets/js/49.98d284b0.js"><link rel="prefetch" href="/assets/js/5.f3e6ed41.js"><link rel="prefetch" href="/assets/js/50.40c11909.js"><link rel="prefetch" href="/assets/js/51.401f93f0.js"><link rel="prefetch" href="/assets/js/52.b0168dbe.js"><link rel="prefetch" href="/assets/js/53.8b60059b.js"><link rel="prefetch" href="/assets/js/54.161c06e4.js"><link rel="prefetch" href="/assets/js/55.afd26206.js"><link rel="prefetch" href="/assets/js/56.55d94850.js"><link rel="prefetch" href="/assets/js/57.ae35ff7c.js"><link rel="prefetch" href="/assets/js/58.96b6abba.js"><link rel="prefetch" href="/assets/js/59.91f247f9.js"><link rel="prefetch" href="/assets/js/6.498ab014.js"><link rel="prefetch" href="/assets/js/60.2b43d161.js"><link rel="prefetch" href="/assets/js/61.9ebe816a.js"><link rel="prefetch" href="/assets/js/62.bc73408a.js"><link rel="prefetch" href="/assets/js/63.f8745496.js"><link rel="prefetch" href="/assets/js/64.4ae7ce85.js"><link rel="prefetch" href="/assets/js/65.23ecc3e4.js"><link rel="prefetch" href="/assets/js/66.1d24d480.js"><link rel="prefetch" href="/assets/js/67.6042bfed.js"><link rel="prefetch" href="/assets/js/68.ed1e1ed8.js"><link rel="prefetch" href="/assets/js/69.28d1024d.js"><link rel="prefetch" href="/assets/js/7.3f5168c2.js"><link rel="prefetch" href="/assets/js/70.5ff6d4e4.js"><link rel="prefetch" href="/assets/js/71.bd57315c.js"><link rel="prefetch" href="/assets/js/72.e93c0d6e.js"><link rel="prefetch" href="/assets/js/73.4229454d.js"><link rel="prefetch" href="/assets/js/74.c2eb2bad.js"><link rel="prefetch" href="/assets/js/75.7eca9a4e.js"><link rel="prefetch" href="/assets/js/76.b83f903e.js"><link rel="prefetch" href="/assets/js/77.b9a22162.js"><link rel="prefetch" href="/assets/js/78.2450176d.js"><link rel="prefetch" href="/assets/js/79.ff4267c4.js"><link rel="prefetch" href="/assets/js/8.0e4354f9.js"><link rel="prefetch" href="/assets/js/80.abebe711.js"><link rel="prefetch" href="/assets/js/81.d8369dc4.js"><link rel="prefetch" href="/assets/js/82.5da13948.js"><link rel="prefetch" href="/assets/js/83.deb172fd.js"><link rel="prefetch" href="/assets/js/84.727650ec.js"><link rel="prefetch" href="/assets/js/85.50b1b4ef.js"><link rel="prefetch" href="/assets/js/86.90bb267e.js"><link rel="prefetch" href="/assets/js/9.de4e9e4c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="笔记栈" class="logo"> <span class="site-name can-hide">笔记栈</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/第一天html笔记/" class="nav-link">
+  html-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/第二天html总结/" class="nav-link">
+  html-two
+</a></li></ul></li><li class="dropdown-item"><h4>
+          css
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/css第一天/" class="nav-link">
+  css-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第二天/" class="nav-link">
+  css-two
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第三天/" class="nav-link">
+  css-twree
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第四天/" class="nav-link">
+  css-four
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day07-前端基础CSS第五天/" class="nav-link">
+  css-five
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day08-前端基础CSS第六天/" class="nav-link">
+  css-six
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day09-前端基础CSS第七天/" class="nav-link">
+  css-seven
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day10-HTML5&amp;CSS3提高/" class="nav-link">
+  css html提高
+</a></li><li class="dropdown-subitem"><a href="/前端基础/移动端/" class="nav-link">
+  移动端
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day01/" class="nav-link">
+  移动端布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/basis/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/js/senior/" class="nav-link">
+  JavaScript高级
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/webapinew/" class="nav-link">
+  webapi新
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/pk webapi/" class="nav-link">
+  webapi
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  es6
+</a></li><li class="dropdown-item"><!----> <a href="/js/跨域防抖节流 Promise/" class="nav-link">
+  跨域防抖节流
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git&amp;ajax&amp;JQ" class="dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow down"></span></button> <button type="button" aria-label="git&amp;ajax&amp;JQ" class="mobile-dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/Git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/ajax/Ajax/" class="nav-link">
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/jq/JQuery/" class="nav-link">
+  JQuery
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="node" class="dropdown-title"><span class="title">node</span> <span class="arrow down"></span></button> <button type="button" aria-label="node" class="mobile-dropdown-title"><span class="title">node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/Node入门及模块系统/" class="nav-link">
+  入门
+</a></li><li class="dropdown-item"><!----> <a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li><li class="dropdown-item"><!----> <a href="/node/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/node/Express/" class="nav-link">
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/node/接口测试工具/" class="nav-link">
+  接口测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/node/MySQL/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/node/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/node/ES6/" class="nav-link">
+  es6
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue基础/笔记/" class="nav-link">
+  vue基础
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前端路由/" class="nav-link">
+  前端路由
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前后端对接/" class="nav-link">
+  前后端交互
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/04-前端工程化/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/05-综合案例/" class="nav-link">
+  综合案例
+</a></li></ul></li><li class="dropdown-item"><h4>
+          vue进阶目录
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue进阶/vue进阶/" class="nav-link">
+  vue进阶
+</a></li><li class="dropdown-subitem"><a href="/vue/vuex/outline-vuex/" class="nav-link">
+  vuex
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue项目" class="dropdown-title"><span class="title">vue项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue项目" class="mobile-dropdown-title"><span class="title">vue项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          大事件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/project/头条移动/01-头条-Mobile-项目初始化/" class="nav-link">
+  头条移动
+</a></li><li class="dropdown-item"><!----> <a href="/project/头条综合案例/01-头条-PC-项目初始化/" class="nav-link">
+  头条pc综合案例
+</a></li><li class="dropdown-item"><!----> <a href="/project/中台/01-HR-项目初始化/" class="nav-link">
+  中台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题" class="dropdown-title"><span class="title">问题</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题" class="mobile-dropdown-title"><span class="title">问题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/question/question/" class="nav-link">
+  问题总结小册
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/第一天html笔记/" class="nav-link">
+  html-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/第二天html总结/" class="nav-link">
+  html-two
+</a></li></ul></li><li class="dropdown-item"><h4>
+          css
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/css第一天/" class="nav-link">
+  css-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第二天/" class="nav-link">
+  css-two
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第三天/" class="nav-link">
+  css-twree
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第四天/" class="nav-link">
+  css-four
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day07-前端基础CSS第五天/" class="nav-link">
+  css-five
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day08-前端基础CSS第六天/" class="nav-link">
+  css-six
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day09-前端基础CSS第七天/" class="nav-link">
+  css-seven
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day10-HTML5&amp;CSS3提高/" class="nav-link">
+  css html提高
+</a></li><li class="dropdown-subitem"><a href="/前端基础/移动端/" class="nav-link">
+  移动端
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day01/" class="nav-link">
+  移动端布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/basis/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/js/senior/" class="nav-link">
+  JavaScript高级
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/webapinew/" class="nav-link">
+  webapi新
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/pk webapi/" class="nav-link">
+  webapi
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  es6
+</a></li><li class="dropdown-item"><!----> <a href="/js/跨域防抖节流 Promise/" class="nav-link">
+  跨域防抖节流
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git&amp;ajax&amp;JQ" class="dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow down"></span></button> <button type="button" aria-label="git&amp;ajax&amp;JQ" class="mobile-dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/Git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/ajax/Ajax/" class="nav-link">
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/jq/JQuery/" class="nav-link">
+  JQuery
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="node" class="dropdown-title"><span class="title">node</span> <span class="arrow down"></span></button> <button type="button" aria-label="node" class="mobile-dropdown-title"><span class="title">node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/Node入门及模块系统/" class="nav-link">
+  入门
+</a></li><li class="dropdown-item"><!----> <a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li><li class="dropdown-item"><!----> <a href="/node/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/node/Express/" class="nav-link">
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/node/接口测试工具/" class="nav-link">
+  接口测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/node/MySQL/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/node/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/node/ES6/" class="nav-link">
+  es6
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue基础/笔记/" class="nav-link">
+  vue基础
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前端路由/" class="nav-link">
+  前端路由
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前后端对接/" class="nav-link">
+  前后端交互
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/04-前端工程化/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/05-综合案例/" class="nav-link">
+  综合案例
+</a></li></ul></li><li class="dropdown-item"><h4>
+          vue进阶目录
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue进阶/vue进阶/" class="nav-link">
+  vue进阶
+</a></li><li class="dropdown-subitem"><a href="/vue/vuex/outline-vuex/" class="nav-link">
+  vuex
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue项目" class="dropdown-title"><span class="title">vue项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue项目" class="mobile-dropdown-title"><span class="title">vue项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          大事件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/project/头条移动/01-头条-Mobile-项目初始化/" class="nav-link">
+  头条移动
+</a></li><li class="dropdown-item"><!----> <a href="/project/头条综合案例/01-头条-PC-项目初始化/" class="nav-link">
+  头条pc综合案例
+</a></li><li class="dropdown-item"><!----> <a href="/project/中台/01-HR-项目初始化/" class="nav-link">
+  中台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题" class="dropdown-title"><span class="title">问题</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题" class="mobile-dropdown-title"><span class="title">问题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/question/question/" class="nav-link">
+  问题总结小册
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>中台</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/project/%E4%B8%AD%E5%8F%B0/" aria-current="page" class="sidebar-link">Home</a></li><li><a href="/project/中台/01-HR-项目初始化.html" class="sidebar-link">项目初始化</a></li><li><a href="/project/中台/02-HR-登录模块.html" class="sidebar-link">登录模块</a></li><li><a href="/project/中台/03-HR-主页模块.html" class="sidebar-link">主页模块</a></li><li><a href="/project/中台/04-HR-路由配置.html" class="sidebar-link">路由配置</a></li><li><a href="/project/中台/05-HR-组织架构模块.html" class="sidebar-link">组织架构模块</a></li><li><a href="/project/中台/06-HR-角色管理模块.html" class="sidebar-link">角色管理模块</a></li><li><a href="/project/中台/07-HR-01-员工管理模块.html" class="sidebar-link">员工管理模块</a></li><li><a href="/project/中台/07-HR-02-员工详情模块.html" class="sidebar-link">员工详情</a></li><li><a href="/project/中台/08-HR-权限管理模块.html" class="sidebar-link">权限管理模块</a></li><li><a href="/project/中台/09-HR-其他模块集成.html" class="active sidebar-link">其他模块集成</a></li><li><a href="/project/中台/10-HR-主页日历图表.html" class="sidebar-link">主页日历图表</a></li><li><a href="/project/中台/11-HR-多语言全屏.html" class="sidebar-link">多语言全屏主题切换</a></li><li><a href="/project/中台/12-HR-打包上线.html" class="sidebar-link">打包上线</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="其他模块集成"><a href="#其他模块集成" class="header-anchor">#</a> 其他模块集成</h1> <ul><li>回顾（权限管理：RBAC）
+<ul><li>用户-角色-权限（目标：不同的用户拥有不同的权限）
+<ul><li>把角色分配给用户</li> <li>把权限分配给角色</li> <li>注意：引入角色的目的是简化授权的操作</li></ul></li> <li>权限的验证
+<ul><li>登录成功后，需要通过接口获取当前用户所拥有的权限信息（menus一级权限/points二级权限）</li> <li>控制一级路由权限的验证
+<ul><li>控制左侧动态路由的条件过滤（所有的动态路由和menus提供权限标识）</li> <li>router.addRoutes(动态路由)</li> <li>防止出现死循环（保证动态添加路由的操作仅仅执行一次）</li></ul></li> <li>控制二级权限功能点的验证
+<ul><li>判断某个菜单是否拥有操作行为（基于points作为判断的条件；基于菜单的本身的标识）</li> <li>封装一个判断方法，检测当前按钮的标识是否在points里面</li></ul></li></ul></li></ul></li></ul> <hr> <p><strong>目标</strong>： 将其他业务模块代码集成到该项目中</p> <p>到目前为止，我们已经完成了一个基本项目框架 + 组织架构 + 公司 + 员工  +  权限的 业务联调，</p> <p>时间关系，我们不可能将所有的业务都去编写一遍，这里提供大家 其余模块的集成代码，</p> <p>最终的目的是让大家得到一个完成的业务模块</p> <p>要集成的模块业务，包括工资模块，社保模块，考勤模块，审批模块</p> <blockquote><p>在我们提供的资源集成模块中，我们提供了四个模块的**<code>路由</code><strong>/</strong><code>页面</code><strong>/</strong><code>api</code>*, 按照下面的路径拷贝即可</p></blockquote> <p>路由 =&gt;  <strong><code>src/router/modules</code></strong></p> <p>页面 =&gt;  <strong><code>src/views</code></strong></p> <p>api  =&gt;  <strong><code>src/api</code></strong></p> <p>filters =&gt; <code>src/filters</code></p> <p>除此之外，我们需要将 <strong><code>router/modules/user.js</code></strong> 导入到静态路由中，</p> <p>因为这个模块是所有用户都可以访问的</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">import</span> user <span class="token keyword">from</span> <span class="token string">'./modules/user'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">const</span> constantRoutes <span class="token operator">=</span> <span class="token punctuation">[</span>
+  <span class="token operator">...</span><span class="token punctuation">,</span>
+  <span class="token comment">// 上传excel页</span>
+  <span class="token punctuation">{</span>
+    path<span class="token operator">:</span> <span class="token string">'/import'</span><span class="token punctuation">,</span>
+    component<span class="token operator">:</span> Layout<span class="token punctuation">,</span>
+    hidden<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    children<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span>
+        path<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+        name<span class="token operator">:</span> <span class="token string">'import'</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">'@/views/import/index'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  user
+  <span class="token comment">// 如果前面的路由都没有匹配到, 那么就会被 * 匹配, 重定向到了 /404</span>
+  <span class="token comment">// { path: '*', redirect: '/404', hidden: true }</span>
+<span class="token punctuation">]</span>
+</code></pre></div><p>最终，我们将得到一个较为完整的系统业务。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/project/中台/08-HR-权限管理模块.html" class="prev">
+        权限管理模块
+      </a></span> <span class="next"><a href="/project/中台/10-HR-主页日历图表.html">
+        主页日历图表
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0d7c1303.js" defer></script><script src="/assets/js/2.1fe0b50b.js" defer></script><script src="/assets/js/33.a43732df.js" defer></script>
+  </body>
+</html>

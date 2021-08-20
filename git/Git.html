@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>笔记栈</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/assets/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.0d7c1303.js" as="script"><link rel="preload" href="/assets/js/2.1fe0b50b.js" as="script"><link rel="preload" href="/assets/js/10.2978dd1f.js" as="script"><link rel="prefetch" href="/assets/js/11.0dbaa531.js"><link rel="prefetch" href="/assets/js/12.32c02705.js"><link rel="prefetch" href="/assets/js/13.109a51a8.js"><link rel="prefetch" href="/assets/js/14.515ca27a.js"><link rel="prefetch" href="/assets/js/15.5ded3296.js"><link rel="prefetch" href="/assets/js/16.8bc52c4e.js"><link rel="prefetch" href="/assets/js/17.68df63de.js"><link rel="prefetch" href="/assets/js/18.89b1b877.js"><link rel="prefetch" href="/assets/js/19.901364af.js"><link rel="prefetch" href="/assets/js/20.5481b80d.js"><link rel="prefetch" href="/assets/js/21.2a144945.js"><link rel="prefetch" href="/assets/js/22.70831219.js"><link rel="prefetch" href="/assets/js/23.3b0c302e.js"><link rel="prefetch" href="/assets/js/24.878e1e96.js"><link rel="prefetch" href="/assets/js/25.9ff49721.js"><link rel="prefetch" href="/assets/js/26.093c8bdc.js"><link rel="prefetch" href="/assets/js/27.401b5c78.js"><link rel="prefetch" href="/assets/js/28.dc1c7c43.js"><link rel="prefetch" href="/assets/js/29.40e51e71.js"><link rel="prefetch" href="/assets/js/3.ac9d9143.js"><link rel="prefetch" href="/assets/js/30.b76a99b4.js"><link rel="prefetch" href="/assets/js/31.c3ef67ce.js"><link rel="prefetch" href="/assets/js/32.6c5637f7.js"><link rel="prefetch" href="/assets/js/33.a43732df.js"><link rel="prefetch" href="/assets/js/34.944b27fe.js"><link rel="prefetch" href="/assets/js/35.c2719e80.js"><link rel="prefetch" href="/assets/js/36.db5072a0.js"><link rel="prefetch" href="/assets/js/37.3aac3f33.js"><link rel="prefetch" href="/assets/js/38.ac02531c.js"><link rel="prefetch" href="/assets/js/39.b9d37857.js"><link rel="prefetch" href="/assets/js/4.e05c873c.js"><link rel="prefetch" href="/assets/js/40.750e94fc.js"><link rel="prefetch" href="/assets/js/41.941fe774.js"><link rel="prefetch" href="/assets/js/42.bcdffcaa.js"><link rel="prefetch" href="/assets/js/43.1188d721.js"><link rel="prefetch" href="/assets/js/44.0ba6bb4b.js"><link rel="prefetch" href="/assets/js/45.a98c08d8.js"><link rel="prefetch" href="/assets/js/46.1339ab8c.js"><link rel="prefetch" href="/assets/js/47.1e9f1793.js"><link rel="prefetch" href="/assets/js/48.0b65993c.js"><link rel="prefetch" href="/assets/js/49.98d284b0.js"><link rel="prefetch" href="/assets/js/5.f3e6ed41.js"><link rel="prefetch" href="/assets/js/50.40c11909.js"><link rel="prefetch" href="/assets/js/51.401f93f0.js"><link rel="prefetch" href="/assets/js/52.b0168dbe.js"><link rel="prefetch" href="/assets/js/53.8b60059b.js"><link rel="prefetch" href="/assets/js/54.161c06e4.js"><link rel="prefetch" href="/assets/js/55.afd26206.js"><link rel="prefetch" href="/assets/js/56.55d94850.js"><link rel="prefetch" href="/assets/js/57.ae35ff7c.js"><link rel="prefetch" href="/assets/js/58.96b6abba.js"><link rel="prefetch" href="/assets/js/59.91f247f9.js"><link rel="prefetch" href="/assets/js/6.498ab014.js"><link rel="prefetch" href="/assets/js/60.2b43d161.js"><link rel="prefetch" href="/assets/js/61.9ebe816a.js"><link rel="prefetch" href="/assets/js/62.bc73408a.js"><link rel="prefetch" href="/assets/js/63.f8745496.js"><link rel="prefetch" href="/assets/js/64.4ae7ce85.js"><link rel="prefetch" href="/assets/js/65.23ecc3e4.js"><link rel="prefetch" href="/assets/js/66.1d24d480.js"><link rel="prefetch" href="/assets/js/67.6042bfed.js"><link rel="prefetch" href="/assets/js/68.ed1e1ed8.js"><link rel="prefetch" href="/assets/js/69.28d1024d.js"><link rel="prefetch" href="/assets/js/7.3f5168c2.js"><link rel="prefetch" href="/assets/js/70.5ff6d4e4.js"><link rel="prefetch" href="/assets/js/71.bd57315c.js"><link rel="prefetch" href="/assets/js/72.e93c0d6e.js"><link rel="prefetch" href="/assets/js/73.4229454d.js"><link rel="prefetch" href="/assets/js/74.c2eb2bad.js"><link rel="prefetch" href="/assets/js/75.7eca9a4e.js"><link rel="prefetch" href="/assets/js/76.b83f903e.js"><link rel="prefetch" href="/assets/js/77.b9a22162.js"><link rel="prefetch" href="/assets/js/78.2450176d.js"><link rel="prefetch" href="/assets/js/79.ff4267c4.js"><link rel="prefetch" href="/assets/js/8.0e4354f9.js"><link rel="prefetch" href="/assets/js/80.abebe711.js"><link rel="prefetch" href="/assets/js/81.d8369dc4.js"><link rel="prefetch" href="/assets/js/82.5da13948.js"><link rel="prefetch" href="/assets/js/83.deb172fd.js"><link rel="prefetch" href="/assets/js/84.727650ec.js"><link rel="prefetch" href="/assets/js/85.50b1b4ef.js"><link rel="prefetch" href="/assets/js/86.90bb267e.js"><link rel="prefetch" href="/assets/js/9.de4e9e4c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="笔记栈" class="logo"> <span class="site-name can-hide">笔记栈</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/第一天html笔记/" class="nav-link">
+  html-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/第二天html总结/" class="nav-link">
+  html-two
+</a></li></ul></li><li class="dropdown-item"><h4>
+          css
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/css第一天/" class="nav-link">
+  css-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第二天/" class="nav-link">
+  css-two
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第三天/" class="nav-link">
+  css-twree
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第四天/" class="nav-link">
+  css-four
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day07-前端基础CSS第五天/" class="nav-link">
+  css-five
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day08-前端基础CSS第六天/" class="nav-link">
+  css-six
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day09-前端基础CSS第七天/" class="nav-link">
+  css-seven
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day10-HTML5&amp;CSS3提高/" class="nav-link">
+  css html提高
+</a></li><li class="dropdown-subitem"><a href="/前端基础/移动端/" class="nav-link">
+  移动端
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day01/" class="nav-link">
+  移动端布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/basis/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/js/senior/" class="nav-link">
+  JavaScript高级
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/webapinew/" class="nav-link">
+  webapi新
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/pk webapi/" class="nav-link">
+  webapi
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  es6
+</a></li><li class="dropdown-item"><!----> <a href="/js/跨域防抖节流 Promise/" class="nav-link">
+  跨域防抖节流
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git&amp;ajax&amp;JQ" class="dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow down"></span></button> <button type="button" aria-label="git&amp;ajax&amp;JQ" class="mobile-dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/Git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/ajax/Ajax/" class="nav-link">
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/jq/JQuery/" class="nav-link">
+  JQuery
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="node" class="dropdown-title"><span class="title">node</span> <span class="arrow down"></span></button> <button type="button" aria-label="node" class="mobile-dropdown-title"><span class="title">node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/Node入门及模块系统/" class="nav-link">
+  入门
+</a></li><li class="dropdown-item"><!----> <a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li><li class="dropdown-item"><!----> <a href="/node/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/node/Express/" class="nav-link">
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/node/接口测试工具/" class="nav-link">
+  接口测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/node/MySQL/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/node/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/node/ES6/" class="nav-link">
+  es6
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue基础/笔记/" class="nav-link">
+  vue基础
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前端路由/" class="nav-link">
+  前端路由
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前后端对接/" class="nav-link">
+  前后端交互
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/04-前端工程化/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/05-综合案例/" class="nav-link">
+  综合案例
+</a></li></ul></li><li class="dropdown-item"><h4>
+          vue进阶目录
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue进阶/vue进阶/" class="nav-link">
+  vue进阶
+</a></li><li class="dropdown-subitem"><a href="/vue/vuex/outline-vuex/" class="nav-link">
+  vuex
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue项目" class="dropdown-title"><span class="title">vue项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue项目" class="mobile-dropdown-title"><span class="title">vue项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          大事件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/project/头条移动/01-头条-Mobile-项目初始化/" class="nav-link">
+  头条移动
+</a></li><li class="dropdown-item"><!----> <a href="/project/头条综合案例/01-头条-PC-项目初始化/" class="nav-link">
+  头条pc综合案例
+</a></li><li class="dropdown-item"><!----> <a href="/project/中台/01-HR-项目初始化/" class="nav-link">
+  中台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题" class="dropdown-title"><span class="title">问题</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题" class="mobile-dropdown-title"><span class="title">问题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/question/question/" class="nav-link">
+  问题总结小册
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/第一天html笔记/" class="nav-link">
+  html-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/第二天html总结/" class="nav-link">
+  html-two
+</a></li></ul></li><li class="dropdown-item"><h4>
+          css
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/css第一天/" class="nav-link">
+  css-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第二天/" class="nav-link">
+  css-two
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第三天/" class="nav-link">
+  css-twree
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第四天/" class="nav-link">
+  css-four
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day07-前端基础CSS第五天/" class="nav-link">
+  css-five
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day08-前端基础CSS第六天/" class="nav-link">
+  css-six
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day09-前端基础CSS第七天/" class="nav-link">
+  css-seven
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day10-HTML5&amp;CSS3提高/" class="nav-link">
+  css html提高
+</a></li><li class="dropdown-subitem"><a href="/前端基础/移动端/" class="nav-link">
+  移动端
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day01/" class="nav-link">
+  移动端布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/basis/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/js/senior/" class="nav-link">
+  JavaScript高级
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/webapinew/" class="nav-link">
+  webapi新
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/pk webapi/" class="nav-link">
+  webapi
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  es6
+</a></li><li class="dropdown-item"><!----> <a href="/js/跨域防抖节流 Promise/" class="nav-link">
+  跨域防抖节流
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git&amp;ajax&amp;JQ" class="dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow down"></span></button> <button type="button" aria-label="git&amp;ajax&amp;JQ" class="mobile-dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/Git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/ajax/Ajax/" class="nav-link">
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/jq/JQuery/" class="nav-link">
+  JQuery
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="node" class="dropdown-title"><span class="title">node</span> <span class="arrow down"></span></button> <button type="button" aria-label="node" class="mobile-dropdown-title"><span class="title">node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/Node入门及模块系统/" class="nav-link">
+  入门
+</a></li><li class="dropdown-item"><!----> <a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li><li class="dropdown-item"><!----> <a href="/node/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/node/Express/" class="nav-link">
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/node/接口测试工具/" class="nav-link">
+  接口测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/node/MySQL/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/node/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/node/ES6/" class="nav-link">
+  es6
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue基础/笔记/" class="nav-link">
+  vue基础
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前端路由/" class="nav-link">
+  前端路由
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前后端对接/" class="nav-link">
+  前后端交互
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/04-前端工程化/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/05-综合案例/" class="nav-link">
+  综合案例
+</a></li></ul></li><li class="dropdown-item"><h4>
+          vue进阶目录
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue进阶/vue进阶/" class="nav-link">
+  vue进阶
+</a></li><li class="dropdown-subitem"><a href="/vue/vuex/outline-vuex/" class="nav-link">
+  vuex
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue项目" class="dropdown-title"><span class="title">vue项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue项目" class="mobile-dropdown-title"><span class="title">vue项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          大事件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/project/头条移动/01-头条-Mobile-项目初始化/" class="nav-link">
+  头条移动
+</a></li><li class="dropdown-item"><!----> <a href="/project/头条综合案例/01-头条-PC-项目初始化/" class="nav-link">
+  头条pc综合案例
+</a></li><li class="dropdown-item"><!----> <a href="/project/中台/01-HR-项目初始化/" class="nav-link">
+  中台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题" class="dropdown-title"><span class="title">问题</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题" class="mobile-dropdown-title"><span class="title">问题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/question/question/" class="nav-link">
+  问题总结小册
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/git/Git.html#版本管理简介" class="sidebar-link">版本管理简介</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/git/Git.html#项目的版本" class="sidebar-link">项目的版本</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#管理版本" class="sidebar-link">管理版本</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#使用版本管理软件的必要性" class="sidebar-link">使用版本管理软件的必要性</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#版本管理软件的作用" class="sidebar-link">版本管理软件的作用</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#版本管理软件分类" class="sidebar-link">版本管理软件分类</a></li></ul></li><li><a href="/git/Git.html#git软件安装" class="sidebar-link">Git软件安装</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/git/Git.html#告诉git-你是谁" class="sidebar-link">告诉Git，你是谁？</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/git/Git.html#初体验" class="sidebar-link">初体验</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/git/Git.html#使用git记录代码的每一次变更" class="sidebar-link">使用Git记录代码的每一次变更</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#查看了所有的历史记录" class="sidebar-link">查看了所有的历史记录</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#体验在历史版本中穿梭" class="sidebar-link">体验在历史版本中穿梭</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#穿梭到历史之后-如何查看所有的版本号" class="sidebar-link">穿梭到历史之后，如何查看所有的版本号</a></li></ul></li><li><a href="/git/Git.html#git初始化详解" class="sidebar-link">Git初始化详解</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/git/Git.html#查看提交日志详解" class="sidebar-link">查看提交日志详解</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/git/Git.html#git工作时维护的几个区域" class="sidebar-link">Git工作时维护的几个区域</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/git/Git.html#添加提交命令" class="sidebar-link">添加提交命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/git/Git.html#添加文件到暂存区" class="sidebar-link">添加文件到暂存区</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#提交文件到仓库" class="sidebar-link">提交文件到仓库</a></li></ul></li><li><a href="/git/Git.html#撤销" class="sidebar-link">撤销</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/git/Git.html#查看文件的状态" class="sidebar-link">查看文件的状态</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/git/Git.html#分支" class="sidebar-link">分支</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/git/Git.html#分支常用命令" class="sidebar-link">分支常用命令</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#快进合并-fast-forward" class="sidebar-link">快进合并（fast-forward）</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#三方合并-thirdparty-merge" class="sidebar-link">三方合并（thirdparty merge）</a></li></ul></li><li><a href="/git/Git.html#远程仓库" class="sidebar-link">远程仓库</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/git/Git.html#注册码云或github账号" class="sidebar-link">注册码云或github账号</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#配置码云或github的ssh秘钥" class="sidebar-link">配置码云或github的SSH秘钥</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#创建远程仓库" class="sidebar-link">创建远程仓库</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#推送代码到远程【首次】" class="sidebar-link">推送代码到远程【首次】</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#再次及后续推送" class="sidebar-link">再次及后续推送</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#常见问题" class="sidebar-link">常见问题</a></li></ul></li><li><a href="/git/Git.html#多人协作" class="sidebar-link">多人协作</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/git/Git.html#管理员角色" class="sidebar-link">管理员角色</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#成员角色" class="sidebar-link">成员角色</a></li></ul></li><li><a href="/git/Git.html#git忽略和移除文件" class="sidebar-link">Git忽略和移除文件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/git/Git.html#移除文件" class="sidebar-link">移除文件</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#git忽略文件" class="sidebar-link">Git忽略文件</a></li></ul></li><li><a href="/git/Git.html#分支和远程相关命令" class="sidebar-link">分支和远程相关命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/git/Git.html#推送分支" class="sidebar-link">推送分支</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#查看远程分支" class="sidebar-link">查看远程分支</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#跟踪-下载-检出-分支" class="sidebar-link">跟踪（下载/检出）分支</a></li><li class="sidebar-sub-header"><a href="/git/Git.html#删除远程分支" class="sidebar-link">删除远程分支</a></li></ul></li><li><a href="/git/Git.html#vscode中的git" class="sidebar-link">VSCode中的Git</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20200417223245728.png" alt="image-2020041723245728"></p> <h1 id="git"><a href="#git" class="header-anchor">#</a> Git</h1> <h2 id="版本管理简介"><a href="#版本管理简介" class="header-anchor">#</a> 版本管理简介</h2> <h3 id="项目的版本"><a href="#项目的版本" class="header-anchor">#</a> 项目的版本</h3> <ul><li>版本和我们平常说的软件、游戏等的版本是一个意思，比如 1.2.8 版本、比如 第1版，比如webstorm2020。</li> <li>所以，版本指的就是代码编写进度当中的一些节点。</li> <li>比如一个项目：
+<ul><li>搭建好目录结构 ---  第1版本</li> <li>完成登录页面布局 --- 第2版本</li> <li>完成登录功能 --- 第3版本</li> <li>完成分类页面布局 --- 第4版本</li> <li>...........</li></ul></li></ul> <h3 id="管理版本"><a href="#管理版本" class="header-anchor">#</a> 管理版本</h3> <ul><li>【记录】记录代码开发的过程，每一次代码的变化。</li> <li>【回退】将代码回退到之前的版本</li> <li>【查看】查看所有的版本</li> <li>【协作】配合远程仓库，实现多人协作</li></ul> <h3 id="使用版本管理软件的必要性"><a href="#使用版本管理软件的必要性" class="header-anchor">#</a> 使用版本管理软件的必要性</h3> <p>工作场景一：项目的需求不断的变化，改来改去，也可能需要改回原来的代码。</p> <ul><li>使用版本管理软件
+<ul><li>可以对代码每次的改动做记录，记录一次，叫做形成一个版本。</li> <li>可以轻松的将代码回退到任意一个版本。（可以使用之前版本中的代码、文件）</li> <li>电脑关机了，版本也不会丢失。</li></ul></li></ul> <p>工作场景二：多个合作开发，代码不好合并。</p> <ul><li>使用版本管理软件 + 远程仓库，可以解决多人合作的问题。</li></ul> <h3 id="版本管理软件的作用"><a href="#版本管理软件的作用" class="header-anchor">#</a> 版本管理软件的作用</h3> <ul><li>记录代码的版本，可以随时回退。</li> <li>配合远程仓库，实现多人协作，可以很轻松的合并代码</li></ul> <h3 id="版本管理软件分类"><a href="#版本管理软件分类" class="header-anchor">#</a> 版本管理软件分类</h3> <ul><li>集中式，典型代表 SVN</li> <li>分布式，典型代表 <code>Git</code> ---- 我们选择讲解Git。</li></ul> <h2 id="git软件安装"><a href="#git软件安装" class="header-anchor">#</a> Git软件安装</h2> <ul><li>双击，然后一直下一步安装即可。</li> <li><strong>不要安装到含有中文的路径中</strong>。比如，不要安装到  “D:/软件/学习/Git”</li> <li>安装完毕，绝对不可以剪切（移动）到其他文件夹。</li> <li>比如安装到 <code>D:/aa/bb/cc</code> 文件夹，千万不要<strong>重命名</strong>路径中的任何一个文件夹</li> <li>安装完毕，鼠标在任何文件夹空白位置右键，如果出现 <code>Git Bash Here</code>，则表示安装成功。(或者点击“Git Bash Here” --&gt; 输入 git --version  回车，如果看到版本号，则表示安装成功)</li> <li>Mac用户，使用自带的终端。输入“git --version”，回车，如果看到版本号，则表示安装成功</li></ul> <blockquote><p>Mac用户需要额外配置一下：访达 -&gt; 服务 -&gt; 服务偏好设置 -&gt; 勾选“新建位于文件夹位置的终端窗口”</p></blockquote> <h2 id="告诉git-你是谁"><a href="#告诉git-你是谁" class="header-anchor">#</a> 告诉Git，你是谁？</h2> <p>Git软件在工作的时候，需要知道你是谁？所以需要设置一个用户名和邮箱。</p> <p>这个用户名和邮箱，最好使用你的<a href="https://github.com/" target="_blank" rel="noopener noreferrer">github<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>账号或<a href="https://gitee.com/" target="_blank" rel="noopener noreferrer">码云<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>账号（如果你有账号的话），当然随便填也可以。</p> <p>具体做法：</p> <ol><li><strong>任何</strong>文件夹，空白处，右键 --&gt; Git Bash Here</li> <li><strong>依次</strong>执行下面两行命令</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> config --global user.name <span class="token string">&quot;xxx&quot;</span>
+<span class="token function">git</span> config --global user.email <span class="token string">&quot;xxx&quot;</span>
+
+</code></pre></div><p>配置之后，可以通过下面的命令来检查是否配置成功了</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查看所有的全局配置项</span>
+<span class="token function">git</span> config --list --global
+
+<span class="token comment"># 查看单个的配置项，比如查看用户名</span>
+<span class="token function">git</span> config user.name
+</code></pre></div><h2 id="初体验"><a href="#初体验" class="header-anchor">#</a> 初体验</h2> <h3 id="使用git记录代码的每一次变更"><a href="#使用git记录代码的每一次变更" class="header-anchor">#</a> 使用Git记录代码的每一次变更</h3> <ul><li>创建一个项目文件夹，随便创建一个即可。</li> <li>在项目文件夹里面的空白处，右键 --&gt; Git Bash Here，打开黑窗口。
+<ul><li>在黑窗口中，输入 <code>git init</code> 然后按回车，表示执行这条命令。</li> <li>这一步是Git初始化。初始化之后，表示Git软件可以管理这个项目了</li> <li>对于一个项目来说，初始化工作只需要做一次。</li></ul></li> <li>写代码测试
+<ul><li>随便写点代码</li> <li>执行命令 <code>git add .</code></li> <li>执行命令 <code>git commit -m '提交说明'</code></li> <li>执行完这两个命令，表示使用Git把当前代码及文件的改动记录起来了</li></ul></li> <li>重复这个过程，多使用Git记录几次</li></ul> <h3 id="查看了所有的历史记录"><a href="#查看了所有的历史记录" class="header-anchor">#</a> 查看了所有的历史记录</h3> <p>查看提交日志</p> <ul><li><code>git log</code></li> <li><code>git log --oneline</code></li> <li><code>git log --reflog</code>  或者 <code>git log --oneline --reflog</code>  查看所有的版本</li></ul> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20200711115609455.png" alt="image-2020071115609455"></p> <h3 id="体验在历史版本中穿梭"><a href="#体验在历史版本中穿梭" class="header-anchor">#</a> 体验在历史版本中穿梭</h3> <ul><li><code>git reset --hard 版本号</code>  --- 通过它，让代码整体，可以在历史版本中穿梭</li></ul> <blockquote><p>目前还有很多知识没有学习，所以，穿梭到历史之后，不要改代码，先体验一下穿梭的感觉。</p></blockquote> <h3 id="穿梭到历史之后-如何查看所有的版本号"><a href="#穿梭到历史之后-如何查看所有的版本号" class="header-anchor">#</a> 穿梭到历史之后，如何查看所有的版本号</h3> <p>穿梭到历史版本之后，通过 <code>git log</code> 查看不到之后的版本号。</p> <p>需要加 <code>--reflog</code> 选项，才能查看所有的版本号</p> <ul><li><code>git log --reflog</code></li> <li><code>git log --reflog --oneline</code></li></ul> <h2 id="git初始化详解"><a href="#git初始化详解" class="header-anchor">#</a> Git初始化详解</h2> <p>目的是学习，所以，随便创建一个项目文件夹，打开项目文件夹</p> <p><strong><code>注意：一定要在项目文件夹</code></strong>，右键--&gt;Git Bash Here。</p> <blockquote><p>至于项目中有没有文件无所谓。</p></blockquote> <p>执行下面的命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 初始化，表示使用Git管理我们的项目。这个命令只需要执行一次（注意空格）</span>
+<span class="token function">git</span> init
+
+</code></pre></div><ul><li>执行 <code>git init</code> 命令之后，会在项目文件夹中生成一个隐藏的 <code>.git</code> 文件夹</li> <li><code>.git</code> 文件夹里面保存着当前项目文件的更改记录。所以这个文件夹不能删除</li> <li>对于一个项目来说，<code>git init</code> 只需要执行一次</li> <li>切记，不要项目套项目。</li></ul> <h2 id="查看提交日志详解"><a href="#查看提交日志详解" class="header-anchor">#</a> 查看提交日志详解</h2> <p>查看日志的命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> log
+</code></pre></div><p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20201023143347036.png" alt="image-2020102313347036"></p> <p>查看简略版的信息（前7位版本号 及 提交说明）：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> log --oneline
+<span class="token function">git</span> log --pretty<span class="token operator">=</span>oneline
+</code></pre></div><p>如果回到历史版本，还想查看完整的历史记录，需要使用 --reflog 选项。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> log --reflog --oneline
+
+</code></pre></div><p>只查看最近的两次提交</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> log -2
+<span class="token function">git</span> log -2 --pretty<span class="token operator">=</span>oneline
+
+</code></pre></div><h2 id="git工作时维护的几个区域"><a href="#git工作时维护的几个区域" class="header-anchor">#</a> Git工作时维护的几个区域</h2> <ul><li>工作区
+<ul><li>工作区，指的是使用Git管理后的文件，这些文件显示在磁盘上，供我们使用或修改的区域。所以，粗略的说，项目文件夹就是工作区。</li></ul></li> <li>暂存区
+<ul><li>执行 <code>git add .</code>之后，文件由工作区，添加到了暂存区。 暂存区保存了下次将提交的文件列表信息。</li></ul></li> <li>Git 仓库区、本地仓库
+<ul><li>执行 <code>git commit -m '提交说明'</code> 之后，代码会被提交到仓库区。仓库区是 Git 中最重要的部分，代码只有提交到仓库，才会形成一次历史记录，即才会形成一个版本。</li></ul></li> <li>远程仓库
+<ul><li>Git服务器上的仓库，比如，码云或者github网站上创建的的仓库，叫做远程仓库。远程仓库用于存储代码和发布项目，多人协作也需要远程仓库。</li></ul></li></ul> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20210113104147694.png" alt="image-20210113104147694"></p> <h2 id="添加提交命令"><a href="#添加提交命令" class="header-anchor">#</a> 添加提交命令</h2> <h3 id="添加文件到暂存区"><a href="#添加文件到暂存区" class="header-anchor">#</a> 添加文件到暂存区</h3> <blockquote><p>新文件，只有添加到暂存区，才叫做被Git管理。否则和Git没什么关系，即使文件在项目文件夹。</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 添加指定文件到暂存区</span>
+<span class="token function">git</span> <span class="token function">add</span> 文件名
+
+<span class="token comment"># 以空格隔开可以一次 add 多个文件</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token punctuation">[</span>file1<span class="token punctuation">]</span> <span class="token punctuation">[</span>file2<span class="token punctuation">]</span> <span class="token punctuation">..</span>.
+
+<span class="token comment"># 添加指定目录到暂存区，包括子目录</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token punctuation">[</span>dir<span class="token punctuation">]</span> <span class="token punctuation">[</span>file<span class="token punctuation">]</span> <span class="token punctuation">[</span>dir<span class="token punctuation">]</span> <span class="token punctuation">[</span>file<span class="token punctuation">]</span> <span class="token punctuation">[</span>file<span class="token punctuation">]</span> <span class="token punctuation">..</span>.
+
+<span class="token comment"># 添加当前目录的所有文件到暂存区，包括子目录</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+
+
+</code></pre></div><blockquote><p>默认空文件夹，是不能添加，不能提交的</p></blockquote> <h3 id="提交文件到仓库"><a href="#提交文件到仓库" class="header-anchor">#</a> 提交文件到仓库</h3> <blockquote><p>提交到仓库的文件，是暂存区中的文件。</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 提交暂存区到仓库区</span>
+<span class="token function">git</span> commit -m <span class="token punctuation">[</span>message<span class="token punctuation">]</span>
+
+<span class="token comment"># 提交暂存区的指定文件到仓库区</span>
+<span class="token function">git</span> commit <span class="token punctuation">[</span>file1<span class="token punctuation">]</span> <span class="token punctuation">[</span>file2<span class="token punctuation">]</span> <span class="token punctuation">..</span>. -m <span class="token punctuation">[</span>message<span class="token punctuation">]</span>
+
+<span class="token comment"># 提交工作区和暂存区自上次commit之后的变化，直接到仓库区。</span>
+<span class="token comment"># 新文件，从未被Git管理过，是不能直接提交到仓库区的</span>
+<span class="token function">git</span> commit -a -m <span class="token string">&quot;提交日志&quot;</span>
+
+
+</code></pre></div><p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20200419100145919.png" alt="image-2020041100145919"></p> <h2 id="撤销"><a href="#撤销" class="header-anchor">#</a> 撤销</h2> <blockquote><p>撤销，是把暂存区的代码撤销到工作区；或者把最后一次提交的代码撤销到暂存区和工作区</p></blockquote> <ul><li>暂存区 ---&gt; 工作区：<code>git checkout 文件</code></li> <li>本地仓库 ---&gt; 暂存区：<code>git reset 文件</code></li> <li>本地仓库 ---&gt; 暂存区/工作区：<code>git reset --hard</code></li></ul> <h2 id="查看文件的状态"><a href="#查看文件的状态" class="header-anchor">#</a> 查看文件的状态</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查看文件的状态</span>
+<span class="token function">git</span> status
+
+<span class="token comment"># 查看简略版信息</span>
+<span class="token function">git</span> status -s
+<span class="token function">git</span> status --short
+
+</code></pre></div><ul><li>已提交（nothing to commit）
+<ul><li>表示没有什么东西可以提交了；即，所有的内容都已经提交过了</li> <li>有的文档也把这个状态叫做 <strong>未修改</strong>，意思是自上次提交过后，代码还没有修改过</li></ul></li> <li>未跟踪（新增的文件）</li> <li>已暂存（新增的文件，添加到暂存区之后的状态）</li> <li>已修改（文件曾经被Git记录过了（无论是刚刚添加到暂存区，还是曾经被提交到仓库过），然后在工作区对他进行了修改）</li></ul> <p>以<strong>精简模式</strong>（git status -s）为例：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 未跟踪的结果 --- 新增文件，然后查看状态</span>
+?? xxx.html 
+?? css/main.css
+
+<span class="token comment"># 已暂存的结果 --- 新增文件，然后执行add命令</span>
+A xxx.html
+A css/main.css
+
+<span class="token comment"># 已修改(并且已经暂存了) --- 新增文件，执行了add命令暂存了它，然后又修改了文件</span>
+AM xxx.html
+AM css/main.css
+
+<span class="token comment"># 已修改（红色字体的M） --- 文件已经被提交到仓库了，然后又修改了它</span>
+M xxx.html
+M css/main.html
+
+<span class="token comment"># 已修改（绿色字体的M） --- 文件已经被提交到了仓库，然后又修改了它，修改完毕又暂存了它</span>
+M xxx.html
+M css/main.html
+
+<span class="token comment">#####  如果查看到文件有上述三种状态，表示还有文件没有提交，需要提交这些文件 #####</span>
+
+<span class="token comment"># 已提交（未修改）</span>
+On branch master
+nothing to commit <span class="token punctuation">..</span><span class="token punctuation">..</span>.
+
+</code></pre></div><blockquote><p>初学者，只需要区分：<strong>代码是否都被提交到仓库了</strong>，即可。</p></blockquote> <h2 id="分支"><a href="#分支" class="header-anchor">#</a> 分支</h2> <p>分支就是当前项目的一个副本（可以理解为把当前项目复制了一份，可以这样理解，但是要知道内部实现并非如此）。</p> <p>初始化之后，默认是在master分支上进行操作的，master分支也叫做主分支。</p> <p>实际开发中，正规的公司，都不允许直接在master分支上开发。需要创建分支，在分支上开发，最后将代码合并回master。</p> <h3 id="分支常用命令"><a href="#分支常用命令" class="header-anchor">#</a> 分支常用命令</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查看所有本地分支</span>
+<span class="token function">git</span> branch
+
+<span class="token comment"># 创建新分支</span>
+<span class="token function">git</span> branch 分支名
+<span class="token comment"># 比如，创建一个叫做login的分支</span>
+<span class="token function">git</span> branch login
+
+<span class="token comment"># 切换分支</span>
+<span class="token function">git</span> checkout 分支名
+<span class="token comment"># 比如，切换到login分支</span>
+<span class="token function">git</span> checkout login
+<span class="token comment"># 比如，切换到master分支</span>
+<span class="token function">git</span> checkout master
+
+<span class="token comment"># 删除分支（删除时，必须先切换到其他分支）</span>
+<span class="token function">git</span> branch -d 分支名
+<span class="token function">git</span> branch -D 分支名  强制删除分支
+
+<span class="token comment"># 创建并直接切换分支</span>
+<span class="token function">git</span> checkout -b 分支名
+
+</code></pre></div><p>体验：</p> <ul><li>创建并切换到dev分支上；在dev分支上，写点代码，提交一下。</li> <li>切换分支，查看两个分支的不同。</li></ul> <blockquote><p>切换分支之前，必须把当前分支的代码全部提交到仓库。</p></blockquote> <h3 id="快进合并-fast-forward"><a href="#快进合并-fast-forward" class="header-anchor">#</a> 快进合并（fast-forward）</h3> <p>特点：一个分支包含另一个分支的全部提交记录。</p> <p>如果需要把dev分支的代码合并到master分支</p> <ul><li>切换到master</li> <li>执行 <code>git merge add</code> ，即可把add分支的代码合并到master</li></ul> <blockquote><p>合并之后，add和master分支的代码就回一样了。</p></blockquote> <h3 id="三方合并-thirdparty-merge"><a href="#三方合并-thirdparty-merge" class="header-anchor">#</a> 三方合并（thirdparty merge）</h3> <ul><li><p>两个分支，比如是master和dev，特点是都有新的提交</p></li> <li><p>也就是说，一个分支<strong>不包括</strong>另一个分支的全部提交记录</p></li> <li><p>这种模式的合并，有可能会有冲突</p></li> <li><p>合并方法，和前面一样</p> <ul><li><p>假设把dev的代码合并到master分支，切换到master <code>git checkout master</code></p></li> <li><p>执行 <code>git merge dev</code> ，表示将dev分支的代码合并到当前（master）分支</p></li> <li><p>然后就会出现如下两个画面中的一种</p> <ul><li>画面一：两个分支修改的代码不在同一个文件的同一行代码，出现下面的画面。</li></ul> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20200711164803953.png" alt="image-2020071114803953"></p> <ul><li>画面二：两个分支修改了同一个文件的同一行代码，出现下面的画面。</li></ul> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20200711170958994.png" alt="image-2020071117098994"></p></li></ul></li></ul> <p><strong>出现上述画面一</strong>，表示已经合并完成了，但是需要提交一次；</p> <p>出现的框是让我们输入提交说明；</p> <p>需要执行下面的操作：</p> <ul><li>按 <code>i</code> ，进入 “插入” 模式，就可以对画面中的文字进行修改了（直接输入也行）</li> <li>按 “上下左右” 键，调整光标的位置，可以删除里面的内容，写自己的提交说明</li> <li>上述画面中的 <code># Please enter.....</code> 表示注释，可以不用理会</li> <li>按 <code>Esc</code> 键，退出 “插入” 模式</li> <li>直接输入 “<code>:wq</code>”，退出这个画面，从而完成合并。（一定是英文的冒号）</li></ul> <p><strong>出现上述画面二</strong>，表示正在合并中，但是遇到冲突了；</p> <p>需要在代码中解决掉冲突，然后保存代码；</p> <p>最后，需要提交一次；</p> <ul><li>打开有冲突的文件</li> <li>去掉分割线，保存代码，表示解决了冲突</li> <li>保存代码，执行 <code>git add .</code> 和 <code>git commit -m '提交说明'</code> 从而完成这个合并。</li></ul> <h2 id="远程仓库"><a href="#远程仓库" class="header-anchor">#</a> 远程仓库</h2> <h3 id="注册码云或github账号"><a href="#注册码云或github账号" class="header-anchor">#</a> 注册码云或github账号</h3> <p>码云和github都提供仓库的托管服务。</p> <p>区别是码云是国内的服务器，打开速度较快；github是国外的服务器，打开速度不能保证。</p> <p>码云：https://gitee.com/</p> <p>github：https://github.com/</p> <p>自行去这两个网站注册账号，最好使用<code>相同的邮箱</code> 分别到码云和github上注册账号。</p> <blockquote><p>如果你不会在Github上注册，没关系，上课的时候，老师演示。</p></blockquote> <h3 id="配置码云或github的ssh秘钥"><a href="#配置码云或github的ssh秘钥" class="header-anchor">#</a> 配置码云或github的SSH秘钥</h3> <p>我们向码云或github网站推送代码的时候，最好使用SSH的方案，这个方案需要提前配置好秘钥。下面是具体的配置方法。</p> <p>任何文件夹位置，空白处右键，选择右键菜单中的 “<code>Git Bash Here</code>”，执行下面的命令，可以生成SSH秘钥（包含一个公钥一个私钥）</p> <div class="language-bash extra-class"><pre class="language-bash"><code>ssh-keygen -t rsa -C <span class="token string">&quot;你的邮箱地址&quot;</span>
+<span class="token comment"># 比如</span>
+ssh-keygen -t rsa -C <span class="token string">&quot;tangfengpo@163.com&quot;</span>
+<span class="token comment"># 执行完这个命令之后，后面有一些询问，我们直接一路回车即可</span>
+</code></pre></div><blockquote><p>注意，回车执行命令，然后继续回车，回车....直至生成完毕~</p></blockquote> <p>最后生成的秘钥在：</p> <div class="language- extra-class"><pre class="language-text"><code>Windows：
+C:\Users\用户名\.ssh
+
+mac：
+你的用户名那个文件夹中。 按shift+Commend+.  可以显示隐藏文件，然后就可以看到 .ssh文件夹了
+</code></pre></div><p>找到 <code>.ssh/id_rsa.pub</code>，用vscode打开，复制里面全部的内容，配置到远程仓库，做法如下：</p> <ul><li>GitHub右上角的三角号</li> <li>Settings</li> <li>左侧有 SSH and GPG keys</li> <li>在显示的界面中，点击右上角的 New SSH key，然后完成添加公钥操作</li> <li>码云的配置方式和Github一样。</li></ul> <h3 id="创建远程仓库"><a href="#创建远程仓库" class="header-anchor">#</a> 创建远程仓库</h3> <ul><li>码云
+<ul><li>右上角的 “+” ，选择新建仓库</li> <li>填写仓库名，选择公开</li> <li>点击创建按钮，创建。</li></ul></li> <li>github
+<ul><li>右上角的 “+” ，选择 “New repository”</li> <li>填写仓库名称</li> <li>点击创建按钮，创建。</li></ul></li></ul> <h3 id="推送代码到远程【首次】"><a href="#推送代码到远程【首次】" class="header-anchor">#</a> 推送代码到远程【首次】</h3> <ul><li>进入本地项目文件夹，右键 --&gt; Git Bash Here，打开终端窗口。</li> <li>远程仓库地址有两个（https、ssh地址），一定要选择ssh地址。</li> <li>添加远程仓库地址（<code>git remote add 远程仓库地址别名 完整的远程仓库SSH地址</code>）</li> <li>首次推送代码到远程仓库（<code>git push -u origin master</code>）</li></ul> <blockquote><p>只能把本地仓库的代码推送到远程仓库；不能把工作区的、暂存区的代码推到远程。</p> <p>确保你的本地仓库有内容，别推送空的本地仓库。注意是本地仓库，不是工作区。</p></blockquote> <p>首次使用SSH，会出现如下画面，输入 “yes”，回车即可。后面就不会再有了。</p> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20200819170633759.png" alt="image-2020081970633759"></p> <h3 id="再次及后续推送"><a href="#再次及后续推送" class="header-anchor">#</a> 再次及后续推送</h3> <ul><li>工作区编写代码</li> <li>执行 add 命令，将代码添加到暂存区</li> <li>执行 commit 命令，将代码提交到本地仓库。（因为只有本地仓库的代码才能推送到远程）</li> <li>执行 <code>git push</code> 命令，将这次改动推送到远程仓库。</li></ul> <h3 id="常见问题"><a href="#常见问题" class="header-anchor">#</a> 常见问题</h3> <ul><li>执行完“<strong>git remote add origin ssh地址</strong>”报错：fatal：remote origin already exists.
+<ul><li>叫做 origin 的远程地址以及存在了。不能再使用这个名字了。</li> <li>执行 <code>git remote -v</code> 查看所有的远程地址。</li> <li>可以选择性的 删除 远程地址。执行 <code>git remote remove 别名</code>，比如 <code>git remote remove origin</code></li></ul></li> <li>首次推送的时候，提示输入账号密码
+<ul><li>因为添加远程地址的时候，填错了，填成了 https 地址了。应该换成 ssh 地址。</li> <li>可以选择改过来，也可以使用https地址。下次做项目，再使用ssh地址也可以。</li></ul></li></ul> <p><strong>git remote add 那里，地址复制错了，能改吗？</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查看所有可用的源（可用的远程地址）</span>
+<span class="token function">git</span> remote -v
+<span class="token comment"># 删除一个源</span>
+<span class="token function">git</span> remote remove 远程仓库地址别名
+<span class="token comment"># 然后重新添加新的地址</span>
+<span class="token function">git</span> remote <span class="token function">add</span> 远程仓库地址别名 SSH地址
+</code></pre></div><p><strong>我电脑上有两个本地项目（仓库），能推送到一个远程仓库吗？</strong></p> <p>没人这么干！！！！！！！！两个项目放一起，会出现混乱或者覆盖的呀！！！</p> <p><strong>推送总是不成功？</strong></p> <ol><li><p>检查一下SSH秘钥配置好了吗</p></li> <li><p>看看什么错误，直接把前因后果告诉老师吧~~~</p></li> <li><p>实在不行，重新创建一个仓库试试，从头再来。</p></li></ol> <h2 id="多人协作"><a href="#多人协作" class="header-anchor">#</a> 多人协作</h2> <h3 id="管理员角色"><a href="#管理员角色" class="header-anchor">#</a> 管理员角色</h3> <ul><li>创建远程仓库 或 创建本地仓库之后推送到远程仓库
+<ul><li>初始化一个项目，<code>git init</code></li> <li>添加初始的代码到暂存区 <code>git add .</code></li> <li>提交初始的代码到本地仓库 <code>git commit -m &quot;提交了初始的代码&quot;</code></li></ul></li> <li>推送到远程仓库
+<ul><li><code>git remote add origin SSH地址</code></li> <li><code>git push -u origin master</code></li></ul></li> <li>邀请成员</li> <li>开发（add / commit / pull / push）
+<ul><li>编辑自己的代码</li> <li>把修改后的代码，添加到暂存区 <code>git add .</code></li> <li>把修改后的代码，推送到本地仓库 <code>git commit -m &quot;xxx&quot;</code></li> <li>如果有人在你之前推送了，则推送之前需要先拉取，将拉取下来的代码和你的代码合并 <code>git pull origin master</code></li> <li>合并如果有冲突，需要解决冲突，别忘记提交一次</li> <li>最后推送 <code>git push origin master</code></li></ul></li></ul> <h3 id="成员角色"><a href="#成员角色" class="header-anchor">#</a> 成员角色</h3> <ul><li>同意邀请</li> <li>克隆项目到本地（注意路径）
+<ul><li>执行 <code>git clone SSH地址</code> ，将项目克隆到本地。然后关闭黑窗口。</li> <li>进入项目文件夹，重新 <code>git Bash Here</code> 打开黑窗口，这样可以保证路径正确。</li></ul></li> <li>开发（add / commit / pull / push）
+<ul><li>编辑自己的代码</li> <li>把修改后的代码，添加到暂存区 <code>git add .</code></li> <li>把修改后的代码，推送到本地仓库 <code>git commit -m &quot;xxx&quot;</code></li> <li>如果有人在你之前推送了，则推送之前需要先拉取，将拉取下来的代码和你的代码合并 <code>git pull origin master</code></li> <li>合并如果有冲突，需要解决冲突，别忘记提交一次</li> <li>最后推送 <code>git push origin master</code></li></ul></li></ul> <h1 id="附录"><a href="#附录" class="header-anchor">#</a> 附录</h1> <h2 id="git忽略和移除文件"><a href="#git忽略和移除文件" class="header-anchor">#</a> Git忽略和移除文件</h2> <h3 id="移除文件"><a href="#移除文件" class="header-anchor">#</a> 移除文件</h3> <p>只把文件从仓库中移除</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> <span class="token function">rm</span> --cached 文件
+
+</code></pre></div><p>把文件从工作区和仓库中同时移除</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> <span class="token function">rm</span> -f 文件
+
+</code></pre></div><h3 id="git忽略文件"><a href="#git忽略文件" class="header-anchor">#</a> Git忽略文件</h3> <p>在项目中，创建 <code>.gitignore</code> 文件，它就是git的忽略文件，记录了哪些文件不被Git管理。</p> <p>如果有的文件已经被Git管理了，而又想设置为忽略文件，则需要使用 <code>git rm --cached 文件</code> 将文件从仓库中移除才有效。</p> <p>被成功忽略的文件，不会被添加到暂存区，不会被提交到本地仓库，不会被推送到远程仓库。这就是忽略的意思。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 展示 .gitignore 的写法</span>
+
+<span class="token comment"># 忽略当前目录中的 test 文件夹</span>
+/test
+
+<span class="token comment"># 忽略任何目录中的 test 文件夹</span>
+test/
+
+<span class="token comment"># 忽略任何目录中的 png 图片</span>
+/**/*.png
+
+</code></pre></div><h2 id="分支和远程相关命令"><a href="#分支和远程相关命令" class="header-anchor">#</a> 分支和远程相关命令</h2> <h3 id="推送分支"><a href="#推送分支" class="header-anchor">#</a> 推送分支</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> push -u 仓库别名 本地分支:远程分支
+
+<span class="token comment"># 比如，有个本地分支叫做 reg，推送到远程之后叫做 register</span>
+<span class="token function">git</span> push -u origin reg:register
+
+<span class="token comment"># 如果本地分支和远程分支同名，可以省略 :远程分支</span>
+<span class="token comment"># 比如，有个本地分支叫做dev，推送到远程也叫做dev</span>
+<span class="token function">git</span> push -u origin dev
+
+
+</code></pre></div><h3 id="查看远程分支"><a href="#查看远程分支" class="header-anchor">#</a> 查看远程分支</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> remote show 仓库别名
+
+<span class="token comment"># 比如，查看一个叫做码云的远程仓库的分支</span>
+<span class="token function">git</span> remote show mayun
+
+<span class="token comment"># 使用下面的命令也可以查看所有的分支，a表示all，所有的意思</span>
+<span class="token function">git</span> branch -a
+
+</code></pre></div><h3 id="跟踪-下载-检出-分支"><a href="#跟踪-下载-检出-分支" class="header-anchor">#</a> 跟踪（下载/检出）分支</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> checkout 远程分支名
+
+<span class="token comment"># 比如有个远程分支，叫做user，把他下载到本地也叫做user</span>
+<span class="token function">git</span> checkout user
+
+<span class="token comment"># 比如有个远程分支，叫做user，把他下载到本地叫做user2</span>
+<span class="token function">git</span> checkout -b user2 origin/user
+
+</code></pre></div><h3 id="删除远程分支"><a href="#删除远程分支" class="header-anchor">#</a> 删除远程分支</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> push origin --delete 分支名
+
+</code></pre></div><h2 id="vscode中的git"><a href="#vscode中的git" class="header-anchor">#</a> VSCode中的Git</h2> <p>点点鼠标，即可完成日常开发。</p> <p>工作也基本够用了。</p> <p>当你看到这里的时候，其实你可以不用马上记住那么多命令的。</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0d7c1303.js" defer></script><script src="/assets/js/2.1fe0b50b.js" defer></script><script src="/assets/js/10.2978dd1f.js" defer></script>
+  </body>
+</html>

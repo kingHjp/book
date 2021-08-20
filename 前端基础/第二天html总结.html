@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>第二天 | 笔记栈</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/assets/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.0d7c1303.js" as="script"><link rel="preload" href="/assets/js/2.1fe0b50b.js" as="script"><link rel="preload" href="/assets/js/86.90bb267e.js" as="script"><link rel="prefetch" href="/assets/js/10.2978dd1f.js"><link rel="prefetch" href="/assets/js/11.0dbaa531.js"><link rel="prefetch" href="/assets/js/12.32c02705.js"><link rel="prefetch" href="/assets/js/13.109a51a8.js"><link rel="prefetch" href="/assets/js/14.515ca27a.js"><link rel="prefetch" href="/assets/js/15.5ded3296.js"><link rel="prefetch" href="/assets/js/16.8bc52c4e.js"><link rel="prefetch" href="/assets/js/17.68df63de.js"><link rel="prefetch" href="/assets/js/18.89b1b877.js"><link rel="prefetch" href="/assets/js/19.901364af.js"><link rel="prefetch" href="/assets/js/20.5481b80d.js"><link rel="prefetch" href="/assets/js/21.2a144945.js"><link rel="prefetch" href="/assets/js/22.70831219.js"><link rel="prefetch" href="/assets/js/23.3b0c302e.js"><link rel="prefetch" href="/assets/js/24.878e1e96.js"><link rel="prefetch" href="/assets/js/25.9ff49721.js"><link rel="prefetch" href="/assets/js/26.093c8bdc.js"><link rel="prefetch" href="/assets/js/27.401b5c78.js"><link rel="prefetch" href="/assets/js/28.dc1c7c43.js"><link rel="prefetch" href="/assets/js/29.40e51e71.js"><link rel="prefetch" href="/assets/js/3.ac9d9143.js"><link rel="prefetch" href="/assets/js/30.b76a99b4.js"><link rel="prefetch" href="/assets/js/31.c3ef67ce.js"><link rel="prefetch" href="/assets/js/32.6c5637f7.js"><link rel="prefetch" href="/assets/js/33.a43732df.js"><link rel="prefetch" href="/assets/js/34.944b27fe.js"><link rel="prefetch" href="/assets/js/35.c2719e80.js"><link rel="prefetch" href="/assets/js/36.db5072a0.js"><link rel="prefetch" href="/assets/js/37.3aac3f33.js"><link rel="prefetch" href="/assets/js/38.ac02531c.js"><link rel="prefetch" href="/assets/js/39.b9d37857.js"><link rel="prefetch" href="/assets/js/4.e05c873c.js"><link rel="prefetch" href="/assets/js/40.750e94fc.js"><link rel="prefetch" href="/assets/js/41.941fe774.js"><link rel="prefetch" href="/assets/js/42.bcdffcaa.js"><link rel="prefetch" href="/assets/js/43.1188d721.js"><link rel="prefetch" href="/assets/js/44.0ba6bb4b.js"><link rel="prefetch" href="/assets/js/45.a98c08d8.js"><link rel="prefetch" href="/assets/js/46.1339ab8c.js"><link rel="prefetch" href="/assets/js/47.1e9f1793.js"><link rel="prefetch" href="/assets/js/48.0b65993c.js"><link rel="prefetch" href="/assets/js/49.98d284b0.js"><link rel="prefetch" href="/assets/js/5.f3e6ed41.js"><link rel="prefetch" href="/assets/js/50.40c11909.js"><link rel="prefetch" href="/assets/js/51.401f93f0.js"><link rel="prefetch" href="/assets/js/52.b0168dbe.js"><link rel="prefetch" href="/assets/js/53.8b60059b.js"><link rel="prefetch" href="/assets/js/54.161c06e4.js"><link rel="prefetch" href="/assets/js/55.afd26206.js"><link rel="prefetch" href="/assets/js/56.55d94850.js"><link rel="prefetch" href="/assets/js/57.ae35ff7c.js"><link rel="prefetch" href="/assets/js/58.96b6abba.js"><link rel="prefetch" href="/assets/js/59.91f247f9.js"><link rel="prefetch" href="/assets/js/6.498ab014.js"><link rel="prefetch" href="/assets/js/60.2b43d161.js"><link rel="prefetch" href="/assets/js/61.9ebe816a.js"><link rel="prefetch" href="/assets/js/62.bc73408a.js"><link rel="prefetch" href="/assets/js/63.f8745496.js"><link rel="prefetch" href="/assets/js/64.4ae7ce85.js"><link rel="prefetch" href="/assets/js/65.23ecc3e4.js"><link rel="prefetch" href="/assets/js/66.1d24d480.js"><link rel="prefetch" href="/assets/js/67.6042bfed.js"><link rel="prefetch" href="/assets/js/68.ed1e1ed8.js"><link rel="prefetch" href="/assets/js/69.28d1024d.js"><link rel="prefetch" href="/assets/js/7.3f5168c2.js"><link rel="prefetch" href="/assets/js/70.5ff6d4e4.js"><link rel="prefetch" href="/assets/js/71.bd57315c.js"><link rel="prefetch" href="/assets/js/72.e93c0d6e.js"><link rel="prefetch" href="/assets/js/73.4229454d.js"><link rel="prefetch" href="/assets/js/74.c2eb2bad.js"><link rel="prefetch" href="/assets/js/75.7eca9a4e.js"><link rel="prefetch" href="/assets/js/76.b83f903e.js"><link rel="prefetch" href="/assets/js/77.b9a22162.js"><link rel="prefetch" href="/assets/js/78.2450176d.js"><link rel="prefetch" href="/assets/js/79.ff4267c4.js"><link rel="prefetch" href="/assets/js/8.0e4354f9.js"><link rel="prefetch" href="/assets/js/80.abebe711.js"><link rel="prefetch" href="/assets/js/81.d8369dc4.js"><link rel="prefetch" href="/assets/js/82.5da13948.js"><link rel="prefetch" href="/assets/js/83.deb172fd.js"><link rel="prefetch" href="/assets/js/84.727650ec.js"><link rel="prefetch" href="/assets/js/85.50b1b4ef.js"><link rel="prefetch" href="/assets/js/9.de4e9e4c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="笔记栈" class="logo"> <span class="site-name can-hide">笔记栈</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/第一天html笔记/" class="nav-link">
+  html-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/第二天html总结/" class="nav-link">
+  html-two
+</a></li></ul></li><li class="dropdown-item"><h4>
+          css
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/css第一天/" class="nav-link">
+  css-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第二天/" class="nav-link">
+  css-two
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第三天/" class="nav-link">
+  css-twree
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第四天/" class="nav-link">
+  css-four
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day07-前端基础CSS第五天/" class="nav-link">
+  css-five
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day08-前端基础CSS第六天/" class="nav-link">
+  css-six
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day09-前端基础CSS第七天/" class="nav-link">
+  css-seven
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day10-HTML5&amp;CSS3提高/" class="nav-link">
+  css html提高
+</a></li><li class="dropdown-subitem"><a href="/前端基础/移动端/" class="nav-link">
+  移动端
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day01/" class="nav-link">
+  移动端布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/basis/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/js/senior/" class="nav-link">
+  JavaScript高级
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/webapinew/" class="nav-link">
+  webapi新
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/pk webapi/" class="nav-link">
+  webapi
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  es6
+</a></li><li class="dropdown-item"><!----> <a href="/js/跨域防抖节流 Promise/" class="nav-link">
+  跨域防抖节流
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git&amp;ajax&amp;JQ" class="dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow down"></span></button> <button type="button" aria-label="git&amp;ajax&amp;JQ" class="mobile-dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/Git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/ajax/Ajax/" class="nav-link">
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/jq/JQuery/" class="nav-link">
+  JQuery
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="node" class="dropdown-title"><span class="title">node</span> <span class="arrow down"></span></button> <button type="button" aria-label="node" class="mobile-dropdown-title"><span class="title">node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/Node入门及模块系统/" class="nav-link">
+  入门
+</a></li><li class="dropdown-item"><!----> <a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li><li class="dropdown-item"><!----> <a href="/node/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/node/Express/" class="nav-link">
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/node/接口测试工具/" class="nav-link">
+  接口测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/node/MySQL/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/node/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/node/ES6/" class="nav-link">
+  es6
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue基础/笔记/" class="nav-link">
+  vue基础
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前端路由/" class="nav-link">
+  前端路由
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前后端对接/" class="nav-link">
+  前后端交互
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/04-前端工程化/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/05-综合案例/" class="nav-link">
+  综合案例
+</a></li></ul></li><li class="dropdown-item"><h4>
+          vue进阶目录
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue进阶/vue进阶/" class="nav-link">
+  vue进阶
+</a></li><li class="dropdown-subitem"><a href="/vue/vuex/outline-vuex/" class="nav-link">
+  vuex
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue项目" class="dropdown-title"><span class="title">vue项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue项目" class="mobile-dropdown-title"><span class="title">vue项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          大事件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/project/头条移动/01-头条-Mobile-项目初始化/" class="nav-link">
+  头条移动
+</a></li><li class="dropdown-item"><!----> <a href="/project/头条综合案例/01-头条-PC-项目初始化/" class="nav-link">
+  头条pc综合案例
+</a></li><li class="dropdown-item"><!----> <a href="/project/中台/01-HR-项目初始化/" class="nav-link">
+  中台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题" class="dropdown-title"><span class="title">问题</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题" class="mobile-dropdown-title"><span class="title">问题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/question/question/" class="nav-link">
+  问题总结小册
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/第一天html笔记/" class="nav-link">
+  html-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/第二天html总结/" class="nav-link">
+  html-two
+</a></li></ul></li><li class="dropdown-item"><h4>
+          css
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/css第一天/" class="nav-link">
+  css-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第二天/" class="nav-link">
+  css-two
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第三天/" class="nav-link">
+  css-twree
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第四天/" class="nav-link">
+  css-four
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day07-前端基础CSS第五天/" class="nav-link">
+  css-five
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day08-前端基础CSS第六天/" class="nav-link">
+  css-six
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day09-前端基础CSS第七天/" class="nav-link">
+  css-seven
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day10-HTML5&amp;CSS3提高/" class="nav-link">
+  css html提高
+</a></li><li class="dropdown-subitem"><a href="/前端基础/移动端/" class="nav-link">
+  移动端
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day01/" class="nav-link">
+  移动端布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/basis/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/js/senior/" class="nav-link">
+  JavaScript高级
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/webapinew/" class="nav-link">
+  webapi新
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/pk webapi/" class="nav-link">
+  webapi
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  es6
+</a></li><li class="dropdown-item"><!----> <a href="/js/跨域防抖节流 Promise/" class="nav-link">
+  跨域防抖节流
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git&amp;ajax&amp;JQ" class="dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow down"></span></button> <button type="button" aria-label="git&amp;ajax&amp;JQ" class="mobile-dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/Git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/ajax/Ajax/" class="nav-link">
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/jq/JQuery/" class="nav-link">
+  JQuery
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="node" class="dropdown-title"><span class="title">node</span> <span class="arrow down"></span></button> <button type="button" aria-label="node" class="mobile-dropdown-title"><span class="title">node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/Node入门及模块系统/" class="nav-link">
+  入门
+</a></li><li class="dropdown-item"><!----> <a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li><li class="dropdown-item"><!----> <a href="/node/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/node/Express/" class="nav-link">
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/node/接口测试工具/" class="nav-link">
+  接口测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/node/MySQL/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/node/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/node/ES6/" class="nav-link">
+  es6
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue基础/笔记/" class="nav-link">
+  vue基础
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前端路由/" class="nav-link">
+  前端路由
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前后端对接/" class="nav-link">
+  前后端交互
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/04-前端工程化/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/05-综合案例/" class="nav-link">
+  综合案例
+</a></li></ul></li><li class="dropdown-item"><h4>
+          vue进阶目录
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue进阶/vue进阶/" class="nav-link">
+  vue进阶
+</a></li><li class="dropdown-subitem"><a href="/vue/vuex/outline-vuex/" class="nav-link">
+  vuex
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue项目" class="dropdown-title"><span class="title">vue项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue项目" class="mobile-dropdown-title"><span class="title">vue项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          大事件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/project/头条移动/01-头条-Mobile-项目初始化/" class="nav-link">
+  头条移动
+</a></li><li class="dropdown-item"><!----> <a href="/project/头条综合案例/01-头条-PC-项目初始化/" class="nav-link">
+  头条pc综合案例
+</a></li><li class="dropdown-item"><!----> <a href="/project/中台/01-HR-项目初始化/" class="nav-link">
+  中台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题" class="dropdown-title"><span class="title">问题</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题" class="mobile-dropdown-title"><span class="title">问题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/question/question/" class="nav-link">
+  问题总结小册
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>第二天</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#第二天" class="sidebar-link">第二天</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#表格" class="sidebar-link">表格</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#表格的主要作用" class="sidebar-link">表格的主要作用</a></li><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#表头单元格标签" class="sidebar-link">表头单元格标签：</a></li><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#表格属性" class="sidebar-link">表格属性：</a></li><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#表格结构标签" class="sidebar-link">表格结构标签：</a></li><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#合并单元格" class="sidebar-link">合并单元格：</a></li></ul></li><li><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#列表" class="sidebar-link">列表</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#无序" class="sidebar-link">无序：</a></li><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#有序" class="sidebar-link">有序：</a></li><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#自定义" class="sidebar-link">自定义：</a></li><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#列表总结" class="sidebar-link">列表总结</a></li></ul></li><li><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#表单" class="sidebar-link">表单</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#为什么需要表单" class="sidebar-link">为什么需要表单：</a></li><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#表单的组成" class="sidebar-link">表单的组成：</a></li><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#表单域" class="sidebar-link">表单域：</a></li><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#表单域的常用属性" class="sidebar-link">表单域的常用属性：</a></li><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#表单控件-表单元素" class="sidebar-link">表单控件(表单元素)</a></li><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#完成综合案例" class="sidebar-link">完成综合案例</a></li><li class="sidebar-sub-header"><a href="/%E5%89%8D%E7%AB%AF%E5%9F%BA%E7%A1%80/%E7%AC%AC%E4%BA%8C%E5%A4%A9html%E6%80%BB%E7%BB%93.html#查阅文档" class="sidebar-link">查阅文档：</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="第二天"><a href="#第二天" class="header-anchor">#</a> 第二天</h2> <h2 id="表格"><a href="#表格" class="header-anchor">#</a> 表格</h2> <h3 id="表格的主要作用"><a href="#表格的主要作用" class="header-anchor">#</a> 表格的主要作用</h3> <ol><li>表格主要用于显示、展示数据，因为它可以让数据显示的非常的规整，可读性非常好。特别是后台展示数据的时候，能够熟练运用表格就显得很重要。一个清爽简约的表格能够把繁杂的数据表现得很有条理</li> <li>表格不是用来布局页面的,而是用来展示数据的。</li></ol> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E8%A1%A8%E6%A0%BC1.png" alt="">
+​    3.表格的具体用法：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>单元格内的文字<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+    ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ol><li><code>&lt;table&gt; &lt;/table&gt;</code> 是用于定义表格的标签。</li> <li><code>&lt;tr&gt; &lt;/tr&gt;</code> 标签用于定义表格中的行，必须嵌套在<code>&lt;table&gt; &lt;/table&gt;</code>标签</li> <li><code>&lt;td&gt; &lt;/td&gt;</code> 用于定义表格中的单元格，必须嵌套在<code>&lt;tr&gt;&lt;/tr&gt;</code>标签中。</li> <li>字母 td 指表格数据（table data），即数据单元格的内容。</li></ol> <h3 id="表头单元格标签"><a href="#表头单元格标签" class="header-anchor">#</a> 表头单元格标签：</h3> <p>​        表头标签的具体实现：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>姓名<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
+    ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ol><li>一般表头单元格位于表格的第一行或第一列，表头单元格里面的文本内容加粗居中显示.<code>&lt;th&gt;</code> 标签表示 HTML 表格的表头部分(table head 的缩写)</li> <li>表头单元格也是单元格，常用于表格第一行突出重要性，表头单元格里面的文字会加粗居中</li></ol> <h3 id="表格属性"><a href="#表格属性" class="header-anchor">#</a> 表格属性：</h3> <p>​    1.表格标签这部分属性我们实际开发我们不常用，后面通过 CSS 来设置.
+​        <img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E8%A1%A8%E6%A0%BC%E5%B1%9E%E6%80%A7.png" alt="">
+​    完成下面综合案例：</p> <p>​    <img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E8%A1%A8%E6%A0%BC%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B.png" alt=""></p> <p>​    <strong>思路：</strong></p> <p><strong>先制作表格的结构.</strong></p> <p>1.第一行里面是 th 表头单元格</p> <p>2.第二行开始里面是 td 普通单元格单元格里面可以放任何元素</p> <p>3.文字链接图片等都可以</p> <p><strong>后书写表格属性</strong></p> <p>1.用到宽度高度边框 cellpadding 和 cellspacing</p> <p>2.表格浏览器中对齐 align</p> <h3 id="表格结构标签"><a href="#表格结构标签" class="header-anchor">#</a> 表格结构标签：</h3> <p>​    使用场景:
+​        因为表格可能很长,为了更好的表示表格的语义，可以将表格分割成 表格头部和表格主体两大部分.
+​    在表格标签中，分别用：<code>&lt;thead&gt;</code>标签 表格的头部区域、<code>&lt;tbody&gt;</code>标签 表格的主体区域. 这样可以更好的分清表格结构。</p> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E8%A1%A8%E6%A0%BC%E7%BB%93%E6%9E%84%E6%A0%87%E7%AD%BE.png" alt=""></p> <p><strong>总结:</strong>
+1. <code>&lt;thead&gt;&lt;/thead&gt;</code>：用于定义表格的头部。<code>&lt;thead&gt;</code> 内部必须拥有 <code>&lt;tr&gt;</code>标签。 一般是位于第一行。
+2. <code>&lt;tbody&gt;&lt;/tbody&gt;</code>：用于定义表格的主体，主要用于放数据本体 。
+3. 以上标签都是放在 <code>&lt;table&gt;&lt;/table&gt;</code> 标签中。</p> <h3 id="合并单元格"><a href="#合并单元格" class="header-anchor">#</a> 合并单元格：</h3> <p>​    特殊情况下,可以把多个单元格合并为一个单元格,  这里同学们会最简单的合并单元格即可.
+​    1.合并单元格方式
+​    2.目标单元格
+​    3.合并单元格的步骤
+​    如下图：</p> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E5%90%88%E5%B9%B6%E5%8D%95%E5%85%83%E6%A0%BC.png" alt=""></p> <p><strong>合并单元格方式：</strong></p> <p><strong>跨行合并</strong>：rowspan=&quot;合并单元格的个数&quot;</p> <p>​	最上侧单元格为目标单元格, 写合并代码</p> <p><strong>跨列合并</strong>：colspan=&quot;合并单元格的个数&quot;</p> <p>​	最左侧单元格为目标单元格, 写合并代码</p> <p><strong>合并单元格三步曲：</strong></p> <p>先确定是跨行还是跨列合并。</p> <p>找到目标单元格. 写上合并方式 = 合并的单元格数量。</p> <p>比如：<code>&lt;td colspan=&quot;2&quot;&gt;&lt;/td&gt;</code>。删除多余的单元格。</p> <p><strong>表格总结</strong></p> <p>​	表格学习整体可以分为三大部分:</p> <p><strong>表格的相关标签</strong></p> <p>​	table   thead  body  tr  th  td</p> <p><strong>表格的相关属性</strong></p> <p>​	cellspacing    cellpadding     width  height  border</p> <p><strong>合并单元格</strong></p> <p>​	  rowspan   collspan</p> <h2 id="列表"><a href="#列表" class="header-anchor">#</a> 列表</h2> <p>​    表格是用来显示数据的，那么列表就是用来布局的。
+​    列表最大的特点就是整齐、整洁、有序，它作为布局会更加自由和方便。
+​    根据使用情景不同，列表可以分为三大类：无序列表、有序列表和自定义列表。</p> <h3 id="无序"><a href="#无序" class="header-anchor">#</a> 无序：</h3> <p>​	<img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E6%97%A0%E5%BA%8F.png" alt=""></p> <p><code>&lt;ul&gt;</code> 标签表示 HTML 页面中项目的无序列表，一般会以项目符号呈现列表项，而列表项使用 <code>&lt;li&gt;</code>标签定义。无序列表的基本语法格式如下：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span> 
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>列表项1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>列表项2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>列表项3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span> 
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ol><li>无序列表的各个列表项之间没有顺序级别之分，是并列的。</li> <li><code>&lt;ul&gt;&lt;/ul&gt;</code> 中只能嵌套 <code>&lt;li&gt;&lt;/li&gt;</code>，直接在<code>&lt;ul&gt;&lt;/ul&gt;</code> 标签中输入其他标签或者文字的做法是不被允许的。<code>3.</code></li><li> 与 </li>` 之间相当于一个容器，可以容纳所有元素。 <li>无序列表会带有自己的样式属性，但在实际使用时，我们会使用 CSS 来设置。</li></ol> <h3 id="有序"><a href="#有序" class="header-anchor">#</a> 有序：</h3> <p>​	<img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E6%9C%89%E5%BA%8F.png" alt=""></p> <p>有序列表即为有排列顺序的列表，其各个列表项会按照一定的顺序排列定义。在 HTML 标签中，<code>&lt;ol&gt;</code> 标签用于定义有序列表，列表排序以数字来显示，并且使用 <code>&lt;li&gt;</code> 标签来定义列表项。有序列表的基本语法格式如下：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>列表项1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>列表项2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>列表项3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><ol><li><code>&lt;ol&gt;&lt;/ol&gt;</code>中只能嵌套<code>&lt;li&gt;&lt;/li&gt;</code>，直接在<code>&lt;ol&gt;&lt;/ol&gt;</code>标签中输入其他标签或者文字的做法是不被允许的。</li> <li><code>&lt;li&gt; 与 &lt;/li&gt;</code>之间相当于一个容器，可以容纳所有元素。</li> <li>有序列表会带有自己样式属性，但在实际使用时，我们会使用 CSS 来设置。</li></ol> <h3 id="自定义"><a href="#自定义" class="header-anchor">#</a> 自定义：</h3> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E8%87%AA%E5%AE%9A%E4%B9%89.png" alt=""></p> <p>自定义列表的使用场景:自定义列表常用于对术语或名词进行解释和描述，定义列表的列表项前没有任何项目符号。在 HTML 标签中，<code>&lt;dl&gt;</code>标签用于定义描述列表（或定义列表），该标签会与 <code>&lt;dt&gt;</code>（定义项目/名字）和 <code>&lt;dd&gt;</code>（描述每一个项目/名字）一起使用。语法如下：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">&gt;</span></span>名词1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">&gt;</span></span>名词1解释1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">&gt;</span></span>名词1解释2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">&gt;</span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="列表总结"><a href="#列表总结" class="header-anchor">#</a> 列表总结</h3> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E5%88%97%E8%A1%A8%E6%80%BB%E7%BB%93.png" alt=""></p> <h2 id="表单"><a href="#表单" class="header-anchor">#</a> 表单</h2> <p>现实中的表单：
+<img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E8%A1%A8%E5%8D%95%E9%A1%B5%E9%9D%A2.png" alt=""></p> <h3 id="为什么需要表单"><a href="#为什么需要表单" class="header-anchor">#</a> 为什么需要表单：</h3> <p>​    使用表单目的是为了收集用户信息。
+​    在我们网页中， 我们也需要跟用户进行交互，收集用户资料，此时就需要表单。</p> <h3 id="表单的组成"><a href="#表单的组成" class="header-anchor">#</a> 表单的组成：</h3> <p>​    在 HTML 中，一个完整的表单通常由表单域、表单控件（也称为表单元素）和 提示信息3个部分构成。</p> <h3 id="表单域"><a href="#表单域" class="header-anchor">#</a> 表单域：</h3> <p>​    表单域是一个包含表单元素的区域。
+​    在 HTML 标签中， <code>&lt;form&gt;</code> 标签用于定义表单域，以实现用户信息的收集和传递。
+​   <code>&lt;form&gt;</code>会把它范围内的表单元素信息提交给服务器.
+实现代码：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>url地址<span class="token punctuation">&quot;</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>提交方式<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>表单域名称<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+   各种表单元素控件
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h3 id="表单域的常用属性"><a href="#表单域的常用属性" class="header-anchor">#</a> 表单域的常用属性：</h3> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E8%A1%A8%E5%8D%95%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7.png" alt=""></p> <p>基础班来说,我们暂时不用表单域提交数据,只需要写上 form 标签即可.  就业班等学习服务器编程阶段会重新讲解.
+这里只需要记住两点:</p> <ol><li>在我们写表单元素之前,应该有个表单域把他们进行包含.</li> <li>表单域是 form标签.</li></ol> <h3 id="表单控件-表单元素"><a href="#表单控件-表单元素" class="header-anchor">#</a> 表单控件(表单元素)</h3> <h4 id="input-表单元素"><a href="#input-表单元素" class="header-anchor">#</a> <code>&lt;input&gt;</code> 表单元素</h4> <p>在英文单词中，input 是输入的意思，而在表单元素中<code>&lt;input&gt;</code> 标签用于收集用户信息。在<code>&lt;input&gt;</code>标签中，包含一个 type 属性，根据不同的 type 属性值，输入字段拥有很多种形式（可以是文本字段、复选框、掩码后的文本控件、单选按钮、按钮等）。</p> <p><code>&lt;input type=&quot;属性值&quot; /&gt;</code></p> <p><code>&lt;input /&gt;</code>标签为单标签 type 属性设置不同的属性值用来指定不同的控件类型</p> <p>type 属性的属性值及其描述如下：</p> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE.png" alt=""></p> <p>除 type 属性外，<code>&lt;input&gt;</code>标签还有其他很多属性，其常用属性如下：</p> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E8%A1%A8%E5%8D%95%E5%85%B6%E4%BB%96%E5%B1%9E%E6%80%A7.png" alt=""></p> <h4 id="label-标签"><a href="#label-标签" class="header-anchor">#</a> <code>&lt;label&gt;</code> 标签</h4> <p><code>&lt;label&gt;</code> 标签为 input 元素定义标注（标签）。
+<code>&lt;label&gt;</code> 标签用于绑定一个表单元素, 当点击<code>&lt;label&gt;</code>标签内的文本时，浏览器就会自动将焦点(光标)转到或者选择对应的表单元素上,用来增加用户体验.
+语法：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>sex<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>男<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>radio<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>sex<span class="token punctuation">&quot;</span></span>  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>sex<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre></div><p>核心： <code>&lt;label&gt;</code>标签的 for 属性应当与相关元素的 id 属性相同。</p> <h4 id="select-表单元素"><a href="#select-表单元素" class="header-anchor">#</a> <code>&lt;select&gt;</code> 表单元素</h4> <p>使用场景: 在页面中，如果有多个选项让用户选择，并且想要节约页面空间时，我们可以使用<code>&lt;select&gt;</code>标签控件定义下拉列表。</p> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8.png" alt=""></p> <p>语法：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">&gt;</span></span>选项1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">&gt;</span></span>选项2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">&gt;</span></span>选项3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h4 id="textarea-表单元素"><a href="#textarea-表单元素" class="header-anchor">#</a> <code>&lt;textarea&gt;</code>表单元素</h4> <ol><li>使用场景: 当用户输入内容较多的情况下，我们就不能使用文本框表单了，此时我们可以使用<code>&lt;textarea&gt;</code>标签。</li> <li>在表单元素中，<code>&lt;textarea&gt;</code> 标签是用于定义多行文本输入的控件。</li> <li>使用多行文本输入控件，可以输入更多的文字，该控件常见于留言板，评论。</li></ol> <p>语法：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span> <span class="token attr-name">rows</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>3<span class="token punctuation">&quot;</span></span> <span class="token attr-name">cols</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>20<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span> 文本内容 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>textarea</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>通过<code>&lt;textarea&gt;</code> 标签可以轻松地创建多行文本输入框。其中：rows=&quot;显示的行数&quot;，cols=&quot;每行中的字符数&quot;</p> <p>我们在实际开发中不会使用，都是用 CSS 来改变大小。</p> <p>表单元素我们学习了三大组</p> <ol><li>input 输入表单元素</li> <li>select 下拉表单元素</li> <li>textarea 文本域表单元素.</li></ol> <p>这三组表单元素都应该包含在form表单域里面,并且有 name 属性.</p> <p>具体代码：</p> <div class="language-html extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text <span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>username<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>jiguan<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span><span class="token punctuation">&gt;</span></span>北京<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textarea</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>message<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>textarea</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>有三个名字非常相似的标签:</p> <ol><li>表单域   form    使用场景:  提交区域内表单元素给后台服务器文件域</li> <li>file   是  input type 属性值   使用场景: 上传文件文本域</li> <li>textarea    使用场景:  可以输入多行文字, 比如留言板  网站介绍等…</li> <li>我们当前阶段不需要提交表单元素,所以我们只负责表单元素的外观形态即可.</li></ol> <h3 id="完成综合案例"><a href="#完成综合案例" class="header-anchor">#</a> 完成综合案例</h3> <h3 id="查阅文档"><a href="#查阅文档" class="header-anchor">#</a> 查阅文档：</h3> <p>​    经常查阅文档是一个非常好的学习习惯。
+​    推荐的网址：
+​    百度:  http://www.baidu.com
+​    W3C :  http://www.w3school.com.cn/
+​    MDN: https://developer.mozilla.org/zh-CN/</p></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0d7c1303.js" defer></script><script src="/assets/js/2.1fe0b50b.js" defer></script><script src="/assets/js/86.90bb267e.js" defer></script>
+  </body>
+</html>

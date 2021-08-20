@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>项目初始化 | 笔记栈</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/assets/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.0d7c1303.js" as="script"><link rel="preload" href="/assets/js/2.1fe0b50b.js" as="script"><link rel="preload" href="/assets/js/24.878e1e96.js" as="script"><link rel="prefetch" href="/assets/js/10.2978dd1f.js"><link rel="prefetch" href="/assets/js/11.0dbaa531.js"><link rel="prefetch" href="/assets/js/12.32c02705.js"><link rel="prefetch" href="/assets/js/13.109a51a8.js"><link rel="prefetch" href="/assets/js/14.515ca27a.js"><link rel="prefetch" href="/assets/js/15.5ded3296.js"><link rel="prefetch" href="/assets/js/16.8bc52c4e.js"><link rel="prefetch" href="/assets/js/17.68df63de.js"><link rel="prefetch" href="/assets/js/18.89b1b877.js"><link rel="prefetch" href="/assets/js/19.901364af.js"><link rel="prefetch" href="/assets/js/20.5481b80d.js"><link rel="prefetch" href="/assets/js/21.2a144945.js"><link rel="prefetch" href="/assets/js/22.70831219.js"><link rel="prefetch" href="/assets/js/23.3b0c302e.js"><link rel="prefetch" href="/assets/js/25.9ff49721.js"><link rel="prefetch" href="/assets/js/26.093c8bdc.js"><link rel="prefetch" href="/assets/js/27.401b5c78.js"><link rel="prefetch" href="/assets/js/28.dc1c7c43.js"><link rel="prefetch" href="/assets/js/29.40e51e71.js"><link rel="prefetch" href="/assets/js/3.ac9d9143.js"><link rel="prefetch" href="/assets/js/30.b76a99b4.js"><link rel="prefetch" href="/assets/js/31.c3ef67ce.js"><link rel="prefetch" href="/assets/js/32.6c5637f7.js"><link rel="prefetch" href="/assets/js/33.a43732df.js"><link rel="prefetch" href="/assets/js/34.944b27fe.js"><link rel="prefetch" href="/assets/js/35.c2719e80.js"><link rel="prefetch" href="/assets/js/36.db5072a0.js"><link rel="prefetch" href="/assets/js/37.3aac3f33.js"><link rel="prefetch" href="/assets/js/38.ac02531c.js"><link rel="prefetch" href="/assets/js/39.b9d37857.js"><link rel="prefetch" href="/assets/js/4.e05c873c.js"><link rel="prefetch" href="/assets/js/40.750e94fc.js"><link rel="prefetch" href="/assets/js/41.941fe774.js"><link rel="prefetch" href="/assets/js/42.bcdffcaa.js"><link rel="prefetch" href="/assets/js/43.1188d721.js"><link rel="prefetch" href="/assets/js/44.0ba6bb4b.js"><link rel="prefetch" href="/assets/js/45.a98c08d8.js"><link rel="prefetch" href="/assets/js/46.1339ab8c.js"><link rel="prefetch" href="/assets/js/47.1e9f1793.js"><link rel="prefetch" href="/assets/js/48.0b65993c.js"><link rel="prefetch" href="/assets/js/49.98d284b0.js"><link rel="prefetch" href="/assets/js/5.f3e6ed41.js"><link rel="prefetch" href="/assets/js/50.40c11909.js"><link rel="prefetch" href="/assets/js/51.401f93f0.js"><link rel="prefetch" href="/assets/js/52.b0168dbe.js"><link rel="prefetch" href="/assets/js/53.8b60059b.js"><link rel="prefetch" href="/assets/js/54.161c06e4.js"><link rel="prefetch" href="/assets/js/55.afd26206.js"><link rel="prefetch" href="/assets/js/56.55d94850.js"><link rel="prefetch" href="/assets/js/57.ae35ff7c.js"><link rel="prefetch" href="/assets/js/58.96b6abba.js"><link rel="prefetch" href="/assets/js/59.91f247f9.js"><link rel="prefetch" href="/assets/js/6.498ab014.js"><link rel="prefetch" href="/assets/js/60.2b43d161.js"><link rel="prefetch" href="/assets/js/61.9ebe816a.js"><link rel="prefetch" href="/assets/js/62.bc73408a.js"><link rel="prefetch" href="/assets/js/63.f8745496.js"><link rel="prefetch" href="/assets/js/64.4ae7ce85.js"><link rel="prefetch" href="/assets/js/65.23ecc3e4.js"><link rel="prefetch" href="/assets/js/66.1d24d480.js"><link rel="prefetch" href="/assets/js/67.6042bfed.js"><link rel="prefetch" href="/assets/js/68.ed1e1ed8.js"><link rel="prefetch" href="/assets/js/69.28d1024d.js"><link rel="prefetch" href="/assets/js/7.3f5168c2.js"><link rel="prefetch" href="/assets/js/70.5ff6d4e4.js"><link rel="prefetch" href="/assets/js/71.bd57315c.js"><link rel="prefetch" href="/assets/js/72.e93c0d6e.js"><link rel="prefetch" href="/assets/js/73.4229454d.js"><link rel="prefetch" href="/assets/js/74.c2eb2bad.js"><link rel="prefetch" href="/assets/js/75.7eca9a4e.js"><link rel="prefetch" href="/assets/js/76.b83f903e.js"><link rel="prefetch" href="/assets/js/77.b9a22162.js"><link rel="prefetch" href="/assets/js/78.2450176d.js"><link rel="prefetch" href="/assets/js/79.ff4267c4.js"><link rel="prefetch" href="/assets/js/8.0e4354f9.js"><link rel="prefetch" href="/assets/js/80.abebe711.js"><link rel="prefetch" href="/assets/js/81.d8369dc4.js"><link rel="prefetch" href="/assets/js/82.5da13948.js"><link rel="prefetch" href="/assets/js/83.deb172fd.js"><link rel="prefetch" href="/assets/js/84.727650ec.js"><link rel="prefetch" href="/assets/js/85.50b1b4ef.js"><link rel="prefetch" href="/assets/js/86.90bb267e.js"><link rel="prefetch" href="/assets/js/9.de4e9e4c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="笔记栈" class="logo"> <span class="site-name can-hide">笔记栈</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/第一天html笔记/" class="nav-link">
+  html-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/第二天html总结/" class="nav-link">
+  html-two
+</a></li></ul></li><li class="dropdown-item"><h4>
+          css
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/css第一天/" class="nav-link">
+  css-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第二天/" class="nav-link">
+  css-two
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第三天/" class="nav-link">
+  css-twree
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第四天/" class="nav-link">
+  css-four
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day07-前端基础CSS第五天/" class="nav-link">
+  css-five
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day08-前端基础CSS第六天/" class="nav-link">
+  css-six
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day09-前端基础CSS第七天/" class="nav-link">
+  css-seven
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day10-HTML5&amp;CSS3提高/" class="nav-link">
+  css html提高
+</a></li><li class="dropdown-subitem"><a href="/前端基础/移动端/" class="nav-link">
+  移动端
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day01/" class="nav-link">
+  移动端布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/basis/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/js/senior/" class="nav-link">
+  JavaScript高级
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/webapinew/" class="nav-link">
+  webapi新
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/pk webapi/" class="nav-link">
+  webapi
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  es6
+</a></li><li class="dropdown-item"><!----> <a href="/js/跨域防抖节流 Promise/" class="nav-link">
+  跨域防抖节流
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git&amp;ajax&amp;JQ" class="dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow down"></span></button> <button type="button" aria-label="git&amp;ajax&amp;JQ" class="mobile-dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/Git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/ajax/Ajax/" class="nav-link">
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/jq/JQuery/" class="nav-link">
+  JQuery
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="node" class="dropdown-title"><span class="title">node</span> <span class="arrow down"></span></button> <button type="button" aria-label="node" class="mobile-dropdown-title"><span class="title">node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/Node入门及模块系统/" class="nav-link">
+  入门
+</a></li><li class="dropdown-item"><!----> <a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li><li class="dropdown-item"><!----> <a href="/node/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/node/Express/" class="nav-link">
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/node/接口测试工具/" class="nav-link">
+  接口测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/node/MySQL/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/node/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/node/ES6/" class="nav-link">
+  es6
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue基础/笔记/" class="nav-link">
+  vue基础
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前端路由/" class="nav-link">
+  前端路由
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前后端对接/" class="nav-link">
+  前后端交互
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/04-前端工程化/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/05-综合案例/" class="nav-link">
+  综合案例
+</a></li></ul></li><li class="dropdown-item"><h4>
+          vue进阶目录
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue进阶/vue进阶/" class="nav-link">
+  vue进阶
+</a></li><li class="dropdown-subitem"><a href="/vue/vuex/outline-vuex/" class="nav-link">
+  vuex
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue项目" class="dropdown-title"><span class="title">vue项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue项目" class="mobile-dropdown-title"><span class="title">vue项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          大事件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/project/头条移动/01-头条-Mobile-项目初始化/" class="nav-link">
+  头条移动
+</a></li><li class="dropdown-item"><!----> <a href="/project/头条综合案例/01-头条-PC-项目初始化/" class="nav-link">
+  头条pc综合案例
+</a></li><li class="dropdown-item"><!----> <a href="/project/中台/01-HR-项目初始化/" class="nav-link">
+  中台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题" class="dropdown-title"><span class="title">问题</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题" class="mobile-dropdown-title"><span class="title">问题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/question/question/" class="nav-link">
+  问题总结小册
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/第一天html笔记/" class="nav-link">
+  html-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/第二天html总结/" class="nav-link">
+  html-two
+</a></li></ul></li><li class="dropdown-item"><h4>
+          css
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/css第一天/" class="nav-link">
+  css-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第二天/" class="nav-link">
+  css-two
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第三天/" class="nav-link">
+  css-twree
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第四天/" class="nav-link">
+  css-four
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day07-前端基础CSS第五天/" class="nav-link">
+  css-five
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day08-前端基础CSS第六天/" class="nav-link">
+  css-six
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day09-前端基础CSS第七天/" class="nav-link">
+  css-seven
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day10-HTML5&amp;CSS3提高/" class="nav-link">
+  css html提高
+</a></li><li class="dropdown-subitem"><a href="/前端基础/移动端/" class="nav-link">
+  移动端
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day01/" class="nav-link">
+  移动端布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/basis/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/js/senior/" class="nav-link">
+  JavaScript高级
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/webapinew/" class="nav-link">
+  webapi新
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/pk webapi/" class="nav-link">
+  webapi
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  es6
+</a></li><li class="dropdown-item"><!----> <a href="/js/跨域防抖节流 Promise/" class="nav-link">
+  跨域防抖节流
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git&amp;ajax&amp;JQ" class="dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow down"></span></button> <button type="button" aria-label="git&amp;ajax&amp;JQ" class="mobile-dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/Git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/ajax/Ajax/" class="nav-link">
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/jq/JQuery/" class="nav-link">
+  JQuery
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="node" class="dropdown-title"><span class="title">node</span> <span class="arrow down"></span></button> <button type="button" aria-label="node" class="mobile-dropdown-title"><span class="title">node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/Node入门及模块系统/" class="nav-link">
+  入门
+</a></li><li class="dropdown-item"><!----> <a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li><li class="dropdown-item"><!----> <a href="/node/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/node/Express/" class="nav-link">
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/node/接口测试工具/" class="nav-link">
+  接口测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/node/MySQL/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/node/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/node/ES6/" class="nav-link">
+  es6
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue基础/笔记/" class="nav-link">
+  vue基础
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前端路由/" class="nav-link">
+  前端路由
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前后端对接/" class="nav-link">
+  前后端交互
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/04-前端工程化/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/05-综合案例/" class="nav-link">
+  综合案例
+</a></li></ul></li><li class="dropdown-item"><h4>
+          vue进阶目录
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue进阶/vue进阶/" class="nav-link">
+  vue进阶
+</a></li><li class="dropdown-subitem"><a href="/vue/vuex/outline-vuex/" class="nav-link">
+  vuex
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue项目" class="dropdown-title"><span class="title">vue项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue项目" class="mobile-dropdown-title"><span class="title">vue项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          大事件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/project/头条移动/01-头条-Mobile-项目初始化/" class="nav-link">
+  头条移动
+</a></li><li class="dropdown-item"><!----> <a href="/project/头条综合案例/01-头条-PC-项目初始化/" class="nav-link">
+  头条pc综合案例
+</a></li><li class="dropdown-item"><!----> <a href="/project/中台/01-HR-项目初始化/" class="nav-link">
+  中台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题" class="dropdown-title"><span class="title">问题</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题" class="mobile-dropdown-title"><span class="title">问题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/question/question/" class="nav-link">
+  问题总结小册
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>中台</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/project/%E4%B8%AD%E5%8F%B0/" aria-current="page" class="sidebar-link">Home</a></li><li><a href="/project/中台/01-HR-项目初始化.html" class="active sidebar-link">项目初始化</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/project/中台/01-HR-项目初始化.html#项目介绍" class="sidebar-link">项目介绍</a></li><li class="sidebar-sub-header"><a href="/project/中台/01-HR-项目初始化.html#vue-element-admin介绍" class="sidebar-link">vue-element-admin介绍</a></li><li class="sidebar-sub-header"><a href="/project/中台/01-HR-项目初始化.html#初始化项目" class="sidebar-link">初始化项目</a></li><li class="sidebar-sub-header"><a href="/project/中台/01-HR-项目初始化.html#基于git管理项目" class="sidebar-link">基于git管理项目</a></li><li class="sidebar-sub-header"><a href="/project/中台/01-HR-项目初始化.html#项目目录结构分析" class="sidebar-link">项目目录结构分析</a></li><li class="sidebar-sub-header"><a href="/project/中台/01-HR-项目初始化.html#项目主要代码分析" class="sidebar-link">项目主要代码分析</a></li><li class="sidebar-sub-header"><a href="/project/中台/01-HR-项目初始化.html#vue中实现组件的模板方式" class="sidebar-link">Vue中实现组件的模板方式</a></li><li class="sidebar-sub-header"><a href="/project/中台/01-HR-项目初始化.html#关于虚拟dom的理解vnode" class="sidebar-link">关于虚拟DOM的理解VNode</a></li><li class="sidebar-sub-header"><a href="/project/中台/01-HR-项目初始化.html#基于git管理项目代码" class="sidebar-link">基于git管理项目代码</a></li><li class="sidebar-sub-header"><a href="/project/中台/01-HR-项目初始化.html#api模块介绍" class="sidebar-link">API模块介绍</a></li><li class="sidebar-sub-header"><a href="/project/中台/01-HR-项目初始化.html#项目公共样式处理" class="sidebar-link">项目公共样式处理</a></li></ul></li><li><a href="/project/中台/02-HR-登录模块.html" class="sidebar-link">登录模块</a></li><li><a href="/project/中台/03-HR-主页模块.html" class="sidebar-link">主页模块</a></li><li><a href="/project/中台/04-HR-路由配置.html" class="sidebar-link">路由配置</a></li><li><a href="/project/中台/05-HR-组织架构模块.html" class="sidebar-link">组织架构模块</a></li><li><a href="/project/中台/06-HR-角色管理模块.html" class="sidebar-link">角色管理模块</a></li><li><a href="/project/中台/07-HR-01-员工管理模块.html" class="sidebar-link">员工管理模块</a></li><li><a href="/project/中台/07-HR-02-员工详情模块.html" class="sidebar-link">员工详情</a></li><li><a href="/project/中台/08-HR-权限管理模块.html" class="sidebar-link">权限管理模块</a></li><li><a href="/project/中台/09-HR-其他模块集成.html" class="sidebar-link">其他模块集成</a></li><li><a href="/project/中台/10-HR-主页日历图表.html" class="sidebar-link">主页日历图表</a></li><li><a href="/project/中台/11-HR-多语言全屏.html" class="sidebar-link">多语言全屏主题切换</a></li><li><a href="/project/中台/12-HR-打包上线.html" class="sidebar-link">打包上线</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="项目初始化"><a href="#项目初始化" class="header-anchor">#</a> 项目初始化</h1> <h2 id="项目介绍"><a href="#项目介绍" class="header-anchor">#</a> 项目介绍</h2> <ul><li><a href="http://ihrm-java.itheima.net/#/login" target="_blank" rel="noopener noreferrer">项目演示地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <blockquote><p>总结：项目主要用于人力资源相关流程的信息管理（类似于OA）</p> <p>员工管理；角色管理；权限管理；授权流程分析；组织架构。</p></blockquote> <h2 id="vue-element-admin介绍"><a href="#vue-element-admin介绍" class="header-anchor">#</a> vue-element-admin介绍</h2> <blockquote><p><strong><code>目标</code></strong>: 熟悉通用的 vue后台集成方案**<code>vue-element-admin</code>**基本用法</p> <p><a href="https://panjiachen.gitee.io/vue-element-admin-site/zh/" target="_blank" rel="noopener noreferrer">vue-element-admin<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 是一个后台前端解决方案，它基于 <a href="https://github.com/vuejs/vue" target="_blank" rel="noopener noreferrer">vue<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a> 和 <a href="https://github.com/ElemeFE/element" target="_blank" rel="noopener noreferrer">element-ui<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>实现。</p> <p>它使用了最新的前端技术栈，内置国际化解决方案，动态路由，权限验证，提炼了典型的业务模型，提供了丰富的功能组件，可以帮助你快速搭建企业级中后台产品原型。</p> <p>集成方案：<a href="https://github.com/PanJiaChen/vue-element-admin" target="_blank" rel="noopener noreferrer">vue-element-admin<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>基础模板：<a href="https://github.com/PanJiaChen/vue-admin-template" target="_blank" rel="noopener noreferrer">vue-admin-template<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p></blockquote> <ul><li>集成方案预览</li></ul> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 拉取代码</span>
+<span class="token function">git</span> clone https://github.com/PanJiaChen/vue-element-admin.git
+<span class="token comment"># 切换到具体目录下</span>
+<span class="token builtin class-name">cd</span> vue-element-admin
+<span class="token comment"># 用 npm i 下载依赖包</span>
+<span class="token function">npm</span> i 
+<span class="token comment"># 启动开发调试模式  查看package.json文件的scripts可知晓启动命令</span>
+<span class="token function">npm</span> run dev
+</code></pre></div><blockquote><p>集成方案并不适合我们直接拿来进行二次开发，<a href="https://github.com/PanJiaChen/vue-admin-template" target="_blank" rel="noopener noreferrer">基础模板<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>则是一个更好的选择。</p> <p>基础模板, 包含了基本的 <strong>登录 / 鉴权 / 主页布局</strong> 功能模板, 我们可以直接在该模板上进行功能的扩展和项目的二次开发。</p> <p>总结：vue-element-admin是一个基于Vue和Element-UI封装的一个后台管理系统的可以快速创建项目基本原型的包，集成方案提供可非常丰富的业务功能模块；基础版本提供最基础的项目架构，方便进行</p></blockquote> <h2 id="初始化项目"><a href="#初始化项目" class="header-anchor">#</a> 初始化项目</h2> <blockquote><p><strong><code>目标</code></strong>: 熟悉搭建一个vue中台项目的基本流程</p></blockquote> <ol><li>拉取基础模板代码</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> clone https://github.com/PanJiaChen/vue-admin-template.git
+</code></pre></div><ol start="2"><li>安装项目依赖包</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> i
+</code></pre></div><ol start="3"><li>启动项目</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">npm</span> run dev
+</code></pre></div><h2 id="基于git管理项目"><a href="#基于git管理项目" class="header-anchor">#</a> 基于git管理项目</h2> <ul><li>git init 初始化仓库</li> <li>git add  添加所有代码到暂存区</li> <li>git commit  提交初始版本</li> <li>git remote add origin https://gitee.com/byte1031/vue-admin-template.git  添加远程仓库别名</li> <li>git push -u origin master  推送到远程</li></ul> <h2 id="项目目录结构分析"><a href="#项目目录结构分析" class="header-anchor">#</a> 项目目录结构分析</h2> <blockquote><p><strong><code>目标</code></strong>: 熟悉基础模板的项目目录结构</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code>├── build                      <span class="token comment"># 构建打包相关</span>
+├── mock                       <span class="token comment"># 项目mock 模拟数据</span>
+├── public                     <span class="token comment"># 静态资源</span>
+│   │── favicon.ico            <span class="token comment"># favicon图标</span>
+│   └── index.html             <span class="token comment"># html模板</span>
+├── src                        <span class="token comment"># 源代码</span>
+│   ├── api                    <span class="token comment"># 所有请求</span>
+│   ├── assets                 <span class="token comment"># 主题 字体等静态资源</span>
+│   ├── components             <span class="token comment"># 全局公用组件</span>
+│   ├── icons                  <span class="token comment"># 项目所有 svg icons</span>
+│   ├── layout                 <span class="token comment"># 全局 layout</span>
+│   ├── router                 <span class="token comment"># 路由</span>
+│   ├── store                  <span class="token comment"># 全局 store管理</span>
+│   ├── styles                 <span class="token comment"># 全局样式</span>
+│   ├── utils                  <span class="token comment"># 全局公用方法</span>
+│   ├── vendor                 <span class="token comment"># 公用vendor</span>
+│   ├── views                  <span class="token comment"># views 所有页面</span>
+│   ├── App.vue                <span class="token comment"># 入口页面</span>
+│   ├── main.js                <span class="token comment"># 入口文件 加载组件 初始化等</span>
+│   └── permission.js          <span class="token comment"># 权限管理</span>
+│   └── settings.js            <span class="token comment"># 配置文件</span>
+├── tests                      <span class="token comment"># 测试</span>
+├── .env.xxx                   <span class="token comment"># 环境变量配置</span>
+├── .eslintrc.js               <span class="token comment"># eslint 配置项</span>
+├── .babelrc                   <span class="token comment"># babel-loader 配置</span>
+├── .travis.yml                <span class="token comment"># 自动化CI配置</span>
+├── vue.config.js              <span class="token comment"># vue-cli 配置</span>
+├── postcss.config.js          <span class="token comment"># postcss 配置</span>
+└── package.json               <span class="token comment"># package.json</span>
+</code></pre></div><blockquote><p>此时,你可能会<strong>眼花缭乱</strong>, 因为生成的目录里面有太多的文件 我们在做项目时 其中最关注的就是**<code>src</code>**目录, 里面是所有的源代码和资源, 至于其他目录, 都是对项目的环境和工具的配置。</p></blockquote> <h2 id="项目主要代码分析"><a href="#项目主要代码分析" class="header-anchor">#</a> 项目主要代码分析</h2> <blockquote><p><strong><code>目标</code></strong>: 熟悉当前模板的基本运行机制和基础架构</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code>├── src                        <span class="token comment"># 源代码</span>
+│   ├── api                    <span class="token comment"># 所有请求</span>
+│   ├── assets                 <span class="token comment"># 主题 字体等静态资源</span>
+│   ├── components             <span class="token comment"># 全局公用组件</span>
+│   ├── icons                  <span class="token comment"># 项目所有 svg icons</span>
+│   ├── layout                 <span class="token comment"># 全局 layout</span>
+│   ├── router                 <span class="token comment"># 路由</span>
+│   ├── store                  <span class="token comment"># 全局 store管理</span>
+│   ├── styles                 <span class="token comment"># 全局样式</span>
+│   ├── utils                  <span class="token comment"># 全局公用方法</span>
+│   ├── vendor                 <span class="token comment"># 公用vendor</span>
+│   ├── views                  <span class="token comment"># views 所有页面</span>
+│   ├── App.vue                <span class="token comment"># 入口页面</span>
+│   ├── main.js                <span class="token comment"># 入口文件 加载组件 初始化等</span>
+│   └── permission.js          <span class="token comment"># 权限管理</span>
+│   └── settings.js            <span class="token comment"># 配置文件</span>
+</code></pre></div><h3 id="main-js"><a href="#main-js" class="header-anchor">#</a> main.js</h3> <blockquote><p>项目入口文件主要实现如下功能</p></blockquote> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20210216103338274.png" alt="image-20210216103338274"></p> <blockquote><p>总结：</p> <ol><li>导入相关的资源（样式）</li> <li>导入并配置ElementUI</li> <li>导入图标</li> <li>导入权限控制模块</li> <li>导入路由</li> <li>导入store</li> <li>配置跟组件</li></ol></blockquote> <h3 id="app-vue"><a href="#app-vue" class="header-anchor">#</a> App.vue</h3> <blockquote><p>项目根组件主要提供如下功能</p></blockquote> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20210216103509352.png" alt="image-20210216103509352"></p> <blockquote><p>总结</p> <ol><li>左侧菜单</li> <li>右侧内容区（顶部导航；下面内容区）</li> <li>左侧菜单又进行了子组件拆分</li></ol> <p>注意：关于直接导入导出的写法要理解</p> <p><code>export { default as AppMain } from './AppMain'</code></p></blockquote> <h3 id="permission-js"><a href="#permission-js" class="header-anchor">#</a> permission.js</h3> <blockquote><p><strong><code>permission.js</code></strong> 是控制页面登录权限(路由访问)的文件， 我们可以先将此处的代码进行注释或删除，现在还没做登录拦截，等我们构建权限功能时，再从0到1进行构建。</p></blockquote> <ul><li>将代码进行注释</li></ul> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20210216103659777.png" alt="image-20210216103659777"></p> <h3 id="settings-js"><a href="#settings-js" class="header-anchor">#</a> settings.js</h3> <blockquote><p>**<code>settings.js</code>**则是对于一些项目信息的配置，里面有三个属性</p> <p><strong><code>title</code></strong>(项目名称)，</p> <p><strong><code>fixedHeader</code></strong>（固定头部）</p> <p><strong><code>sidebarLogo</code></strong>（显示左侧菜单logo）</p> <p>**<code>settings.js</code>**中的文件在其他的位置会引用到，所以这里暂时不去对该文件进行变动</p></blockquote> <h3 id="vuex结构"><a href="#vuex结构" class="header-anchor">#</a> Vuex结构</h3> <blockquote><p>当前的Vuex结构采用了模块形式进行管理共享状态，其架构如下</p></blockquote> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20210216103849198.png" alt="image-20210216103849198"></p> <ul><li>其中app.js模块和settings.js模块，功能已经完备，不需要再进行修改。 user.js模块是我们后期需要重点开发的内容，所以这里我们将user.js里面的内容删除，并且导出一个默认配置</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">default</span>  <span class="token punctuation">{</span>
+  namespaced<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  state<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  mutations<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  actions<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>同时，由于getters中引用了user中的状态，所以我们将getters中的状态改为</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> getters <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">sidebar</span><span class="token operator">:</span> <span class="token parameter">state</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>app<span class="token punctuation">.</span>sidebar<span class="token punctuation">,</span>
+  <span class="token function-variable function">device</span><span class="token operator">:</span> <span class="token parameter">state</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>app<span class="token punctuation">.</span>device
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> getters
+</code></pre></div><blockquote><p>总结：</p> <ol><li>默认有三个模块</li></ol> <ul><li>app和settings是完整的模块；user模块需要自己实现</li></ul> <p>注意：模块中的state状态的值的类型（对象或者函数需要进行验证）</p></blockquote> <h3 id="scss"><a href="#scss" class="header-anchor">#</a> scss</h3> <blockquote><p>该项目还使用了<a href="https://www.sass.hk/" target="_blank" rel="noopener noreferrer">scss<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>作为css的扩展语言，在**<code>styles</code>**目录下，我们可以发现scss的相关文件</p> <ol><li>less</li> <li>sass/scss</li> <li>stylus</li></ol></blockquote> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20210216111548825.png" alt="image-20210216111548825"></p> <blockquote><p>样式导入：入口文件index.scss;间接导入其他样式</p></blockquote> <h3 id="icons"><a href="#icons" class="header-anchor">#</a> icons</h3> <blockquote><p>图标的文件结构如下</p></blockquote> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20210216111619982.png" alt="image-20210216111619982"></p> <blockquote><p>总结：如何使用svg图标？</p> <ol><li>把图标svg文件复制到icons/svg目录中</li> <li>使用svg-icon全局组件配置图标</li></ol> <p><code>&lt;svg-icon class-name='abc' icon-class='user'&gt;&lt;/svg-icon&gt;</code></p> <ul><li><p>iconClass的值是svg文件的名称</p></li> <li><p>className可以定制图标的样式</p></li></ul></blockquote> <ul><li>使用svg图标的位置 <code>@/src/layout/components/SideBar/Item.vue</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token function">render</span><span class="token punctuation">(</span><span class="token parameter">h<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> icon<span class="token punctuation">,</span> title <span class="token punctuation">}</span> <span class="token operator">=</span> context<span class="token punctuation">.</span>props
+    <span class="token comment">// vnodes数组中放的是什么？字体图标的标签，或者svg组件标签</span>
+    <span class="token comment">// vnodes = [&lt;i&gt;&lt;/i&gt;, &lt;svg-icon&gt;&lt;/svg-icon&gt;]</span>
+    <span class="token comment">// vnodes中本质上放的是组件的实例对象</span>
+    <span class="token comment">// vnodes = [{}, {props,data,watch,computed}]</span>
+    <span class="token keyword">const</span> vnodes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>icon<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>icon<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span><span class="token string">'el-icon'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        vnodes<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>i <span class="token keyword">class</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">[</span>icon<span class="token punctuation">,</span> <span class="token string">'sub-el-icon'</span><span class="token punctuation">]</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        vnodes<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>svg<span class="token operator">-</span>icon icon<span class="token operator">-</span><span class="token keyword">class</span><span class="token operator">=</span><span class="token punctuation">{</span>icon<span class="token punctuation">}</span><span class="token operator">/</span><span class="token operator">&gt;</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>title<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      vnodes<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>span slot<span class="token operator">=</span><span class="token string">'title'</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">(</span>title<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>span<span class="token operator">&gt;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> vnodes
+<span class="token punctuation">}</span>
+</code></pre></div><blockquote><p>总结：字体图标的用法；render函数的作用</p> <p>主要：组件标签的属性不可以使用驼峰的方式，需要转换为短横线方式</p></blockquote> <h2 id="vue中实现组件的模板方式"><a href="#vue中实现组件的模板方式" class="header-anchor">#</a> Vue中实现组件的模板方式</h2> <blockquote><p>Vue组件的模板由如下三种写法</p></blockquote> <ul><li>template</li> <li>el</li> <li>render</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'my-com'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  template<span class="token operator">:</span> <span class="token string">'&lt;div&gt;hello&lt;/div&gt;'</span><span class="token punctuation">,</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      msg<span class="token operator">:</span> <span class="token string">''</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// --------------------------</span>
+<span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  el<span class="token operator">:</span> <span class="token string">'#app'</span><span class="token punctuation">,</span>
+  data<span class="token operator">:</span> <span class="token punctuation">{</span>
+    msg<span class="token operator">:</span> <span class="token string">''</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment">// --------------------------</span>
+<span class="token comment">// &lt;anchored-heading&gt;hello&lt;/anchored-heading&gt;</span>
+<span class="token comment">// 本质上template里面的字符串模板运行时也会编译为render函数</span>
+Vue<span class="token punctuation">.</span><span class="token function">component</span><span class="token punctuation">(</span><span class="token string">'anchored-heading'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">createElement</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// createElement函数的参数</span>
+    <span class="token comment">// 参数一，表示标签名称</span>
+    <span class="token comment">// 参数二，表示里面的内容子元素</span>
+    <span class="token keyword">return</span> <span class="token function">createElement</span><span class="token punctuation">(</span>
+      <span class="token string">'h'</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>level<span class="token punctuation">,</span>   <span class="token comment">// 标签名称</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>$slots<span class="token punctuation">.</span>default <span class="token comment">// 子节点数组(default表示默认插槽的名称)</span>
+    <span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  props<span class="token operator">:</span> <span class="token punctuation">{</span>
+    level<span class="token operator">:</span> <span class="token punctuation">{</span>
+      type<span class="token operator">:</span> Number<span class="token punctuation">,</span>
+      required<span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><blockquote><p>梳理：</p> <ol><li>如何使用svg图标</li> <li>左侧菜单使用图标时有点儿特殊（模板用到了render）</li> <li>关于组件的模板的用法</li> <li>为了加强对render的理解，需要补充虚拟DOM的概念</li></ol></blockquote> <h2 id="关于虚拟dom的理解vnode"><a href="#关于虚拟dom的理解vnode" class="header-anchor">#</a> 关于虚拟DOM的理解VNode</h2> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20210403162208634.png" alt="image-20210403162208634"></p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>info<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>active<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token plain-text">hello</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token comment">// 其中一个节点称之为虚拟节点 VNode</span>
+<span class="token keyword">var</span> vnode <span class="token operator">=</span> <span class="token punctuation">{</span>
+  tagName<span class="token operator">:</span> <span class="token string">'div'</span><span class="token punctuation">,</span>
+  attrs<span class="token operator">:</span> <span class="token punctuation">{</span>
+    id<span class="token operator">:</span> <span class="token string">'info'</span><span class="token punctuation">,</span>
+    <span class="token keyword">class</span><span class="token operator">:</span> <span class="token string">'active'</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  children<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'hello'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 虚拟的<span class="token constant">DOM</span>转成真实的<span class="token constant">DOM</span> <span class="token operator">--</span><span class="token operator">&gt;</span>
+<span class="token keyword">var</span> div <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span>vnode<span class="token punctuation">.</span>tagName<span class="token punctuation">)</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> vnode<span class="token punctuation">.</span>attrs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  div<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> vnode<span class="token punctuation">.</span>attrs<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+vnode<span class="token punctuation">.</span>children<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  div<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="基于git管理项目代码"><a href="#基于git管理项目代码" class="header-anchor">#</a> 基于git管理项目代码</h2> <blockquote><p><code>目标</code>：能够基于git管理项目代码</p></blockquote> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 初始化项目</span>
+<span class="token function">git</span> init
+<span class="token comment"># 将修改添加到暂存</span>
+<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span> 
+<span class="token comment"># 将暂存提到本地仓库</span>
+<span class="token function">git</span> commit -m <span class="token string">'人资项目初始化'</span> 
+<span class="token comment"># 查看版本日志</span>
+<span class="token function">git</span> log --oneline 
+<span class="token comment"># 添加远程仓库地址</span>
+<span class="token function">git</span> remote <span class="token function">add</span> origin <span class="token operator">&lt;</span>远程仓库地址<span class="token operator">&gt;</span>  
+<span class="token comment"># 查看本地仓库的远程仓库地址映射</span>
+<span class="token function">git</span> remote -v 
+<span class="token comment"># 将master分支推送到origin所代表的远程仓库地址</span>
+<span class="token function">git</span> push -u origin master 
+</code></pre></div><h2 id="api模块介绍"><a href="#api模块介绍" class="header-anchor">#</a> API模块介绍</h2> <blockquote><p><strong><code>目标</code></strong> 介绍API模块的单独请求和 request模块的封装</p></blockquote> <ul><li>axios拦截器原理</li></ul> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20210216112010676.png" alt="image-20210216112010676"></p> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20210403164509767.png" alt="image-20210403164509767"></p> <ul><li>创建axios实例 <code>utils/request.js</code></li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> axios <span class="token keyword">from</span> <span class="token string">'axios'</span>
+<span class="token comment">// 基准路径</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> baseURL <span class="token operator">=</span> <span class="token string">'http://ihrm-java.itheima.net/api/'</span>
+
+<span class="token comment">// 创建一个新的axios实例</span>
+<span class="token keyword">const</span> instance <span class="token operator">=</span> axios<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment">// 设置基准路径</span>
+  baseURL<span class="token operator">:</span> baseURL<span class="token punctuation">,</span>
+  <span class="token comment">// 请求超过这么多时间还没有返回就报错</span>
+  timeout<span class="token operator">:</span> <span class="token number">5000</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 封装一个通用的请求方法</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">instance</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    method<span class="token operator">:</span> options<span class="token punctuation">.</span>method <span class="token operator">||</span> <span class="token string">'GET'</span><span class="token punctuation">,</span>
+    url<span class="token operator">:</span> options<span class="token punctuation">.</span>url<span class="token punctuation">,</span>
+    data<span class="token operator">:</span> options<span class="token punctuation">.</span>data<span class="token punctuation">,</span>
+    params<span class="token operator">:</span> options<span class="token punctuation">.</span>params<span class="token punctuation">,</span>
+    headers<span class="token operator">:</span> options<span class="token punctuation">.</span>headers
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ul><li>api模块单独封装</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// import request from '@/utils/request'</span>
+
+<span class="token comment">// 实现登录</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ 
+<span class="token punctuation">}</span>
+<span class="token comment">// 获取用户信息</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token parameter">token</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 实现退出</span>
+<span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">logout</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="项目公共样式处理"><a href="#项目公共样式处理" class="header-anchor">#</a> 项目公共样式处理</h2> <blockquote><p><strong><code>目标</code></strong> 将一些公共的图片和样式资源放入到 规定目录中</p> <ul><li><p>图片资源在课程资料的图片文件中，我们只需要将**<code>common</code>**文件夹拷贝放置到 **<code>assets</code>**目录即可</p></li> <li><p>样式资源在  资源/样式目录下</p></li></ul> <p>修改**<code>variables.scss</code>** （我们在**<code>variables.scss</code>**添加了一些基础的变量值）</p> <p>新增**<code>common.scss</code>**  我们提供了 一份公共的**<code>common.scss</code>**样式,里面内置了一部分内容的样式,在开发期间可以帮助我们快速的实现页面样式和布局）</p> <p>注意在scss文件中，通过**@import** 引入其他样式文件，需要注意最后加分号，否则会报错。</p></blockquote> <ul><li>将两个文件放置到<strong>styles</strong>目录下，然后在**<code>index.scss</code>**中引入该样式</li></ul> <div class="language-scss extra-class"><pre class="language-scss"><code><span class="token keyword">@import</span> <span class="token string">'./common.scss'</span><span class="token punctuation">;</span> <span class="token comment">// 引入common.scss样式表 (在最下面导入)</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/project/%E4%B8%AD%E5%8F%B0/" class="prev router-link-active">
+        Home
+      </a></span> <span class="next"><a href="/project/中台/02-HR-登录模块.html">
+        登录模块
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0d7c1303.js" defer></script><script src="/assets/js/2.1fe0b50b.js" defer></script><script src="/assets/js/24.878e1e96.js" defer></script>
+  </body>
+</html>

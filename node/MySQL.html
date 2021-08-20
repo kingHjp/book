@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MySQL数据库 | 笔记栈</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/assets/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.0d7c1303.js" as="script"><link rel="preload" href="/assets/js/2.1fe0b50b.js" as="script"><link rel="preload" href="/assets/js/18.89b1b877.js" as="script"><link rel="prefetch" href="/assets/js/10.2978dd1f.js"><link rel="prefetch" href="/assets/js/11.0dbaa531.js"><link rel="prefetch" href="/assets/js/12.32c02705.js"><link rel="prefetch" href="/assets/js/13.109a51a8.js"><link rel="prefetch" href="/assets/js/14.515ca27a.js"><link rel="prefetch" href="/assets/js/15.5ded3296.js"><link rel="prefetch" href="/assets/js/16.8bc52c4e.js"><link rel="prefetch" href="/assets/js/17.68df63de.js"><link rel="prefetch" href="/assets/js/19.901364af.js"><link rel="prefetch" href="/assets/js/20.5481b80d.js"><link rel="prefetch" href="/assets/js/21.2a144945.js"><link rel="prefetch" href="/assets/js/22.70831219.js"><link rel="prefetch" href="/assets/js/23.3b0c302e.js"><link rel="prefetch" href="/assets/js/24.878e1e96.js"><link rel="prefetch" href="/assets/js/25.9ff49721.js"><link rel="prefetch" href="/assets/js/26.093c8bdc.js"><link rel="prefetch" href="/assets/js/27.401b5c78.js"><link rel="prefetch" href="/assets/js/28.dc1c7c43.js"><link rel="prefetch" href="/assets/js/29.40e51e71.js"><link rel="prefetch" href="/assets/js/3.ac9d9143.js"><link rel="prefetch" href="/assets/js/30.b76a99b4.js"><link rel="prefetch" href="/assets/js/31.c3ef67ce.js"><link rel="prefetch" href="/assets/js/32.6c5637f7.js"><link rel="prefetch" href="/assets/js/33.a43732df.js"><link rel="prefetch" href="/assets/js/34.944b27fe.js"><link rel="prefetch" href="/assets/js/35.c2719e80.js"><link rel="prefetch" href="/assets/js/36.db5072a0.js"><link rel="prefetch" href="/assets/js/37.3aac3f33.js"><link rel="prefetch" href="/assets/js/38.ac02531c.js"><link rel="prefetch" href="/assets/js/39.b9d37857.js"><link rel="prefetch" href="/assets/js/4.e05c873c.js"><link rel="prefetch" href="/assets/js/40.750e94fc.js"><link rel="prefetch" href="/assets/js/41.941fe774.js"><link rel="prefetch" href="/assets/js/42.bcdffcaa.js"><link rel="prefetch" href="/assets/js/43.1188d721.js"><link rel="prefetch" href="/assets/js/44.0ba6bb4b.js"><link rel="prefetch" href="/assets/js/45.a98c08d8.js"><link rel="prefetch" href="/assets/js/46.1339ab8c.js"><link rel="prefetch" href="/assets/js/47.1e9f1793.js"><link rel="prefetch" href="/assets/js/48.0b65993c.js"><link rel="prefetch" href="/assets/js/49.98d284b0.js"><link rel="prefetch" href="/assets/js/5.f3e6ed41.js"><link rel="prefetch" href="/assets/js/50.40c11909.js"><link rel="prefetch" href="/assets/js/51.401f93f0.js"><link rel="prefetch" href="/assets/js/52.b0168dbe.js"><link rel="prefetch" href="/assets/js/53.8b60059b.js"><link rel="prefetch" href="/assets/js/54.161c06e4.js"><link rel="prefetch" href="/assets/js/55.afd26206.js"><link rel="prefetch" href="/assets/js/56.55d94850.js"><link rel="prefetch" href="/assets/js/57.ae35ff7c.js"><link rel="prefetch" href="/assets/js/58.96b6abba.js"><link rel="prefetch" href="/assets/js/59.91f247f9.js"><link rel="prefetch" href="/assets/js/6.498ab014.js"><link rel="prefetch" href="/assets/js/60.2b43d161.js"><link rel="prefetch" href="/assets/js/61.9ebe816a.js"><link rel="prefetch" href="/assets/js/62.bc73408a.js"><link rel="prefetch" href="/assets/js/63.f8745496.js"><link rel="prefetch" href="/assets/js/64.4ae7ce85.js"><link rel="prefetch" href="/assets/js/65.23ecc3e4.js"><link rel="prefetch" href="/assets/js/66.1d24d480.js"><link rel="prefetch" href="/assets/js/67.6042bfed.js"><link rel="prefetch" href="/assets/js/68.ed1e1ed8.js"><link rel="prefetch" href="/assets/js/69.28d1024d.js"><link rel="prefetch" href="/assets/js/7.3f5168c2.js"><link rel="prefetch" href="/assets/js/70.5ff6d4e4.js"><link rel="prefetch" href="/assets/js/71.bd57315c.js"><link rel="prefetch" href="/assets/js/72.e93c0d6e.js"><link rel="prefetch" href="/assets/js/73.4229454d.js"><link rel="prefetch" href="/assets/js/74.c2eb2bad.js"><link rel="prefetch" href="/assets/js/75.7eca9a4e.js"><link rel="prefetch" href="/assets/js/76.b83f903e.js"><link rel="prefetch" href="/assets/js/77.b9a22162.js"><link rel="prefetch" href="/assets/js/78.2450176d.js"><link rel="prefetch" href="/assets/js/79.ff4267c4.js"><link rel="prefetch" href="/assets/js/8.0e4354f9.js"><link rel="prefetch" href="/assets/js/80.abebe711.js"><link rel="prefetch" href="/assets/js/81.d8369dc4.js"><link rel="prefetch" href="/assets/js/82.5da13948.js"><link rel="prefetch" href="/assets/js/83.deb172fd.js"><link rel="prefetch" href="/assets/js/84.727650ec.js"><link rel="prefetch" href="/assets/js/85.50b1b4ef.js"><link rel="prefetch" href="/assets/js/86.90bb267e.js"><link rel="prefetch" href="/assets/js/9.de4e9e4c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="笔记栈" class="logo"> <span class="site-name can-hide">笔记栈</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/第一天html笔记/" class="nav-link">
+  html-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/第二天html总结/" class="nav-link">
+  html-two
+</a></li></ul></li><li class="dropdown-item"><h4>
+          css
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/css第一天/" class="nav-link">
+  css-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第二天/" class="nav-link">
+  css-two
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第三天/" class="nav-link">
+  css-twree
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第四天/" class="nav-link">
+  css-four
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day07-前端基础CSS第五天/" class="nav-link">
+  css-five
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day08-前端基础CSS第六天/" class="nav-link">
+  css-six
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day09-前端基础CSS第七天/" class="nav-link">
+  css-seven
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day10-HTML5&amp;CSS3提高/" class="nav-link">
+  css html提高
+</a></li><li class="dropdown-subitem"><a href="/前端基础/移动端/" class="nav-link">
+  移动端
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day01/" class="nav-link">
+  移动端布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/basis/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/js/senior/" class="nav-link">
+  JavaScript高级
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/webapinew/" class="nav-link">
+  webapi新
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/pk webapi/" class="nav-link">
+  webapi
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  es6
+</a></li><li class="dropdown-item"><!----> <a href="/js/跨域防抖节流 Promise/" class="nav-link">
+  跨域防抖节流
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git&amp;ajax&amp;JQ" class="dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow down"></span></button> <button type="button" aria-label="git&amp;ajax&amp;JQ" class="mobile-dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/Git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/ajax/Ajax/" class="nav-link">
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/jq/JQuery/" class="nav-link">
+  JQuery
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="node" class="dropdown-title"><span class="title">node</span> <span class="arrow down"></span></button> <button type="button" aria-label="node" class="mobile-dropdown-title"><span class="title">node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/Node入门及模块系统/" class="nav-link">
+  入门
+</a></li><li class="dropdown-item"><!----> <a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li><li class="dropdown-item"><!----> <a href="/node/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/node/Express/" class="nav-link">
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/node/接口测试工具/" class="nav-link">
+  接口测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/node/MySQL/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/node/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/node/ES6/" class="nav-link">
+  es6
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue基础/笔记/" class="nav-link">
+  vue基础
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前端路由/" class="nav-link">
+  前端路由
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前后端对接/" class="nav-link">
+  前后端交互
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/04-前端工程化/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/05-综合案例/" class="nav-link">
+  综合案例
+</a></li></ul></li><li class="dropdown-item"><h4>
+          vue进阶目录
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue进阶/vue进阶/" class="nav-link">
+  vue进阶
+</a></li><li class="dropdown-subitem"><a href="/vue/vuex/outline-vuex/" class="nav-link">
+  vuex
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue项目" class="dropdown-title"><span class="title">vue项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue项目" class="mobile-dropdown-title"><span class="title">vue项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          大事件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/project/头条移动/01-头条-Mobile-项目初始化/" class="nav-link">
+  头条移动
+</a></li><li class="dropdown-item"><!----> <a href="/project/头条综合案例/01-头条-PC-项目初始化/" class="nav-link">
+  头条pc综合案例
+</a></li><li class="dropdown-item"><!----> <a href="/project/中台/01-HR-项目初始化/" class="nav-link">
+  中台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题" class="dropdown-title"><span class="title">问题</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题" class="mobile-dropdown-title"><span class="title">问题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/question/question/" class="nav-link">
+  问题总结小册
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/第一天html笔记/" class="nav-link">
+  html-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/第二天html总结/" class="nav-link">
+  html-two
+</a></li></ul></li><li class="dropdown-item"><h4>
+          css
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/css第一天/" class="nav-link">
+  css-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第二天/" class="nav-link">
+  css-two
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第三天/" class="nav-link">
+  css-twree
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第四天/" class="nav-link">
+  css-four
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day07-前端基础CSS第五天/" class="nav-link">
+  css-five
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day08-前端基础CSS第六天/" class="nav-link">
+  css-six
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day09-前端基础CSS第七天/" class="nav-link">
+  css-seven
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day10-HTML5&amp;CSS3提高/" class="nav-link">
+  css html提高
+</a></li><li class="dropdown-subitem"><a href="/前端基础/移动端/" class="nav-link">
+  移动端
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day01/" class="nav-link">
+  移动端布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/basis/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/js/senior/" class="nav-link">
+  JavaScript高级
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/webapinew/" class="nav-link">
+  webapi新
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/pk webapi/" class="nav-link">
+  webapi
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  es6
+</a></li><li class="dropdown-item"><!----> <a href="/js/跨域防抖节流 Promise/" class="nav-link">
+  跨域防抖节流
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git&amp;ajax&amp;JQ" class="dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow down"></span></button> <button type="button" aria-label="git&amp;ajax&amp;JQ" class="mobile-dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/Git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/ajax/Ajax/" class="nav-link">
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/jq/JQuery/" class="nav-link">
+  JQuery
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="node" class="dropdown-title"><span class="title">node</span> <span class="arrow down"></span></button> <button type="button" aria-label="node" class="mobile-dropdown-title"><span class="title">node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/Node入门及模块系统/" class="nav-link">
+  入门
+</a></li><li class="dropdown-item"><!----> <a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li><li class="dropdown-item"><!----> <a href="/node/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/node/Express/" class="nav-link">
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/node/接口测试工具/" class="nav-link">
+  接口测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/node/MySQL/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/node/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/node/ES6/" class="nav-link">
+  es6
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue基础/笔记/" class="nav-link">
+  vue基础
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前端路由/" class="nav-link">
+  前端路由
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前后端对接/" class="nav-link">
+  前后端交互
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/04-前端工程化/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/05-综合案例/" class="nav-link">
+  综合案例
+</a></li></ul></li><li class="dropdown-item"><h4>
+          vue进阶目录
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue进阶/vue进阶/" class="nav-link">
+  vue进阶
+</a></li><li class="dropdown-subitem"><a href="/vue/vuex/outline-vuex/" class="nav-link">
+  vuex
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue项目" class="dropdown-title"><span class="title">vue项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue项目" class="mobile-dropdown-title"><span class="title">vue项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          大事件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/project/头条移动/01-头条-Mobile-项目初始化/" class="nav-link">
+  头条移动
+</a></li><li class="dropdown-item"><!----> <a href="/project/头条综合案例/01-头条-PC-项目初始化/" class="nav-link">
+  头条pc综合案例
+</a></li><li class="dropdown-item"><!----> <a href="/project/中台/01-HR-项目初始化/" class="nav-link">
+  中台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题" class="dropdown-title"><span class="title">问题</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题" class="mobile-dropdown-title"><span class="title">问题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/question/question/" class="nav-link">
+  问题总结小册
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>MySQL数据库</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/node/MySQL.html#mysql数据库" class="sidebar-link">MySQL数据库</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/MySQL.html#什么是数据库" class="sidebar-link">什么是数据库</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#常见的数据库及分类" class="sidebar-link">常见的数据库及分类</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#mysql简介" class="sidebar-link">MySQL简介</a></li></ul></li><li><a href="/node/MySQL.html#安装mysql及navicat" class="sidebar-link">安装MySQL及Navicat</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/MySQL.html#安装mysql服务软件" class="sidebar-link">安装MySQL服务软件</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#安装操作mysql的图形化工具-navicat" class="sidebar-link">安装操作MySQL的图形化工具（Navicat）</a></li></ul></li><li><a href="/node/MySQL.html#navicat使用" class="sidebar-link">Navicat使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/MySQL.html#必要条件" class="sidebar-link">必要条件</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#连接到mysql服务器" class="sidebar-link">连接到MySQL服务器</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#创建数据库" class="sidebar-link">创建数据库</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#创建数据表" class="sidebar-link">创建数据表</a></li></ul></li><li><a href="/node/MySQL.html#导入导出数据表-重点" class="sidebar-link">导入导出数据表（重点）</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/node/MySQL.html#sql语句-重点" class="sidebar-link">SQL语句（重点）</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/node/MySQL.html#查询数据" class="sidebar-link">查询数据</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/MySQL.html#语法格式" class="sidebar-link">语法格式</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#基本查询" class="sidebar-link">基本查询</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#带条件的查询" class="sidebar-link">带条件的查询</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#对查询结果排序" class="sidebar-link">对查询结果排序</a></li></ul></li><li><a href="/node/MySQL.html#添加数据" class="sidebar-link">添加数据</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/node/MySQL.html#修改数据" class="sidebar-link">修改数据</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/node/MySQL.html#删除数据" class="sidebar-link">删除数据</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/node/MySQL.html#sql小结" class="sidebar-link">SQL小结</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/node/MySQL.html#node中的mysql模块" class="sidebar-link">Node中的mysql模块</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/node/MySQL.html#mysql模块的作用" class="sidebar-link">mysql模块的作用</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#安装mysql模块" class="sidebar-link">安装mysql模块</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#使用步骤" class="sidebar-link">使用步骤</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#练习增删改查" class="sidebar-link">练习增删改查</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#增删改查小结" class="sidebar-link">增删改查小结</a></li><li class="sidebar-sub-header"><a href="/node/MySQL.html#封装mysql" class="sidebar-link">封装MySQL</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="mysql数据库"><a href="#mysql数据库" class="header-anchor">#</a> MySQL数据库</h2> <blockquote><p>数据库对于我们前端同学来说，就是一个了解。</p></blockquote> <h3 id="什么是数据库"><a href="#什么是数据库" class="header-anchor">#</a> 什么是数据库</h3> <p><strong>数据库 (database) 是用来组织、存储和管理数据的仓库</strong>。</p> <p>当今世界是一个充满着数据的互联网世界，充斥着大量的数据。数据的来源有很多，比如出行记录、消费记录、浏览的网页、发送的消息等等。除了文本类型的数据，图像、音乐、声音都是数据。</p> <p>为了方便管理互联网世界中的数据，就有了数据库管理系统的概念(简称:数据库)。用户可以对数据库中的数据进行新增、查询、更新、删除等操作。</p> <ul><li>增删改查
+<ul><li>新增</li> <li>删除</li> <li>修改</li> <li>查询</li></ul></li></ul> <h3 id="常见的数据库及分类"><a href="#常见的数据库及分类" class="header-anchor">#</a> 常见的数据库及分类</h3> <p>市面上的数据库有很多种，最常见的数据库有如下几个:</p> <ul><li>MySQL 数据库(目前使用最广泛、流行度最高的的开源免费数据库;)</li> <li>Oracle 数据库(收费)</li> <li>SQL Server 数据库(收费)</li> <li>Mongodb 数据库(Community + Enterprise)</li></ul> <p>其中，MySQL、Oracle、SQL Server 属于<strong>传统型数据库</strong>(又叫做:关系型数据库 或 SQL 数据库)，这三者的 设计理念相同，用法比较类似。</p> <p>而 Mongodb 属于<strong>新型数据库</strong>(又叫做:非关系型数据库 或 NoSQL 数据库)，它在一定程度上弥补了传统型 数据库的缺陷。</p> <h3 id="mysql简介"><a href="#mysql简介" class="header-anchor">#</a> MySQL简介</h3> <p>MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。</p> <p>我们常说数据库，其实只是一个泛指。那么数据库的结构是怎样的呢？</p> <ul><li>数据库服务器
+<ul><li>数据库
+<ul><li>数据表（真正存储数据的地方）</li></ul></li></ul></li></ul> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20210118221045236.png" alt="image-20210118221045236"></p> <blockquote><p>真正存储数据的是数据表。数据表和我们见过的Excel表格结构基本相同。</p></blockquote> <p>数据表的结构和excel一模一样。</p> <table><thead><tr><th>id（不允许重复）</th> <th>name</th> <th>age</th> <th>sex</th> <th>tel</th></tr></thead> <tbody><tr><td>1</td> <td>王宇</td> <td>23</td> <td>男</td> <td>13200008888</td></tr> <tr><td>2</td> <td>王宇</td> <td>23</td> <td>男</td> <td>13300008888</td></tr> <tr><td>3</td> <td>裴志博</td> <td>25</td> <td>男</td> <td>18866669999</td></tr> <tr><td>4</td> <td>李淑茵</td> <td>32</td> <td>女</td> <td>13200008888</td></tr></tbody></table> <h2 id="安装mysql及navicat"><a href="#安装mysql及navicat" class="header-anchor">#</a> 安装MySQL及Navicat</h2> <blockquote><p>MySQL 服务器软件（phpStudy）   ----   存储数据，可以创建数据库、数据表</p> <p>MySQL图形化管理工具（Navicat）  ---  可以使用它管理（创建、增删改查等等）数据库</p></blockquote> <h3 id="安装mysql服务软件"><a href="#安装mysql服务软件" class="header-anchor">#</a> 安装MySQL服务软件</h3> <p>安装phpStudy，或者wampserver。<strong>二选一</strong>。</p> <p>安装过程，略</p> <h3 id="安装操作mysql的图形化工具-navicat"><a href="#安装操作mysql的图形化工具-navicat" class="header-anchor">#</a> 安装操作MySQL的图形化工具（Navicat）</h3> <p>图形化的管理工具，有很多种</p> <ul><li>mysql-workbeach（英文版，没有中文版）</li> <li><strong>Navicat</strong></li> <li>phpmyadmin（需要php支持）</li> <li>其他，基本都不跨平台</li></ul> <p>前面已经安装了MySQL软件。那么我们如何管理或者说使用它呢，对于我们来说，还需要安装一个管理MySQL的工具，我们选择就是 <code>Navicat</code>。</p> <p>Navicat是一个收费软件，我们可以免费试用 14 天。</p> <p><strong>MySQL服务和图形化工具的关系</strong></p> <p><img src="https://gitee.com/ye-xingchen/tuchuang/raw/master/img/image-20210118221809498.png" alt="image-20210118221809498"></p> <blockquote><p>试用Navicat时，必须启动MySQL。（phpstudy中点击启动、wampserver打开后即启动了）</p></blockquote> <h2 id="navicat使用"><a href="#navicat使用" class="header-anchor">#</a> Navicat使用</h2> <h3 id="必要条件"><a href="#必要条件" class="header-anchor">#</a> 必要条件</h3> <p><strong>必须</strong>启动MySQL服务。</p> <ul><li>如果你使用phpstudy，打开phpstudy，启动MySQL。</li> <li>如果你使用wampserver，打开wampserver软件，MySQL就启动了</li></ul> <h3 id="连接到mysql服务器"><a href="#连接到mysql服务器" class="header-anchor">#</a> 连接到MySQL服务器</h3> <p>打开 Navicat软件，点击连接 --&gt; MySQL。</p> <p>填写如下参数：</p> <ul><li>连接名：随便填。</li> <li>主机：localhost  （不用改）</li> <li>端口：3306  （不用改）</li> <li>用户名：root  （不用改）</li> <li>密码：自己的密码是什么，就填什么。（phpstudy默认密码root、wampserver默认密码空）</li></ul> <p>填好连接参数，可以点左下角的 “测试连接”，如果成功了，点击右下角的“保存”即可。</p> <p>至此，Navicat侧边栏就有一个连接了。</p> <p>双击或者右键打开这个连接，就表示<strong>使用Navicat软件连接到MySQL数据库了</strong>，后面就可以管理数据库了。</p> <h3 id="创建数据库"><a href="#创建数据库" class="header-anchor">#</a> 创建数据库</h3> <ol><li><p>在连接名称上，右键，选择 “新建数据库”</p></li> <li><p>只需填数据库名，选择utf8编码，然后确定</p></li></ol> <h3 id="创建数据表"><a href="#创建数据表" class="header-anchor">#</a> 创建数据表</h3> <p><strong>对于前端同学来说，创建数据表只需了解即可</strong>。</p> <p>比如创建一个学生信息表：</p> <table><thead><tr><th>id（不允许重复）</th> <th>name</th> <th>age</th> <th>sex</th> <th>tel</th></tr></thead> <tbody><tr><td>1</td> <td>王宇</td> <td>23</td> <td>男</td> <td>13200008888</td></tr> <tr><td>2</td> <td>王宇</td> <td>24</td> <td>男</td> <td>13300008888</td></tr> <tr><td>3</td> <td>裴志博</td> <td>25</td> <td>男</td> <td>18866669999</td></tr> <tr><td>...</td> <td>...</td> <td>...</td> <td>...</td> <td>...</td></tr></tbody></table> <blockquote><p>对于一张表，最重要的是表头的设计</p> <p>对于数据库中的数据表，最重要的设计也是表头，只不过在数据库中<code>把表头叫做字段</code></p></blockquote> <p>下面是关于id的设计：</p> <p>下面是完整的创建表：</p> <table><thead><tr><th>名（表头）</th> <th>类型</th> <th>长度</th> <th>不是null</th> <th>键</th> <th>其他</th></tr></thead> <tbody><tr><td>id</td> <td>int</td> <td></td> <td>√</td> <td>🗝</td> <td>√ 自动递增</td></tr> <tr><td>username</td> <td>varchar</td> <td>20</td> <td>√</td> <td></td> <td></td></tr> <tr><td>age</td> <td>int</td> <td></td> <td></td> <td></td> <td></td></tr> <tr><td>sex</td> <td>varchar</td> <td>1</td> <td></td> <td></td> <td></td></tr></tbody></table> <ul><li><p>id  --  自动递增  --  √</p></li> <li><p>最后保存，填表名 <code>student</code></p></li></ul> <h2 id="导入导出数据表-重点"><a href="#导入导出数据表-重点" class="header-anchor">#</a> 导入导出数据表（重点）</h2> <blockquote><p>前面介绍，前端同学可以不会创建数据表，但是必须会导入导出数据。</p></blockquote> <ul><li><p>导出</p> <ul><li>在数据表名字上，比如 <code>student</code> 上，右键 --&gt; 转储SQL文件 --&gt; 结构和数据，选择保存位置保存即可。</li></ul></li> <li><p>导入</p> <ul><li>在<code>数据库名</code>上面 --&gt; 右键 --&gt; 运行SQL文件 --&gt; 选择SQL文件，运行即可完成导入。</li> <li>导入注意事项，表名不能重复，如果重复会发生覆盖。</li></ul></li></ul> <h2 id="sql语句-重点"><a href="#sql语句-重点" class="header-anchor">#</a> SQL语句（重点）</h2> <p>SQL(英文全称:Structured Query Language)是结构化查询语言，专门用来访问和处理数据库的编程语言。</p> <p><strong>SQL能做什么</strong></p> <ul><li><p>从数据库中查询数据</p></li> <li><p>向数据库中插入新的数据</p></li> <li><p>更新数据库中的数据</p></li> <li><p>从数据库删除数据</p></li> <li><p>可以创建新数据库</p></li> <li><p>可在数据库中创建新表</p></li> <li><p>可在数据库中创建存储过程、视图</p></li> <li><p>etc...</p></li> <li><p>无所不能</p></li></ul> <h2 id="查询数据"><a href="#查询数据" class="header-anchor">#</a> 查询数据</h2> <h3 id="语法格式"><a href="#语法格式" class="header-anchor">#</a> 语法格式</h3> <ul><li>SQL语句，<code>不区分</code>大小写。</li></ul> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">-- 基本的查询语法</span>
+<span class="token keyword">SELECT</span> 字段<span class="token number">1</span><span class="token punctuation">,</span>字段<span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">FROM</span> 表名
+<span class="token comment">-- 不区分大小写</span>
+<span class="token keyword">select</span> 字段<span class="token punctuation">,</span>字段<span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token keyword">from</span> 表名
+
+<span class="token comment">-- 查询所有的字段</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 表名
+
+<span class="token comment">-- 带条件的查询</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> 表名 <span class="token punctuation">[</span><span class="token keyword">WHERE</span> 条件<span class="token punctuation">]</span> <span class="token punctuation">[</span><span class="token keyword">ORDER</span> <span class="token keyword">BY</span> 排序字段<span class="token punctuation">[</span><span class="token punctuation">,</span> 排序字段<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token keyword">LIMIT</span> <span class="token punctuation">[</span>开始位置<span class="token punctuation">,</span><span class="token punctuation">]</span>长度
+
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre></div><h3 id="基本查询"><a href="#基本查询" class="header-anchor">#</a> 基本查询</h3> <blockquote><p>语法：select  字段名1, 字段名2,....  from  表名</p></blockquote> <p>案例1: 查询所有学生的姓名和年龄</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">select</span> username<span class="token punctuation">,</span>age <span class="token keyword">from</span> student
+</code></pre></div><p>案例2: 查询全部学生的全部信息</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> student
+</code></pre></div><h3 id="带条件的查询"><a href="#带条件的查询" class="header-anchor">#</a> 带条件的查询</h3> <blockquote><p>语法：select 字段 from 表名 <strong>where 条件</strong></p></blockquote> <p>可以使用条件来筛选查询出的结果</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">-- 查询id小于10的学生</span>
+<span class="token comment">-- select * from student where 条件</span>
+<span class="token comment">-- select * from student where id&lt;10</span>
+
+<span class="token comment">-- 查询id小于20的女学生</span>
+<span class="token comment">-- select * from student where id&lt;20 and sex='女'</span>
+
+<span class="token comment">-- 查询年龄大于等于20小于等于30的学生</span>
+<span class="token comment">-- select * from student where age&gt;=20 and age&lt;=30</span>
+
+</code></pre></div><h3 id="对查询结果排序"><a href="#对查询结果排序" class="header-anchor">#</a> 对查询结果排序</h3> <blockquote><p>语法：select 字段 from 表名 <strong>order by 字段 规则</strong> [,字段 规则 [,字段 规则 [......]]]</p></blockquote> <p>规则只有下面两种：</p> <ul><li>升序 asc （默认值）</li> <li>降序 desc</li></ul> <p>可进行排序的字段通常是  整型  英文字符串型  日期型  (中文字符串也行,但一般不用)</p> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">-- 对查询结果进行排序</span>
+<span class="token comment">-- 查询所有的同学，并按年龄升序排序</span>
+<span class="token comment">-- select * from student order by age asc</span>
+<span class="token comment">-- select * from student order by age</span>
+
+<span class="token comment">-- 查询所有的同学，按年龄降序排序</span>
+<span class="token comment">-- select * from student order by age desc</span>
+
+<span class="token comment">-- 查询所有的同学，按年龄降序排序，如果年龄相同，按id降序排序</span>
+<span class="token comment">-- select * from student order by age desc, id desc</span>
+
+<span class="token comment">-- 如果SQL中既有条件、又有排序，必须先写条件</span>
+<span class="token comment">-- 查询所有的男同学，并按年龄升序排序</span>
+<span class="token keyword">select</span> <span class="token operator">*</span> <span class="token keyword">from</span> student <span class="token keyword">where</span> sex<span class="token operator">=</span><span class="token string">'男'</span> <span class="token keyword">order</span> <span class="token keyword">by</span> age <span class="token keyword">asc</span>
+
+</code></pre></div><p><strong>注意：如果SQL语句中，有where和order by，where一定要放到order by之前</strong>。</p> <h2 id="添加数据"><a href="#添加数据" class="header-anchor">#</a> 添加数据</h2> <blockquote><p>语法： insert  into  表名 set 字段=值, 字段=值, ......</p></blockquote> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">-- insert into 表名 set 字段=值, 字段=值, ....</span>
+
+<span class="token keyword">insert</span> <span class="token keyword">into</span> student <span class="token keyword">set</span> age<span class="token operator">=</span><span class="token number">30</span><span class="token punctuation">,</span> sex<span class="token operator">=</span><span class="token string">'男'</span><span class="token punctuation">,</span> username<span class="token operator">=</span><span class="token string">'李青'</span>
+</code></pre></div><h2 id="修改数据"><a href="#修改数据" class="header-anchor">#</a> 修改数据</h2> <blockquote><p>语法：update  表名   set   字段=值, 字段=值,......  where  修改条件</p> <p>不指定修改条件会修改所有的数据</p></blockquote> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">-- 修改id为11的数据</span>
+<span class="token keyword">update</span> student <span class="token keyword">set</span> age<span class="token operator">=</span><span class="token number">20</span><span class="token punctuation">,</span> sex<span class="token operator">=</span><span class="token string">'女'</span> <span class="token keyword">where</span> id<span class="token operator">=</span><span class="token number">11</span>
+
+<span class="token comment">-- 没有指定条件，全部的数据都会修改</span>
+<span class="token keyword">update</span> student <span class="token keyword">set</span> age<span class="token operator">=</span><span class="token number">25</span><span class="token punctuation">,</span> sex<span class="token operator">=</span><span class="token string">'女'</span>
+</code></pre></div><h2 id="删除数据"><a href="#删除数据" class="header-anchor">#</a> 删除数据</h2> <blockquote><p>语法：delete  from 表名  where 删除条件</p> <p>不指定条件将删除所有数据</p></blockquote> <div class="language-sql extra-class"><pre class="language-sql"><code><span class="token comment">-- 删除一条数据</span>
+<span class="token keyword">delete</span> <span class="token keyword">from</span> student <span class="token keyword">where</span> id<span class="token operator">=</span><span class="token number">11</span>
+
+<span class="token comment">-- 删除满足条件的数据</span>
+<span class="token keyword">delete</span> <span class="token keyword">from</span> student <span class="token keyword">where</span> id<span class="token operator">&gt;</span><span class="token number">6</span>
+
+<span class="token comment">-- 没有指定条件，删除全部数据</span>
+<span class="token keyword">delete</span> <span class="token keyword">from</span> student
+</code></pre></div><h2 id="sql小结"><a href="#sql小结" class="header-anchor">#</a> SQL小结</h2> <p>SQL相当于是数据库中使用的编程语言。</p> <p>可以通过SQL完成各项工作，比如查询数据，新增数据，删除数据，修改数据......</p> <p>常用的增删改查语句：</p> <ul><li>查询 （<code>select 字段, 字段,... from 表名 [where 条件] [order by 字段 排序规则]</code>）
+<ul><li>select * from student where id&gt;5 order by age desc</li></ul></li> <li>新增（<code>insert into 表名 set 字段=值, 字段=值, ....</code>）
+<ul><li>insert into student set username='张三', age=20, sex='男'</li></ul></li> <li>修改（<code>update 表名 set 字段=值, 字段=值, .... [where 条件]</code>）
+<ul><li>update student set username='李四', sex='女' where id=4</li></ul></li> <li>删除（<code>delete from 表名 [where 条件]</code>）
+<ul><li>delete from student where id=3</li></ul></li></ul> <h2 id="node中的mysql模块"><a href="#node中的mysql模块" class="header-anchor">#</a> Node中的mysql模块</h2> <h3 id="mysql模块的作用"><a href="#mysql模块的作用" class="header-anchor">#</a> mysql模块的作用</h3> <p>数据在数据库中保存着呢？</p> <p>但最终，用户应该在浏览器界面上看到数据。</p> <p>这就需要使用 JS 代码，将数据库中的数据查询出来。</p> <p>mysql模块是一个第三方模块，专门用来操作MySQL数据库。 可以执行增删改查操作。</p> <h3 id="安装mysql模块"><a href="#安装mysql模块" class="header-anchor">#</a> 安装mysql模块</h3> <p>初次安装第三方模块，只需要按照如下方式安装即可。后续会有详细的介绍。</p> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 注意，安装mysql的文件夹，不能用中文，不能叫mysql（不能和模块同名）</span>
+
+<span class="token comment"># 最好先执行下面这条命令，会帮你提高下载速度</span>
+<span class="token function">npm</span> config <span class="token builtin class-name">set</span> registry https://registry.npm.taobao.org
+
+<span class="token comment"># 初始化</span>
+<span class="token function">npm</span> init -y
+
+<span class="token comment"># 执行下面的命令，下载安装mysql</span>
+<span class="token function">npm</span> i mysql
+</code></pre></div><h3 id="使用步骤"><a href="#使用步骤" class="header-anchor">#</a> 使用步骤</h3> <p>在Node中使用MySQL模块一共需要5个步骤：</p> <ol><li><p>加载 MySQL 模块</p></li> <li><p>创建 MySQL 连接对象</p></li> <li><p>连接 MySQL 服务器</p></li> <li><p>执行SQL语句</p></li> <li><p>关闭链接</p></li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 1. 加载mysql模块</span>
+<span class="token keyword">const</span> mysql <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mysql'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 2. 创建连接对象（设置连接参数）</span>
+<span class="token keyword">const</span> conn <span class="token operator">=</span> mysql<span class="token punctuation">.</span><span class="token function">createConnection</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment">// 属性：值</span>
+    host<span class="token operator">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
+    user<span class="token operator">:</span> <span class="token string">'root'</span><span class="token punctuation">,</span>
+    password<span class="token operator">:</span> <span class="token string">'密码'</span><span class="token punctuation">,</span>
+    database<span class="token operator">:</span> <span class="token string">'数据库名'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 3. 连接到MySQL服务器</span>
+conn<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 4. 完成查询（增删改查）</span>
+conn<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span><span class="token constant">SQL</span>语句<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    err<span class="token operator">:</span> 错误信息
+    result<span class="token operator">:</span> 查询结果
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 5. 关闭连接，释放资源</span>
+conn<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="练习增删改查"><a href="#练习增删改查" class="header-anchor">#</a> 练习增删改查</h3> <ul><li>无论是查询、新增、修改、删除，都是相同的步骤。</li> <li>不同的是，SQL不同，result结果也不同。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token comment">// 1. 加载mysql</span>
+<span class="token keyword">const</span> mysql <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mysql'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 2. 创建连接对象（填写连接参数）</span>
+<span class="token keyword">const</span> conn <span class="token operator">=</span> mysql<span class="token punctuation">.</span><span class="token function">createConnection</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    host<span class="token operator">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
+    port<span class="token operator">:</span> <span class="token number">3306</span><span class="token punctuation">,</span>
+    user<span class="token operator">:</span> <span class="token string">'root'</span><span class="token punctuation">,</span>
+    password<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    database<span class="token operator">:</span> <span class="token string">'yingxiong'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 3. 连接到MySQL服务器</span>
+conn<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 4. 完成增删改查</span>
+<span class="token keyword">let</span> sql <span class="token operator">=</span> <span class="token string">'select * from student where id&lt;5'</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> sql <span class="token operator">=</span> <span class="token string">'insert into student set name=&quot;张三&quot;, age=20, sex=&quot;男&quot;'</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> sql <span class="token operator">=</span> <span class="token string">'update student set age=30, sex=&quot;女&quot; where id=3'</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> sql <span class="token operator">=</span> <span class="token string">'delete from student where id=3'</span><span class="token punctuation">;</span>
+conn<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>sql<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+     <span class="token keyword">if</span> <span class="token punctuation">(</span>err <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 5. 关闭连接</span>
+conn<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="增删改查小结"><a href="#增删改查小结" class="header-anchor">#</a> 增删改查小结</h3> <ul><li>查询语句
+<ul><li>result -- 数组</li> <li>数组的每个单元，就是查询到的一行数据</li></ul></li> <li>添加语句
+<ul><li>result -- 对象</li> <li>result.affectedRows -- 受影响的行数</li> <li>result.insertId -- 新增数据id</li></ul></li> <li>修改语句
+<ul><li>result -- 对象</li> <li>result.affectedRows -- 受影响的行数（满足条件的）</li> <li>result.changedRows -- 被改变的行数（真正发生变化的行数）</li></ul></li> <li>删除语句
+<ul><li>result -- 对象</li> <li>result.affectedRows -- 受影响的行数</li></ul></li></ul> <h3 id="封装mysql"><a href="#封装mysql" class="header-anchor">#</a> 封装MySQL</h3> <ul><li><p>封装mysql，然后导出</p> <div class="language-js extra-class"><pre class="language-js"><code>module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">sql<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> mysql <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'mysql'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> conn <span class="token operator">=</span> mysql<span class="token punctuation">.</span><span class="token function">createConnection</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        host<span class="token operator">:</span> <span class="token string">'localhost'</span><span class="token punctuation">,</span>
+        user<span class="token operator">:</span> <span class="token string">'root'</span><span class="token punctuation">,</span>
+        password<span class="token operator">:</span> <span class="token string">'12345678'</span><span class="token punctuation">,</span>
+        database<span class="token operator">:</span> <span class="token string">'hahaha'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    conn<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// 完成增删改查</span>
+    conn<span class="token punctuation">.</span><span class="token function">query</span><span class="token punctuation">(</span>sql<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    conn<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>创建一个测试的文件，试试封装的函数</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 加载自定义模块 </span>
+<span class="token keyword">const</span> db <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./db'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 调用函数</span>
+<span class="token function">db</span><span class="token punctuation">(</span><span class="token string">'select * from student where id&lt;5'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> result</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token keyword">throw</span> err<span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0d7c1303.js" defer></script><script src="/assets/js/2.1fe0b50b.js" defer></script><script src="/assets/js/18.89b1b877.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>项目架构 | 笔记栈</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/assets/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.0d7c1303.js" as="script"><link rel="preload" href="/assets/js/2.1fe0b50b.js" as="script"><link rel="preload" href="/assets/js/41.941fe774.js" as="script"><link rel="prefetch" href="/assets/js/10.2978dd1f.js"><link rel="prefetch" href="/assets/js/11.0dbaa531.js"><link rel="prefetch" href="/assets/js/12.32c02705.js"><link rel="prefetch" href="/assets/js/13.109a51a8.js"><link rel="prefetch" href="/assets/js/14.515ca27a.js"><link rel="prefetch" href="/assets/js/15.5ded3296.js"><link rel="prefetch" href="/assets/js/16.8bc52c4e.js"><link rel="prefetch" href="/assets/js/17.68df63de.js"><link rel="prefetch" href="/assets/js/18.89b1b877.js"><link rel="prefetch" href="/assets/js/19.901364af.js"><link rel="prefetch" href="/assets/js/20.5481b80d.js"><link rel="prefetch" href="/assets/js/21.2a144945.js"><link rel="prefetch" href="/assets/js/22.70831219.js"><link rel="prefetch" href="/assets/js/23.3b0c302e.js"><link rel="prefetch" href="/assets/js/24.878e1e96.js"><link rel="prefetch" href="/assets/js/25.9ff49721.js"><link rel="prefetch" href="/assets/js/26.093c8bdc.js"><link rel="prefetch" href="/assets/js/27.401b5c78.js"><link rel="prefetch" href="/assets/js/28.dc1c7c43.js"><link rel="prefetch" href="/assets/js/29.40e51e71.js"><link rel="prefetch" href="/assets/js/3.ac9d9143.js"><link rel="prefetch" href="/assets/js/30.b76a99b4.js"><link rel="prefetch" href="/assets/js/31.c3ef67ce.js"><link rel="prefetch" href="/assets/js/32.6c5637f7.js"><link rel="prefetch" href="/assets/js/33.a43732df.js"><link rel="prefetch" href="/assets/js/34.944b27fe.js"><link rel="prefetch" href="/assets/js/35.c2719e80.js"><link rel="prefetch" href="/assets/js/36.db5072a0.js"><link rel="prefetch" href="/assets/js/37.3aac3f33.js"><link rel="prefetch" href="/assets/js/38.ac02531c.js"><link rel="prefetch" href="/assets/js/39.b9d37857.js"><link rel="prefetch" href="/assets/js/4.e05c873c.js"><link rel="prefetch" href="/assets/js/40.750e94fc.js"><link rel="prefetch" href="/assets/js/42.bcdffcaa.js"><link rel="prefetch" href="/assets/js/43.1188d721.js"><link rel="prefetch" href="/assets/js/44.0ba6bb4b.js"><link rel="prefetch" href="/assets/js/45.a98c08d8.js"><link rel="prefetch" href="/assets/js/46.1339ab8c.js"><link rel="prefetch" href="/assets/js/47.1e9f1793.js"><link rel="prefetch" href="/assets/js/48.0b65993c.js"><link rel="prefetch" href="/assets/js/49.98d284b0.js"><link rel="prefetch" href="/assets/js/5.f3e6ed41.js"><link rel="prefetch" href="/assets/js/50.40c11909.js"><link rel="prefetch" href="/assets/js/51.401f93f0.js"><link rel="prefetch" href="/assets/js/52.b0168dbe.js"><link rel="prefetch" href="/assets/js/53.8b60059b.js"><link rel="prefetch" href="/assets/js/54.161c06e4.js"><link rel="prefetch" href="/assets/js/55.afd26206.js"><link rel="prefetch" href="/assets/js/56.55d94850.js"><link rel="prefetch" href="/assets/js/57.ae35ff7c.js"><link rel="prefetch" href="/assets/js/58.96b6abba.js"><link rel="prefetch" href="/assets/js/59.91f247f9.js"><link rel="prefetch" href="/assets/js/6.498ab014.js"><link rel="prefetch" href="/assets/js/60.2b43d161.js"><link rel="prefetch" href="/assets/js/61.9ebe816a.js"><link rel="prefetch" href="/assets/js/62.bc73408a.js"><link rel="prefetch" href="/assets/js/63.f8745496.js"><link rel="prefetch" href="/assets/js/64.4ae7ce85.js"><link rel="prefetch" href="/assets/js/65.23ecc3e4.js"><link rel="prefetch" href="/assets/js/66.1d24d480.js"><link rel="prefetch" href="/assets/js/67.6042bfed.js"><link rel="prefetch" href="/assets/js/68.ed1e1ed8.js"><link rel="prefetch" href="/assets/js/69.28d1024d.js"><link rel="prefetch" href="/assets/js/7.3f5168c2.js"><link rel="prefetch" href="/assets/js/70.5ff6d4e4.js"><link rel="prefetch" href="/assets/js/71.bd57315c.js"><link rel="prefetch" href="/assets/js/72.e93c0d6e.js"><link rel="prefetch" href="/assets/js/73.4229454d.js"><link rel="prefetch" href="/assets/js/74.c2eb2bad.js"><link rel="prefetch" href="/assets/js/75.7eca9a4e.js"><link rel="prefetch" href="/assets/js/76.b83f903e.js"><link rel="prefetch" href="/assets/js/77.b9a22162.js"><link rel="prefetch" href="/assets/js/78.2450176d.js"><link rel="prefetch" href="/assets/js/79.ff4267c4.js"><link rel="prefetch" href="/assets/js/8.0e4354f9.js"><link rel="prefetch" href="/assets/js/80.abebe711.js"><link rel="prefetch" href="/assets/js/81.d8369dc4.js"><link rel="prefetch" href="/assets/js/82.5da13948.js"><link rel="prefetch" href="/assets/js/83.deb172fd.js"><link rel="prefetch" href="/assets/js/84.727650ec.js"><link rel="prefetch" href="/assets/js/85.50b1b4ef.js"><link rel="prefetch" href="/assets/js/86.90bb267e.js"><link rel="prefetch" href="/assets/js/9.de4e9e4c.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/logo.png" alt="笔记栈" class="logo"> <span class="site-name can-hide">笔记栈</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/第一天html笔记/" class="nav-link">
+  html-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/第二天html总结/" class="nav-link">
+  html-two
+</a></li></ul></li><li class="dropdown-item"><h4>
+          css
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/css第一天/" class="nav-link">
+  css-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第二天/" class="nav-link">
+  css-two
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第三天/" class="nav-link">
+  css-twree
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第四天/" class="nav-link">
+  css-four
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day07-前端基础CSS第五天/" class="nav-link">
+  css-five
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day08-前端基础CSS第六天/" class="nav-link">
+  css-six
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day09-前端基础CSS第七天/" class="nav-link">
+  css-seven
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day10-HTML5&amp;CSS3提高/" class="nav-link">
+  css html提高
+</a></li><li class="dropdown-subitem"><a href="/前端基础/移动端/" class="nav-link">
+  移动端
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day01/" class="nav-link">
+  移动端布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/basis/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/js/senior/" class="nav-link">
+  JavaScript高级
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/webapinew/" class="nav-link">
+  webapi新
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/pk webapi/" class="nav-link">
+  webapi
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  es6
+</a></li><li class="dropdown-item"><!----> <a href="/js/跨域防抖节流 Promise/" class="nav-link">
+  跨域防抖节流
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git&amp;ajax&amp;JQ" class="dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow down"></span></button> <button type="button" aria-label="git&amp;ajax&amp;JQ" class="mobile-dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/Git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/ajax/Ajax/" class="nav-link">
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/jq/JQuery/" class="nav-link">
+  JQuery
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="node" class="dropdown-title"><span class="title">node</span> <span class="arrow down"></span></button> <button type="button" aria-label="node" class="mobile-dropdown-title"><span class="title">node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/Node入门及模块系统/" class="nav-link">
+  入门
+</a></li><li class="dropdown-item"><!----> <a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li><li class="dropdown-item"><!----> <a href="/node/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/node/Express/" class="nav-link">
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/node/接口测试工具/" class="nav-link">
+  接口测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/node/MySQL/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/node/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/node/ES6/" class="nav-link">
+  es6
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue基础/笔记/" class="nav-link">
+  vue基础
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前端路由/" class="nav-link">
+  前端路由
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前后端对接/" class="nav-link">
+  前后端交互
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/04-前端工程化/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/05-综合案例/" class="nav-link">
+  综合案例
+</a></li></ul></li><li class="dropdown-item"><h4>
+          vue进阶目录
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue进阶/vue进阶/" class="nav-link">
+  vue进阶
+</a></li><li class="dropdown-subitem"><a href="/vue/vuex/outline-vuex/" class="nav-link">
+  vuex
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue项目" class="dropdown-title"><span class="title">vue项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue项目" class="mobile-dropdown-title"><span class="title">vue项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          大事件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/project/头条移动/01-头条-Mobile-项目初始化/" class="nav-link">
+  头条移动
+</a></li><li class="dropdown-item"><!----> <a href="/project/头条综合案例/01-头条-PC-项目初始化/" class="nav-link">
+  头条pc综合案例
+</a></li><li class="dropdown-item"><!----> <a href="/project/中台/01-HR-项目初始化/" class="nav-link">
+  中台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题" class="dropdown-title"><span class="title">问题</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题" class="mobile-dropdown-title"><span class="title">问题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/question/question/" class="nav-link">
+  问题总结小册
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端基础" class="dropdown-title"><span class="title">前端基础</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端基础" class="mobile-dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          html
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/第一天html笔记/" class="nav-link">
+  html-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/第二天html总结/" class="nav-link">
+  html-two
+</a></li></ul></li><li class="dropdown-item"><h4>
+          css
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/前端基础/css第一天/" class="nav-link">
+  css-one
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第二天/" class="nav-link">
+  css-two
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第三天/" class="nav-link">
+  css-twree
+</a></li><li class="dropdown-subitem"><a href="/前端基础/css第四天/" class="nav-link">
+  css-four
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day07-前端基础CSS第五天/" class="nav-link">
+  css-five
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day08-前端基础CSS第六天/" class="nav-link">
+  css-six
+</a></li><li class="dropdown-subitem"><a href="/前端基础/笔记-day09-前端基础CSS第七天/" class="nav-link">
+  css-seven
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day10-HTML5&amp;CSS3提高/" class="nav-link">
+  css html提高
+</a></li><li class="dropdown-subitem"><a href="/前端基础/移动端/" class="nav-link">
+  移动端
+</a></li><li class="dropdown-subitem"><a href="/前端基础/day01/" class="nav-link">
+  移动端布局
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="JavaScript" class="dropdown-title"><span class="title">JavaScript</span> <span class="arrow down"></span></button> <button type="button" aria-label="JavaScript" class="mobile-dropdown-title"><span class="title">JavaScript</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/js/basis/" class="nav-link">
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/js/senior/" class="nav-link">
+  JavaScript高级
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/webapinew/" class="nav-link">
+  webapi新
+</a></li><li class="dropdown-item"><!----> <a href="/webapi/pk webapi/" class="nav-link">
+  webapi
+</a></li><li class="dropdown-item"><!----> <a href="/js/es6/" class="nav-link">
+  es6
+</a></li><li class="dropdown-item"><!----> <a href="/js/跨域防抖节流 Promise/" class="nav-link">
+  跨域防抖节流
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git&amp;ajax&amp;JQ" class="dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow down"></span></button> <button type="button" aria-label="git&amp;ajax&amp;JQ" class="mobile-dropdown-title"><span class="title">git&amp;ajax&amp;JQ</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/git/Git/" class="nav-link">
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/ajax/Ajax/" class="nav-link">
+  ajax
+</a></li><li class="dropdown-item"><!----> <a href="/jq/JQuery/" class="nav-link">
+  JQuery
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="node" class="dropdown-title"><span class="title">node</span> <span class="arrow down"></span></button> <button type="button" aria-label="node" class="mobile-dropdown-title"><span class="title">node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/node/Node入门及模块系统/" class="nav-link">
+  入门
+</a></li><li class="dropdown-item"><!----> <a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li><li class="dropdown-item"><!----> <a href="/node/NPM/" class="nav-link">
+  NPM
+</a></li><li class="dropdown-item"><!----> <a href="/node/Express/" class="nav-link">
+  Express
+</a></li><li class="dropdown-item"><!----> <a href="/node/接口测试工具/" class="nav-link">
+  接口测试工具
+</a></li><li class="dropdown-item"><!----> <a href="/node/MySQL/" class="nav-link">
+  MySQL
+</a></li><li class="dropdown-item"><!----> <a href="/node/webpack/" class="nav-link">
+  webpack
+</a></li><li class="dropdown-item"><!----> <a href="/node/ES6/" class="nav-link">
+  es6
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue" class="mobile-dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue基础/笔记/" class="nav-link">
+  vue基础
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前端路由/" class="nav-link">
+  前端路由
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/03-前后端对接/" class="nav-link">
+  前后端交互
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/04-前端工程化/" class="nav-link">
+  前端工程化
+</a></li><li class="dropdown-subitem"><a href="/vue/vue基础/05-综合案例/" class="nav-link">
+  综合案例
+</a></li></ul></li><li class="dropdown-item"><h4>
+          vue进阶目录
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue/vue进阶/vue进阶/" class="nav-link">
+  vue进阶
+</a></li><li class="dropdown-subitem"><a href="/vue/vuex/outline-vuex/" class="nav-link">
+  vuex
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue项目" class="dropdown-title"><span class="title">vue项目</span> <span class="arrow down"></span></button> <button type="button" aria-label="vue项目" class="mobile-dropdown-title"><span class="title">vue项目</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          大事件
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/project/大事件/大事件-01/" class="nav-link">
+  node大事件
+</a></li></ul></li><li class="dropdown-item"><!----> <a href="/project/头条移动/01-头条-Mobile-项目初始化/" class="nav-link">
+  头条移动
+</a></li><li class="dropdown-item"><!----> <a href="/project/头条综合案例/01-头条-PC-项目初始化/" class="nav-link">
+  头条pc综合案例
+</a></li><li class="dropdown-item"><!----> <a href="/project/中台/01-HR-项目初始化/" class="nav-link">
+  中台
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="问题" class="dropdown-title"><span class="title">问题</span> <span class="arrow down"></span></button> <button type="button" aria-label="问题" class="mobile-dropdown-title"><span class="title">问题</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/question/question/" class="nav-link">
+  问题总结小册
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>头条移动</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/project/%E5%A4%B4%E6%9D%A1%E7%A7%BB%E5%8A%A8/" aria-current="page" class="sidebar-link">Home</a></li><li><a href="/project/头条移动/项目初始化.html" class="sidebar-link">项目初始化</a></li><li><a href="/project/头条移动/02-头条-Mobile-项目架构.html" class="active sidebar-link">项目架构</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/project/头条移动/02-头条-Mobile-项目架构.html#约定路由规则" class="sidebar-link">约定路由规则</a></li><li class="sidebar-sub-header"><a href="/project/头条移动/02-头条-Mobile-项目架构.html#完成layout组件" class="sidebar-link">完成Layout组件</a></li><li class="sidebar-sub-header"><a href="/project/头条移动/02-头条-Mobile-项目架构.html#配置全局样式" class="sidebar-link">配置全局样式</a></li><li class="sidebar-sub-header"><a href="/project/头条移动/02-头条-Mobile-项目架构.html#本地存储token封装" class="sidebar-link">本地存储token封装</a></li><li class="sidebar-sub-header"><a href="/project/头条移动/02-头条-Mobile-项目架构.html#vuex状态管理token" class="sidebar-link">Vuex状态管理token</a></li><li class="sidebar-sub-header"><a href="/project/头条移动/02-头条-Mobile-项目架构.html#初步request工具封装" class="sidebar-link">初步request工具封装</a></li></ul></li><li><a href="/project/头条移动/03-头条-Mobile-登录模块.html" class="sidebar-link">登录模块</a></li><li><a href="/project/头条移动/04-头条-Mobile-主页模块.html" class="sidebar-link">主页模块</a></li><li><a href="/project/头条移动/05-头条-Mobile-文章列表更多操作.html" class="sidebar-link">文章列表更多操作</a></li><li><a href="/project/头条移动/06-头条-Mobile-频道编辑操作.html" class="sidebar-link">频道编辑操作</a></li><li><a href="/project/头条移动/07-头条-Mobile-搜索模块.html" class="sidebar-link">搜索模块</a></li><li><a href="/project/头条移动/08-头条-Mobile-文章详情.html" class="sidebar-link">文章详情模块</a></li><li><a href="/project/头条移动/09-头条-Mobile-个人中心.html" class="sidebar-link">个人中心</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default" data-v-09a17854 data-v-09a17854><h1 id="项目架构" data-v-09a17854><a href="#项目架构" class="header-anchor" data-v-09a17854>#</a> 项目架构</h1> <h2 id="约定路由规则" data-v-09a17854><a href="#约定路由规则" class="header-anchor" data-v-09a17854>#</a> 约定路由规则</h2> <blockquote data-v-09a17854><p data-v-09a17854>目标：根据参考图，设计路由规则。</p></blockquote> <table data-v-09a17854><thead data-v-09a17854><tr data-v-09a17854><th data-v-09a17854>path</th> <th data-v-09a17854>功能</th> <th data-v-09a17854>路由级别</th></tr></thead> <tbody data-v-09a17854><tr data-v-09a17854><td data-v-09a17854>/</td> <td data-v-09a17854>布局组件</td> <td data-v-09a17854>一级路由</td></tr> <tr data-v-09a17854><td data-v-09a17854>├─ /home</td> <td data-v-09a17854>首页组件</td> <td data-v-09a17854>二级路由</td></tr> <tr data-v-09a17854><td data-v-09a17854>├─ /question</td> <td data-v-09a17854>问答组件</td> <td data-v-09a17854>二级路由</td></tr> <tr data-v-09a17854><td data-v-09a17854>├─ /video</td> <td data-v-09a17854>视频组件</td> <td data-v-09a17854>二级路由</td></tr> <tr data-v-09a17854><td data-v-09a17854>├─ /user</td> <td data-v-09a17854>个人中心组件</td> <td data-v-09a17854>二级路由</td></tr> <tr data-v-09a17854><td data-v-09a17854>/profile</td> <td data-v-09a17854>编辑资料组件</td> <td data-v-09a17854>一级路由</td></tr> <tr data-v-09a17854><td data-v-09a17854>/chat</td> <td data-v-09a17854>小智同学组件</td> <td data-v-09a17854>一级路由</td></tr> <tr data-v-09a17854><td data-v-09a17854>/login</td> <td data-v-09a17854>登录组件</td> <td data-v-09a17854>一级路由</td></tr> <tr data-v-09a17854><td data-v-09a17854>/search</td> <td data-v-09a17854>搜索中心组件</td> <td data-v-09a17854>一级路由</td></tr> <tr data-v-09a17854><td data-v-09a17854>/sresult</td> <td data-v-09a17854>搜索结果组件</td> <td data-v-09a17854>一级路由</td></tr> <tr data-v-09a17854><td data-v-09a17854>/article</td> <td data-v-09a17854>文章详情</td> <td data-v-09a17854>一级路由</td></tr></tbody></table> <ul data-v-09a17854><li data-v-09a17854>实现路由配置</li></ul> <div class="language-js extra-class" data-v-09a17854><pre class="language-js" data-v-09a17854><code data-v-09a17854><span class="token keyword" data-v-09a17854>import</span> Vue <span class="token keyword" data-v-09a17854>from</span> <span class="token string" data-v-09a17854>'vue'</span>
+<span class="token keyword" data-v-09a17854>import</span> VueRouter <span class="token keyword" data-v-09a17854>from</span> <span class="token string" data-v-09a17854>'vue-router'</span>
+
+<span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>Layout</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token keyword" data-v-09a17854>import</span><span class="token punctuation" data-v-09a17854>(</span><span class="token string" data-v-09a17854>'@/views/Layout'</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>Home</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token keyword" data-v-09a17854>import</span><span class="token punctuation" data-v-09a17854>(</span><span class="token string" data-v-09a17854>'@/views/home/Index'</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>Question</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token keyword" data-v-09a17854>import</span><span class="token punctuation" data-v-09a17854>(</span><span class="token string" data-v-09a17854>'@/views/question/Index'</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>Video</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token keyword" data-v-09a17854>import</span><span class="token punctuation" data-v-09a17854>(</span><span class="token string" data-v-09a17854>'@/views/video/Index'</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>User</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token keyword" data-v-09a17854>import</span><span class="token punctuation" data-v-09a17854>(</span><span class="token string" data-v-09a17854>'@/views/user/Index'</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>UserProfile</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token keyword" data-v-09a17854>import</span><span class="token punctuation" data-v-09a17854>(</span><span class="token string" data-v-09a17854>'@/views/user/Profile'</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>UserChat</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token keyword" data-v-09a17854>import</span><span class="token punctuation" data-v-09a17854>(</span><span class="token string" data-v-09a17854>'@/views/user/Chat'</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>Login</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token keyword" data-v-09a17854>import</span><span class="token punctuation" data-v-09a17854>(</span><span class="token string" data-v-09a17854>'@/views/user/Login'</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>Search</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token keyword" data-v-09a17854>import</span><span class="token punctuation" data-v-09a17854>(</span><span class="token string" data-v-09a17854>'@/views/search/Index'</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>SearchResult</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token keyword" data-v-09a17854>import</span><span class="token punctuation" data-v-09a17854>(</span><span class="token string" data-v-09a17854>'@/views/search/Result'</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>Article</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token keyword" data-v-09a17854>import</span><span class="token punctuation" data-v-09a17854>(</span><span class="token string" data-v-09a17854>'@/views/home/Article'</span><span class="token punctuation" data-v-09a17854>)</span>
+
+Vue<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>use</span><span class="token punctuation" data-v-09a17854>(</span>VueRouter<span class="token punctuation" data-v-09a17854>)</span>
+
+<span class="token keyword" data-v-09a17854>const</span> routes <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>[</span>
+  <span class="token punctuation" data-v-09a17854>{</span>
+    path<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'/'</span><span class="token punctuation" data-v-09a17854>,</span>
+    component<span class="token operator" data-v-09a17854>:</span> Layout<span class="token punctuation" data-v-09a17854>,</span>
+    redirect<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'/home'</span>
+    children<span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>[</span>
+      <span class="token punctuation" data-v-09a17854>{</span> path<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'/home'</span><span class="token punctuation" data-v-09a17854>,</span> name<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'home'</span><span class="token punctuation" data-v-09a17854>,</span> component<span class="token operator" data-v-09a17854>:</span> Home <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+      <span class="token punctuation" data-v-09a17854>{</span> path<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'/question'</span><span class="token punctuation" data-v-09a17854>,</span> name<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'question'</span><span class="token punctuation" data-v-09a17854>,</span> component<span class="token operator" data-v-09a17854>:</span> Question <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+      <span class="token punctuation" data-v-09a17854>{</span> path<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'/video'</span><span class="token punctuation" data-v-09a17854>,</span> name<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'video'</span><span class="token punctuation" data-v-09a17854>,</span> component<span class="token operator" data-v-09a17854>:</span> Video <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+      <span class="token punctuation" data-v-09a17854>{</span> path<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'/user'</span><span class="token punctuation" data-v-09a17854>,</span> name<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'user'</span><span class="token punctuation" data-v-09a17854>,</span> component<span class="token operator" data-v-09a17854>:</span> User <span class="token punctuation" data-v-09a17854>}</span>
+    <span class="token punctuation" data-v-09a17854>]</span>
+  <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+  <span class="token punctuation" data-v-09a17854>{</span> path<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'/profile'</span><span class="token punctuation" data-v-09a17854>,</span> name<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'user-profile'</span><span class="token punctuation" data-v-09a17854>,</span> component<span class="token operator" data-v-09a17854>:</span> UserProfile <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+  <span class="token punctuation" data-v-09a17854>{</span> path<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'/chat'</span><span class="token punctuation" data-v-09a17854>,</span> name<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'user-chat'</span><span class="token punctuation" data-v-09a17854>,</span> component<span class="token operator" data-v-09a17854>:</span> UserChat <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+  <span class="token punctuation" data-v-09a17854>{</span> path<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'/login'</span><span class="token punctuation" data-v-09a17854>,</span> name<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'login'</span><span class="token punctuation" data-v-09a17854>,</span> component<span class="token operator" data-v-09a17854>:</span> Login <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+  <span class="token punctuation" data-v-09a17854>{</span> path<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'/search'</span><span class="token punctuation" data-v-09a17854>,</span> name<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'search'</span><span class="token punctuation" data-v-09a17854>,</span> component<span class="token operator" data-v-09a17854>:</span> Search <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+  <span class="token punctuation" data-v-09a17854>{</span> path<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'/sresult'</span><span class="token punctuation" data-v-09a17854>,</span> name<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'search-result'</span><span class="token punctuation" data-v-09a17854>,</span> component<span class="token operator" data-v-09a17854>:</span> SearchResult <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+  <span class="token punctuation" data-v-09a17854>{</span> path<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'/article'</span><span class="token punctuation" data-v-09a17854>,</span> name<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'article'</span><span class="token punctuation" data-v-09a17854>,</span> component<span class="token operator" data-v-09a17854>:</span> Article <span class="token punctuation" data-v-09a17854>}</span>
+<span class="token punctuation" data-v-09a17854>]</span>
+
+<span class="token keyword" data-v-09a17854>const</span> router <span class="token operator" data-v-09a17854>=</span> <span class="token keyword" data-v-09a17854>new</span> <span class="token class-name" data-v-09a17854>VueRouter</span><span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>{</span>
+  routes
+<span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>)</span>
+
+<span class="token keyword" data-v-09a17854>export</span> <span class="token keyword" data-v-09a17854>default</span> router
+</code></pre></div><h2 id="完成layout组件" data-v-09a17854><a href="#完成layout组件" class="header-anchor" data-v-09a17854>#</a> 完成Layout组件</h2> <blockquote data-v-09a17854><p data-v-09a17854>目标：实现主页的基本布局</p></blockquote> <ul data-v-09a17854><li data-v-09a17854>提供【首页】【 问答】【 视频】【 我的】基础布局，也就是一级路由组件。</li> <li data-v-09a17854>需要根据地址栏去选中TabBar对应标签，开启路由模式组件内部实现。</li></ul> <div class="language-vue extra-class" data-v-09a17854><pre class="language-vue" data-v-09a17854><code data-v-09a17854><span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;</span>template</span><span class="token punctuation" data-v-09a17854>&gt;</span></span>
+  <span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;</span>div</span> <span class="token attr-name" data-v-09a17854>class</span><span class="token attr-value" data-v-09a17854><span class="token punctuation attr-equals" data-v-09a17854>=</span><span class="token punctuation" data-v-09a17854>&quot;</span>container<span class="token punctuation" data-v-09a17854>&quot;</span></span><span class="token punctuation" data-v-09a17854>&gt;</span></span>
+    <span class="token comment" data-v-09a17854>&lt;!-- 顶部导航栏 --&gt;</span>
+    <span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;</span>van-nav-bar</span> <span class="token attr-name" data-v-09a17854>fixed</span> <span class="token attr-name" data-v-09a17854>title</span><span class="token attr-value" data-v-09a17854><span class="token punctuation attr-equals" data-v-09a17854>=</span><span class="token punctuation" data-v-09a17854>&quot;</span>黑马头条<span class="token punctuation" data-v-09a17854>&quot;</span></span><span class="token attr-name" data-v-09a17854>right-text</span><span class="token attr-value" data-v-09a17854><span class="token punctuation attr-equals" data-v-09a17854>=</span><span class="token punctuation" data-v-09a17854>&quot;</span>搜索<span class="token punctuation" data-v-09a17854>&quot;</span></span><span class="token punctuation" data-v-09a17854>/&gt;</span></span>
+    <span class="token comment" data-v-09a17854>&lt;!-- 中间内容区 --&gt;</span>
+    <span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;</span>div</span> <span class="token attr-name" data-v-09a17854>class</span><span class="token attr-value" data-v-09a17854><span class="token punctuation attr-equals" data-v-09a17854>=</span><span class="token punctuation" data-v-09a17854>&quot;</span>wrapper<span class="token punctuation" data-v-09a17854>&quot;</span></span> <span class="token punctuation" data-v-09a17854>&gt;</span></span>
+      <span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;</span>router-view</span><span class="token punctuation" data-v-09a17854>&gt;</span></span><span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;/</span>router-view</span><span class="token punctuation" data-v-09a17854>&gt;</span></span>
+    <span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;/</span>div</span><span class="token punctuation" data-v-09a17854>&gt;</span></span>
+    <span class="token comment" data-v-09a17854>&lt;!-- 底部菜单 --&gt;</span>
+    <span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;</span>van-tabbar</span> <span class="token attr-name" data-v-09a17854>route</span><span class="token punctuation" data-v-09a17854>&gt;</span></span>
+      <span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;</span>van-tabbar-item</span> <span class="token attr-name" data-v-09a17854>to</span><span class="token attr-value" data-v-09a17854><span class="token punctuation attr-equals" data-v-09a17854>=</span><span class="token punctuation" data-v-09a17854>&quot;</span>/home<span class="token punctuation" data-v-09a17854>&quot;</span></span> <span class="token attr-name" data-v-09a17854>icon</span><span class="token attr-value" data-v-09a17854><span class="token punctuation attr-equals" data-v-09a17854>=</span><span class="token punctuation" data-v-09a17854>&quot;</span>home-o<span class="token punctuation" data-v-09a17854>&quot;</span></span><span class="token punctuation" data-v-09a17854>&gt;</span></span>首页<span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;/</span>van-tabbar-item</span><span class="token punctuation" data-v-09a17854>&gt;</span></span>
+      <span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;</span>van-tabbar-item</span> <span class="token attr-name" data-v-09a17854>to</span><span class="token attr-value" data-v-09a17854><span class="token punctuation attr-equals" data-v-09a17854>=</span><span class="token punctuation" data-v-09a17854>&quot;</span>/question<span class="token punctuation" data-v-09a17854>&quot;</span></span>  <span class="token attr-name" data-v-09a17854>icon</span><span class="token attr-value" data-v-09a17854><span class="token punctuation attr-equals" data-v-09a17854>=</span><span class="token punctuation" data-v-09a17854>&quot;</span>chat-o<span class="token punctuation" data-v-09a17854>&quot;</span></span><span class="token punctuation" data-v-09a17854>&gt;</span></span>问答<span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;/</span>van-tabbar-item</span><span class="token punctuation" data-v-09a17854>&gt;</span></span>
+      <span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;</span>van-tabbar-item</span> <span class="token attr-name" data-v-09a17854>to</span><span class="token attr-value" data-v-09a17854><span class="token punctuation attr-equals" data-v-09a17854>=</span><span class="token punctuation" data-v-09a17854>&quot;</span>/video<span class="token punctuation" data-v-09a17854>&quot;</span></span>  <span class="token attr-name" data-v-09a17854>icon</span><span class="token attr-value" data-v-09a17854><span class="token punctuation attr-equals" data-v-09a17854>=</span><span class="token punctuation" data-v-09a17854>&quot;</span>video-o<span class="token punctuation" data-v-09a17854>&quot;</span></span><span class="token punctuation" data-v-09a17854>&gt;</span></span>视频<span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;/</span>van-tabbar-item</span><span class="token punctuation" data-v-09a17854>&gt;</span></span>
+      <span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;</span>van-tabbar-item</span> <span class="token attr-name" data-v-09a17854>to</span><span class="token attr-value" data-v-09a17854><span class="token punctuation attr-equals" data-v-09a17854>=</span><span class="token punctuation" data-v-09a17854>&quot;</span>/user<span class="token punctuation" data-v-09a17854>&quot;</span></span>  <span class="token attr-name" data-v-09a17854>icon</span><span class="token attr-value" data-v-09a17854><span class="token punctuation attr-equals" data-v-09a17854>=</span><span class="token punctuation" data-v-09a17854>&quot;</span>user-o<span class="token punctuation" data-v-09a17854>&quot;</span></span><span class="token punctuation" data-v-09a17854>&gt;</span></span>我的<span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;/</span>van-tabbar-item</span><span class="token punctuation" data-v-09a17854>&gt;</span></span>
+    <span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;/</span>van-tabbar</span><span class="token punctuation" data-v-09a17854>&gt;</span></span>
+  <span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;/</span>div</span><span class="token punctuation" data-v-09a17854>&gt;</span></span>
+<span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;/</span>template</span><span class="token punctuation" data-v-09a17854>&gt;</span></span>
+
+<span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;</span>script</span><span class="token punctuation" data-v-09a17854>&gt;</span></span><span class="token script" data-v-09a17854><span class="token language-javascript" data-v-09a17854>
+<span class="token keyword" data-v-09a17854>export</span> <span class="token keyword" data-v-09a17854>default</span> <span class="token punctuation" data-v-09a17854>{</span><span class="token punctuation" data-v-09a17854>}</span>
+</span></span><span class="token tag" data-v-09a17854><span class="token tag" data-v-09a17854><span class="token punctuation" data-v-09a17854>&lt;/</span>script</span><span class="token punctuation" data-v-09a17854>&gt;</span></span>
+<span class="token comment" data-v-09a17854>&lt;!-- scoped的作用：让这些样式仅仅在当前组件生效，防止组件之间相同的类名冲突 --&gt;</span>
+<span class="token comment" data-v-09a17854>&lt;!-- 本质上是如何做到这件事情的？添加唯一的自定义属性用于属性选择器 --&gt;</span>
+.layout {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  .wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 46px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+  }
+}
+</code></pre></div><blockquote data-v-09a17854></blockquote> <h2 id="配置全局样式" data-v-09a17854><a href="#配置全局样式" class="header-anchor" data-v-09a17854>#</a> 配置全局样式</h2> <blockquote data-v-09a17854><p data-v-09a17854>目标：配置全局样式</p> <p data-v-09a17854>文件路径：src/styles/index.less</p></blockquote> <div class="language-less extra-class" data-v-09a17854><pre class="language-less" data-v-09a17854><code data-v-09a17854><span class="token comment" data-v-09a17854>// -----------------------全局样式-----------------------</span>
+<span class="token selector" data-v-09a17854>*</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token property" data-v-09a17854>margin</span><span class="token punctuation" data-v-09a17854>:</span> 0<span class="token punctuation" data-v-09a17854>;</span>
+  <span class="token property" data-v-09a17854>padding</span><span class="token punctuation" data-v-09a17854>:</span> 0<span class="token punctuation" data-v-09a17854>;</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+<span class="token selector" data-v-09a17854>ul</span><span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token property" data-v-09a17854>list-style</span><span class="token punctuation" data-v-09a17854>:</span> none<span class="token punctuation" data-v-09a17854>;</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+<span class="token selector" data-v-09a17854>#app</span><span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token property" data-v-09a17854>position</span><span class="token punctuation" data-v-09a17854>:</span> absolute<span class="token punctuation" data-v-09a17854>;</span>
+  <span class="token property" data-v-09a17854>left</span><span class="token punctuation" data-v-09a17854>:</span> 0<span class="token punctuation" data-v-09a17854>;</span>
+  <span class="token property" data-v-09a17854>top</span><span class="token punctuation" data-v-09a17854>:</span> 0<span class="token punctuation" data-v-09a17854>;</span>
+  <span class="token property" data-v-09a17854>overflow</span><span class="token punctuation" data-v-09a17854>:</span> hidden<span class="token punctuation" data-v-09a17854>;</span>
+  <span class="token property" data-v-09a17854>width</span><span class="token punctuation" data-v-09a17854>:</span> 100%<span class="token punctuation" data-v-09a17854>;</span>
+  <span class="token property" data-v-09a17854>height</span><span class="token punctuation" data-v-09a17854>:</span> 100%<span class="token punctuation" data-v-09a17854>;</span>
+  <span class="token property" data-v-09a17854>font-size</span><span class="token punctuation" data-v-09a17854>:</span> 14px<span class="token punctuation" data-v-09a17854>;</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+
+<span class="token comment" data-v-09a17854>// -----------------------覆盖vant-----------------------</span>
+<span class="token selector" data-v-09a17854>.van-nav-bar</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token property" data-v-09a17854>background</span><span class="token punctuation" data-v-09a17854>:</span> #3296fa<span class="token punctuation" data-v-09a17854>;</span>
+  <span class="token selector" data-v-09a17854>.van-nav-bar__title</span> <span class="token punctuation" data-v-09a17854>{</span>
+    <span class="token property" data-v-09a17854>color</span><span class="token punctuation" data-v-09a17854>:</span> #fff<span class="token punctuation" data-v-09a17854>;</span>
+  <span class="token punctuation" data-v-09a17854>}</span>
+  <span class="token selector" data-v-09a17854>.van-nav-bar__text</span> <span class="token punctuation" data-v-09a17854>{</span>
+    <span class="token property" data-v-09a17854>color</span><span class="token punctuation" data-v-09a17854>:</span> #fff<span class="token punctuation" data-v-09a17854>;</span>
+    <span class="token property" data-v-09a17854>font-size</span><span class="token punctuation" data-v-09a17854>:</span> 12px<span class="token punctuation" data-v-09a17854>;</span>
+  <span class="token punctuation" data-v-09a17854>}</span>
+  <span class="token selector" data-v-09a17854>.van-icon</span><span class="token punctuation" data-v-09a17854>{</span>
+    <span class="token property" data-v-09a17854>color</span><span class="token punctuation" data-v-09a17854>:</span> #fff<span class="token punctuation" data-v-09a17854>;</span>
+  <span class="token punctuation" data-v-09a17854>}</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+<span class="token selector" data-v-09a17854>.van-tabbar</span><span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token property" data-v-09a17854>background</span><span class="token punctuation" data-v-09a17854>:</span> #fdfdfd<span class="token punctuation" data-v-09a17854>;</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+<span class="token selector" data-v-09a17854>.van-nav-bar__text:active</span><span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token property" data-v-09a17854>background</span><span class="token punctuation" data-v-09a17854>:</span> transparent<span class="token punctuation" data-v-09a17854>;</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+</code></pre></div><h2 id="本地存储token封装" data-v-09a17854><a href="#本地存储token封装" class="header-anchor" data-v-09a17854>#</a> 本地存储token封装</h2> <blockquote data-v-09a17854><p data-v-09a17854>目标：封装本地存储基本操作方法</p> <p data-v-09a17854>文件路径：src/utils/auth.js</p></blockquote> <div class="language-js extra-class" data-v-09a17854><pre class="language-js" data-v-09a17854><code data-v-09a17854><span class="token comment" data-v-09a17854>/*
+  封装模块：统一处理token操作
+*/</span>
+<span class="token keyword" data-v-09a17854>const</span> <span class="token constant" data-v-09a17854>KEY</span> <span class="token operator" data-v-09a17854>=</span> <span class="token string" data-v-09a17854>'hm-toutiao-mobile-123'</span>
+<span class="token comment" data-v-09a17854>// 存储token</span>
+<span class="token keyword" data-v-09a17854>export</span> <span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>setUser</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token parameter" data-v-09a17854>userInfo</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token punctuation" data-v-09a17854>{</span>
+  localStorage<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>setItem</span><span class="token punctuation" data-v-09a17854>(</span><span class="token constant" data-v-09a17854>KEY</span><span class="token punctuation" data-v-09a17854>,</span> <span class="token constant" data-v-09a17854>JSON</span><span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>stringify</span><span class="token punctuation" data-v-09a17854>(</span>userInfo<span class="token punctuation" data-v-09a17854>)</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+<span class="token comment" data-v-09a17854>// 删除token</span>
+<span class="token keyword" data-v-09a17854>export</span> <span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>delUser</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token punctuation" data-v-09a17854>{</span>
+  localStorage<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>removeItem</span><span class="token punctuation" data-v-09a17854>(</span><span class="token constant" data-v-09a17854>KEY</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+<span class="token comment" data-v-09a17854>// 获取token</span>
+<span class="token keyword" data-v-09a17854>export</span> <span class="token keyword" data-v-09a17854>const</span> <span class="token function-variable function" data-v-09a17854>getUser</span> <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token keyword" data-v-09a17854>return</span> <span class="token constant" data-v-09a17854>JSON</span><span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>parse</span><span class="token punctuation" data-v-09a17854>(</span>localStorage<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>getItem</span><span class="token punctuation" data-v-09a17854>(</span><span class="token constant" data-v-09a17854>KEY</span><span class="token punctuation" data-v-09a17854>)</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+</code></pre></div><div class="language-js extra-class" data-v-09a17854><pre class="language-js" data-v-09a17854><code data-v-09a17854><span class="token comment" data-v-09a17854>// 导入封装的token操作方法</span>
+<span class="token keyword" data-v-09a17854>import</span> <span class="token operator" data-v-09a17854>*</span> <span class="token keyword" data-v-09a17854>as</span> auth <span class="token keyword" data-v-09a17854>from</span> <span class="token string" data-v-09a17854>'@/utils/auth.js'</span>
+<span class="token comment" data-v-09a17854>// 1、缓存token</span>
+<span class="token comment" data-v-09a17854>// 登录成功后返回的结果</span>
+<span class="token keyword" data-v-09a17854>const</span> ret <span class="token operator" data-v-09a17854>=</span> <span class="token punctuation" data-v-09a17854>{</span>
+   token<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'123123123123'</span><span class="token punctuation" data-v-09a17854>,</span>
+   refrash_token<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'ywer234234234234'</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+<span class="token comment" data-v-09a17854>// 把ret存储到缓存中</span>
+auth<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>setUser</span><span class="token punctuation" data-v-09a17854>(</span>ret<span class="token punctuation" data-v-09a17854>)</span>
+
+<span class="token comment" data-v-09a17854>// 2、获取token(用于鉴权)</span>
+<span class="token keyword" data-v-09a17854>const</span> ret <span class="token operator" data-v-09a17854>=</span> auth<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>getUser</span><span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span>
+console<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>log</span><span class="token punctuation" data-v-09a17854>(</span>ret<span class="token punctuation" data-v-09a17854>.</span>token<span class="token punctuation" data-v-09a17854>)</span>
+
+<span class="token comment" data-v-09a17854>// 3、删除token(用于退出)</span>
+auth<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>delUser</span><span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span>
+</code></pre></div><h2 id="vuex状态管理token" data-v-09a17854><a href="#vuex状态管理token" class="header-anchor" data-v-09a17854>#</a> Vuex状态管理token</h2> <blockquote data-v-09a17854><p data-v-09a17854>目标：基于Vuex管理token的信息</p> <p data-v-09a17854>文件路径：src/store.js</p></blockquote> <ul data-v-09a17854><li data-v-09a17854>使用了vuex之后，组件中获取公共数据来源是store中的state</li> <li data-v-09a17854>组件中如果要修改公共数据，也是要修改store中的state</li> <li data-v-09a17854>用户登录之后返回的token和refresh_token是否算作公共数据？算是</li> <li data-v-09a17854>现在用户登录信息已经被放到了缓存中</li> <li data-v-09a17854>那么我们需要把缓存中的数据更新到store的state中</li> <li data-v-09a17854>此时，组件只要和store中的state打交道即可</li></ul> <div class="language-js extra-class" data-v-09a17854><pre class="language-js" data-v-09a17854><code data-v-09a17854><span class="token comment" data-v-09a17854>// store入口文件</span>
+<span class="token keyword" data-v-09a17854>import</span> Vue <span class="token keyword" data-v-09a17854>from</span> <span class="token string" data-v-09a17854>'vue'</span>
+<span class="token keyword" data-v-09a17854>import</span> Vuex <span class="token keyword" data-v-09a17854>from</span> <span class="token string" data-v-09a17854>'vuex'</span>
+<span class="token keyword" data-v-09a17854>import</span> loginModule <span class="token keyword" data-v-09a17854>from</span> <span class="token string" data-v-09a17854>'@/store/module-login.js'</span>
+<span class="token keyword" data-v-09a17854>import</span> globalModule <span class="token keyword" data-v-09a17854>from</span> <span class="token string" data-v-09a17854>'@/store/module-global.js'</span>
+
+Vue<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>use</span><span class="token punctuation" data-v-09a17854>(</span>Vuex<span class="token punctuation" data-v-09a17854>)</span>
+
+<span class="token keyword" data-v-09a17854>const</span> store <span class="token operator" data-v-09a17854>=</span> <span class="token keyword" data-v-09a17854>new</span> <span class="token class-name" data-v-09a17854>Vuex<span class="token punctuation" data-v-09a17854>.</span>Store</span><span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token operator" data-v-09a17854>...</span>globalModule<span class="token punctuation" data-v-09a17854>,</span>
+  modules<span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>{</span>
+    login<span class="token operator" data-v-09a17854>:</span> loginModule
+  <span class="token punctuation" data-v-09a17854>}</span>
+<span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>)</span>
+
+<span class="token keyword" data-v-09a17854>export</span> <span class="token keyword" data-v-09a17854>default</span> store
+<span class="token comment" data-v-09a17854>// 全局模块文件</span>
+<span class="token comment" data-v-09a17854>/*
+  全局模块
+*/</span>
+<span class="token keyword" data-v-09a17854>export</span> <span class="token keyword" data-v-09a17854>default</span> <span class="token punctuation" data-v-09a17854>{</span>
+  state<span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+  mutations<span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+  actions<span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+  modules<span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token punctuation" data-v-09a17854>}</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+<span class="token comment" data-v-09a17854>// login模块</span>
+<span class="token comment" data-v-09a17854>/*
+  登录模块
+*/</span>
+<span class="token keyword" data-v-09a17854>export</span> <span class="token keyword" data-v-09a17854>default</span> <span class="token punctuation" data-v-09a17854>{</span>
+  namespaced<span class="token operator" data-v-09a17854>:</span> <span class="token boolean" data-v-09a17854>true</span><span class="token punctuation" data-v-09a17854>,</span>
+  <span class="token function-variable function" data-v-09a17854>state</span><span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>{</span><span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>)</span><span class="token punctuation" data-v-09a17854>,</span>
+  mutations<span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+  actions<span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+  modules<span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token punctuation" data-v-09a17854>}</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+</code></pre></div><ul data-v-09a17854><li data-v-09a17854>token和store数据关联</li></ul> <div class="language-js extra-class" data-v-09a17854><pre class="language-js" data-v-09a17854><code data-v-09a17854><span class="token comment" data-v-09a17854>/*
+  登录模块
+*/</span>
+<span class="token keyword" data-v-09a17854>import</span> <span class="token punctuation" data-v-09a17854>{</span> getUser<span class="token punctuation" data-v-09a17854>,</span> delUser <span class="token punctuation" data-v-09a17854>}</span> <span class="token keyword" data-v-09a17854>from</span> <span class="token string" data-v-09a17854>'@/utils/auth.js'</span>
+
+<span class="token keyword" data-v-09a17854>export</span> <span class="token keyword" data-v-09a17854>default</span> <span class="token punctuation" data-v-09a17854>{</span>
+  namespaced<span class="token operator" data-v-09a17854>:</span> <span class="token boolean" data-v-09a17854>true</span><span class="token punctuation" data-v-09a17854>,</span>
+  <span class="token function-variable function" data-v-09a17854>state</span><span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>{</span>
+    <span class="token comment" data-v-09a17854>// 登录成功后的用户信息（主要是token）</span>
+    userInfo<span class="token operator" data-v-09a17854>:</span> <span class="token function" data-v-09a17854>getUser</span><span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span>
+  <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>)</span><span class="token punctuation" data-v-09a17854>,</span>
+  mutations<span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>{</span>
+    <span class="token comment" data-v-09a17854>// 更新用户信息</span>
+    <span class="token function" data-v-09a17854>updateUserInfo</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token parameter" data-v-09a17854>state<span class="token punctuation" data-v-09a17854>,</span> payload</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token punctuation" data-v-09a17854>{</span>
+      <span class="token comment" data-v-09a17854>// 更新Store中状态</span>
+      state<span class="token punctuation" data-v-09a17854>.</span>userInfo <span class="token operator" data-v-09a17854>=</span> payload
+      <span class="token comment" data-v-09a17854>// 更新缓存</span>
+      <span class="token function" data-v-09a17854>setUser</span><span class="token punctuation" data-v-09a17854>(</span>payload<span class="token punctuation" data-v-09a17854>)</span>
+    <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+    <span class="token comment" data-v-09a17854>// 删除用户信息</span>
+    <span class="token function" data-v-09a17854>deleteUserInfo</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token parameter" data-v-09a17854>state</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token punctuation" data-v-09a17854>{</span>
+      <span class="token comment" data-v-09a17854>// 删除Store中状态</span>
+      state<span class="token punctuation" data-v-09a17854>.</span>userInfo <span class="token operator" data-v-09a17854>=</span> <span class="token keyword" data-v-09a17854>null</span>
+      <span class="token comment" data-v-09a17854>// 删除缓存</span>
+      <span class="token function" data-v-09a17854>delUser</span><span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>)</span>
+    <span class="token punctuation" data-v-09a17854>}</span>
+  <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+  actions<span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span>
+  modules<span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token punctuation" data-v-09a17854>}</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+
+</code></pre></div><h2 id="初步request工具封装" data-v-09a17854><a href="#初步request工具封装" class="header-anchor" data-v-09a17854>#</a> 初步request工具封装</h2> <blockquote data-v-09a17854><p data-v-09a17854>目标：初步实现接口调用的模块封装</p></blockquote> <ul data-v-09a17854><li data-v-09a17854>基于axios.create方法实现通用配置</li> <li data-v-09a17854>处理js最大安全数值</li> <li data-v-09a17854>封装通用的接口调用方法</li> <li data-v-09a17854>请求拦截器和响应拦截器配置</li></ul> <div class="language-js extra-class" data-v-09a17854><pre class="language-js" data-v-09a17854><code data-v-09a17854><span class="token comment" data-v-09a17854>/*
+  通用的接口调用方法
+*/</span>
+<span class="token keyword" data-v-09a17854>import</span> axios <span class="token keyword" data-v-09a17854>from</span> <span class="token string" data-v-09a17854>'axios'</span>
+<span class="token keyword" data-v-09a17854>import</span> store <span class="token keyword" data-v-09a17854>from</span> <span class="token string" data-v-09a17854>'@/store/index.js'</span>
+<span class="token keyword" data-v-09a17854>import</span> <span class="token constant" data-v-09a17854>JSONBIGINT</span> <span class="token keyword" data-v-09a17854>from</span> <span class="token string" data-v-09a17854>'json-bigint'</span>
+
+<span class="token comment" data-v-09a17854>// 创建专门的axios请求实例对象</span>
+<span class="token keyword" data-v-09a17854>const</span> instance <span class="token operator" data-v-09a17854>=</span> axios<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>create</span><span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>{</span>
+  baseURL<span class="token operator" data-v-09a17854>:</span> <span class="token string" data-v-09a17854>'http://api-toutiao-web.itheima.net/'</span><span class="token punctuation" data-v-09a17854>,</span>
+  <span class="token comment" data-v-09a17854>// 配置返回数据的格式</span>
+  transformResponse<span class="token operator" data-v-09a17854>:</span> <span class="token punctuation" data-v-09a17854>[</span><span class="token punctuation" data-v-09a17854>(</span><span class="token parameter" data-v-09a17854>data</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token punctuation" data-v-09a17854>{</span>
+    <span class="token comment" data-v-09a17854>// data参数表示后端返回的原始数据</span>
+    <span class="token keyword" data-v-09a17854>try</span> <span class="token punctuation" data-v-09a17854>{</span>
+      <span class="token keyword" data-v-09a17854>return</span> <span class="token constant" data-v-09a17854>JSONBIGINT</span><span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>parse</span><span class="token punctuation" data-v-09a17854>(</span>data<span class="token punctuation" data-v-09a17854>)</span>
+    <span class="token punctuation" data-v-09a17854>}</span> <span class="token keyword" data-v-09a17854>catch</span> <span class="token punctuation" data-v-09a17854>(</span>e<span class="token punctuation" data-v-09a17854>)</span> <span class="token punctuation" data-v-09a17854>{</span>
+      console<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>log</span><span class="token punctuation" data-v-09a17854>(</span>e<span class="token punctuation" data-v-09a17854>)</span>
+      <span class="token comment" data-v-09a17854>// 这里表示如果转换错误，那么就返回原始数据（不做转换）</span>
+      <span class="token keyword" data-v-09a17854>return</span> data
+    <span class="token punctuation" data-v-09a17854>}</span>
+  <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>]</span>
+<span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>)</span>
+
+<span class="token comment" data-v-09a17854>// 请求拦截器</span>
+instance<span class="token punctuation" data-v-09a17854>.</span>interceptors<span class="token punctuation" data-v-09a17854>.</span>request<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>use</span><span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>(</span><span class="token parameter" data-v-09a17854>config</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token comment" data-v-09a17854>// 统一添加请求头（登录成功后添加）</span>
+  <span class="token comment" data-v-09a17854>// store中的状态 -&gt; 模块名称 --&gt; 状态属性</span>
+  <span class="token comment" data-v-09a17854>// store.state.login.userInfo</span>
+  <span class="token keyword" data-v-09a17854>const</span> userInfo <span class="token operator" data-v-09a17854>=</span> store<span class="token punctuation" data-v-09a17854>.</span>state<span class="token punctuation" data-v-09a17854>.</span>login<span class="token punctuation" data-v-09a17854>.</span>userInfo
+  <span class="token keyword" data-v-09a17854>if</span> <span class="token punctuation" data-v-09a17854>(</span> userInfo <span class="token operator" data-v-09a17854>&amp;&amp;</span> userInfo<span class="token punctuation" data-v-09a17854>.</span>token<span class="token punctuation" data-v-09a17854>)</span> <span class="token punctuation" data-v-09a17854>{</span>
+    <span class="token comment" data-v-09a17854>// 登录成功，添加请求头</span>
+    config<span class="token punctuation" data-v-09a17854>.</span>headers<span class="token punctuation" data-v-09a17854>.</span>authorization <span class="token operator" data-v-09a17854>=</span> <span class="token string" data-v-09a17854>'Bearer '</span> <span class="token operator" data-v-09a17854>+</span> userInfo<span class="token punctuation" data-v-09a17854>.</span>token
+  <span class="token punctuation" data-v-09a17854>}</span>
+  <span class="token keyword" data-v-09a17854>return</span> config
+<span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token parameter" data-v-09a17854>err</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token keyword" data-v-09a17854>return</span> Promise<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>reject</span><span class="token punctuation" data-v-09a17854>(</span>err<span class="token punctuation" data-v-09a17854>)</span>
+<span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>)</span>
+
+<span class="token comment" data-v-09a17854>// 响应拦截器</span>
+instance<span class="token punctuation" data-v-09a17854>.</span>interceptors<span class="token punctuation" data-v-09a17854>.</span>response<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>use</span><span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>(</span><span class="token parameter" data-v-09a17854>response</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token keyword" data-v-09a17854>return</span> response<span class="token punctuation" data-v-09a17854>.</span>data
+<span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>,</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token parameter" data-v-09a17854>err</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token keyword" data-v-09a17854>return</span> Promise<span class="token punctuation" data-v-09a17854>.</span><span class="token function" data-v-09a17854>reject</span><span class="token punctuation" data-v-09a17854>(</span>err<span class="token punctuation" data-v-09a17854>)</span>
+<span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>)</span>
+
+<span class="token comment" data-v-09a17854>// 封装通用的接口调用方法</span>
+<span class="token keyword" data-v-09a17854>export</span> <span class="token keyword" data-v-09a17854>default</span> <span class="token punctuation" data-v-09a17854>(</span><span class="token parameter" data-v-09a17854>options</span><span class="token punctuation" data-v-09a17854>)</span> <span class="token operator" data-v-09a17854>=&gt;</span> <span class="token punctuation" data-v-09a17854>{</span>
+  <span class="token function" data-v-09a17854>instance</span><span class="token punctuation" data-v-09a17854>(</span><span class="token punctuation" data-v-09a17854>{</span>
+    method<span class="token operator" data-v-09a17854>:</span> options<span class="token punctuation" data-v-09a17854>.</span>method <span class="token operator" data-v-09a17854>||</span> <span class="token string" data-v-09a17854>'get'</span><span class="token punctuation" data-v-09a17854>,</span>
+    url<span class="token operator" data-v-09a17854>:</span> options<span class="token punctuation" data-v-09a17854>.</span>url <span class="token operator" data-v-09a17854>||</span> <span class="token string" data-v-09a17854>'#'</span><span class="token punctuation" data-v-09a17854>,</span>
+    data<span class="token operator" data-v-09a17854>:</span> options<span class="token punctuation" data-v-09a17854>.</span>data<span class="token punctuation" data-v-09a17854>,</span>
+    params<span class="token operator" data-v-09a17854>:</span> options<span class="token punctuation" data-v-09a17854>.</span>params<span class="token punctuation" data-v-09a17854>,</span>
+    headers<span class="token operator" data-v-09a17854>:</span> options<span class="token punctuation" data-v-09a17854>.</span>headers
+  <span class="token punctuation" data-v-09a17854>}</span><span class="token punctuation" data-v-09a17854>)</span>
+<span class="token punctuation" data-v-09a17854>}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/project/头条移动/项目初始化.html" class="prev">
+        项目初始化
+      </a></span> <span class="next"><a href="/project/头条移动/03-头条-Mobile-登录模块.html">
+        登录模块
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.0d7c1303.js" defer></script><script src="/assets/js/2.1fe0b50b.js" defer></script><script src="/assets/js/41.941fe774.js" defer></script>
+  </body>
+</html>
